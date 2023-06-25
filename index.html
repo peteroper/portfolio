@@ -169,14 +169,22 @@ display: flex;
 width: 1376px;
 padding: 5px 0px;
 align-items: flex-start;
-gap: 18.123px;
-overflow-x: visible;
+gap: 18px;
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+overflow: -moz-scrollbars-horizontal;
+white-space: nowrap;
   }
  .slider .img,
 .slider img{
-width: 398.907px;
-height: 224.385px;
+width: 398px;
+height: 224px;
 flex-shrink: 0;
+float: none !important;
+    white-space: initial;
+    display: inline-block;
+    vertical-align: top;
 }
 #showcase .scrollable{
 width: 100%;

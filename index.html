@@ -82,6 +82,9 @@ position: absolute;
 bottom: 0px;
 left: 12px;
 }
+.header > div{
+background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+}
 }
 @media only screen and (max-width: 1024px) {
 .content{
@@ -100,6 +103,9 @@ align-items: center;
 }
 #showcase .scrollable{
 height: 424px;
+}
+.header > div{
+background: linear-gradient(0deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
 }
 }
 /*/ FONT ////////////////////*/
@@ -137,9 +143,9 @@ background-color: #FFF;
 background-color: #E3E9F0;
 }
 .header{
-background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%), url(https://peteroper.github.io/portfolio/assets/imgs/header-bg.png) no-repeat 100% 50%;
+background: url(https://peteroper.github.io/portfolio/assets/imgs/header-bg.png) no-repeat 100% 50%;
 }
-.header div{
+.header div div{
 background: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png) repeat-x 0 101%;
 }
 #posts .post > div{
@@ -165,7 +171,7 @@ border-radius: 16px 0 0 16px;
 border-radius: 0 16px 16px 0;
 }
 /*/ HEADER ////////////////////*/
-.header div{
+.header div div{
 position: relative;
 display: flex;
 justify-content: center;
@@ -276,13 +282,13 @@ flex-shrink: 0;
 </style>
 </head>
 <body>
-<div class="header">
+<div class="header"><div>
     <div>
         <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar.png" />
         <h1>Peter Roper</h1>
         <h2>Product Designer</h2>
     </div>
-</div>
+</div></div>
  <div class="content">
          
         <!-- intro -->

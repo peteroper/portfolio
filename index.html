@@ -77,7 +77,10 @@ background-color: #FFF;
 background-color: #E3E9F0;
 }
 .header{
-background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%), url(https://peteroper.github.io/portfolio/assets/imgs/header-bg.png) no-repeat 100% 50%;
+}
+.header div{
+background: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png) repeat-x 0 100%;
 }
 #posts .post > div{
 border-bottom: 1px solid rgba(0, 0, 0, 0.14);
@@ -204,9 +207,11 @@ flex-shrink: 0;
 </head>
 <body>
 <div class="header">
-        <h1>Peter Roper</h1>
-        <h2>Product Designer</h2>
-        <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar.png" />
+    <div>
+    <h1>Peter Roper</h1>
+    <h2>Product Designer</h2>
+    <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar.png" />
+    </div>
 </div>
  <div class="content">
          

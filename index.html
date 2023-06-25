@@ -98,6 +98,20 @@ align-items: center;
 gap: 24px;
 flex: 1 0 0;
 }
+#posts .post > div{
+display: flex;
+padding: 16px 0px;
+align-items: center;
+gap: 24px;
+flex: 1 0 0;
+}
+#posts .post div div{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 8px;
+flex: 1 0 0;
+}
 #posts .post .img,
 #posts .post img{
 width: 104px;
@@ -108,6 +122,10 @@ display: block;
 display: flex;
 flex-direction: column;
 align-self: stretch;
+}
+#posts .icn{
+width: 24px;
+height: 24px;
 }
 /*/ SLIDER ////////////////////*/
 #sliders{
@@ -123,7 +141,7 @@ align-items: flex-start;
 gap: 16px;
 }
 .slider{
-     display: flex;
+display: flex;
 width: 1376px;
 padding: 5px 0px;
 align-items: flex-start;
@@ -159,12 +177,18 @@ flex-shrink: 0;
         <!-- intro ends -->
          
         <!-- posts start -->
-        <div class="posts">
+        <div id="posts">
                 <h3>Latest Posts</h3>
                 <div class="post">
                     <img src="" />
-                    <h4>Establishing UX Principles</h4>
-                    <p>text goes here, max of 2 lines and then elipses?</p>
+                    <div class="contents">
+                        <div>
+                            <h4>Establishing UX Principles</h4>
+                            <p>text goes here, max of 2 lines and then elipses?</p>
+                        </div>
+                        <span class="icn"></span>
+                    </div> 
+                    
                 </div>
                 <div class="post">
                     <img src="" />

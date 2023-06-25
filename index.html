@@ -29,6 +29,9 @@ h4{ font-size: 18px; font-family: Merriweather; letter-spacing: -0.36px; }
 p.l, p.l b{ font-size: 24px; line-height: 140%; letter-spacing: -0.48px; }
 .posts p{ font-size: 14px; line-height: 140%; letter-spacing: -0.28px; }
 / * / STYLE //////////////////// */
+#posts h4, #posts h4 a{
+    color: #346672;
+}
 .header{
 background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
 color: #FFF;
@@ -100,6 +103,16 @@ align-self: stretch;
 }
 / * / SLIDER //////////////////// */
 #sliders{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+}
+#slider div{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
 }
 .slider{
      display: flex;
@@ -107,6 +120,7 @@ width: 1376px;
 padding: 5px 0px;
 align-items: flex-start;
 gap: 18.123px;
+overflow-x: visible;
   }
  .slider .img,
 .slider img{

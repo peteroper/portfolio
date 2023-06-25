@@ -1,11 +1,12 @@
 <html> 
 <head>
 <style>
-    *{
-        font-family: Lora, Merriweather;
+*{
+        font-family: Merriweather;
        padding: 0;
        margin: 0;
-       font-size: 16px;
+       font-size: 18px;
+       line-height: 160%;
     }
 .header{
    background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
@@ -15,17 +16,28 @@ body{
     color: #000;
     background-color: #FFF;
 }
-h1{
+.content,
+.header{
+   padding-left: 324px;
 }
 h1,h2, h3,h4{
     font-weight: 700;
     line-height: 140%; 
+   font-family: Lora;
 }
+p.l{ font-size: 24px; line-height: 140%; letter-spacing: -0.48px; }
 h1{ font-size: 48px; letter-spacing: -1.92px; }
 h2{ font-size: 20px; font-weight: normal; letter-spacing: 0.8px;  }
 h3{ font-size: 28px; letter-spacing: -1.12px; }
-h4{ font-size: 48px; font-family: Merriweather; letter-spacing: -0.36px; 
-  .slider{
+h4{ font-size: 48px; font-family: Merriweather; letter-spacing: -0.36px; }
+.content > div{
+   margin: 0 0 48px 0;
+}
+.intro p{
+   margin: 0 0 36px 0;
+}
+
+.slider{
      display: flex;
 width: 1376px;
 padding: 5px 0px;
@@ -41,9 +53,11 @@ gap: 18.123px;
             <img src="/imgs/avatar.png" />
         </div>
         <div class="content">
-            <p class="l"><b>Hi I’m Peter, a Product designer with more than 15 years professional experience. </b>
-I have been creating digital products since the very early days of the internets transition into visual design. text goes here</p>
+            <div class="intro">
+            <p class="l"><b>Hi I’m Peter, a Product designer with more than 15 years professional experience. </b></p>
+            <p class="l">I have been creating digital products since the very early days of the internets transition into visual design. text goes here</p>
             <p>For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational insurance and tech-support provider. More information on my background in design is covered in my portfolio slideshow</p>
+            </div>
             <div class="posts">
                 <h3>Latest Posts</h3>
                 <div class="post">

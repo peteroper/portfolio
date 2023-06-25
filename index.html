@@ -46,15 +46,21 @@ h2{ font-size: 20px; font-weight: normal; letter-spacing: 0.8px;  }
 h3{ font-size: 28px; letter-spacing: -1.12px; }
 h4{ font-size: 18px; font-family: Merriweather; letter-spacing: -0.36px; }
 .posts p{ font-size: 14px; line-height: 140%; letter-spacing: -0.28px; }
+/ * / HEADER //////////////////// */
 .header{
 height: 274px;
 }
 .content > div{
    margin: 0 0 48px 0;
 }
+/ * / INTRO //////////////////// */
+.intro{
+max-width: 724px;
+}
 .intro p{
    margin: 0 0 36px 0;
 }
+/ * / POSTS //////////////////// */
 .posts .post{
 display: flex;
 padding: 16px 0px;
@@ -73,6 +79,8 @@ display: flex;
 flex-direction: column;
 align-self: stretch;
 }
+/ * / SLIDER //////////////////// */
+.sliders
 .slider{
      display: flex;
 width: 1376px;
@@ -88,19 +96,24 @@ flex-shrink: 0;
 }
     </style>
 </head>
-    <body>
-        <div class="header">
-            <h1>Peter Roper</h1>
-            <h2>Product Designer</h2>
-            <img src="/imgs/avatar.png" />
-        </div>
-        <div class="content">
-            <div class="intro">
+<body>
+<div class="header">
+        <h1>Peter Roper</h1>
+        <h2>Product Designer</h2>
+        <img src="/imgs/avatar.png" />
+</div>
+ <div class="content">
+         
+        <!-- intro -->
+        <div class="intro">
             <p class="l"><b>Hi I’m Peter, a Product designer with more than 15 years professional experience. </b></p>
             <p class="l">I have been creating digital products since the very early days of the internets transition into visual design. text goes here</p>
             <p>For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational insurance and tech-support provider. More information on my background in design is covered in my portfolio slideshow</p>
-            </div>
-            <div class="posts">
+        </div>
+        <!-- intro ends -->
+         
+        <!-- posts start -->
+        <div class="posts">
                 <h3>Latest Posts</h3>
                 <div class="post">
                     <img src="" />
@@ -117,36 +130,42 @@ flex-shrink: 0;
                     <h4>Establishing UX Principles</h4>
                     <p>text goes here, max of 2 lines and then elipses?</p>
                 </div>
-            </div>
-            <!-- posts ends -->
-            <div id="slidedeck" class="slider">
+        </div>
+        <!-- posts ends -->
+         
+        <div id="sliders">
+            <div id="slidedeck">
                 <h4>Portfolio Slides</h4>
                 <div class="slider">
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
                 </div>
             </div>
             <!--  ends -->
-            <div id="casestudies" class="slider">
+            <div id="casestudies">
                 <h4>Portfolio Slides</h4>
                 <div class="slider">
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
-                    <span style="background-image: url();"</span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
+                    <span class="img" style="background-image: url();"></span>
                 </div>
             </div>
             <!-- casestudies ends -->
-            <div id="showcase" class="slider">
+        </div>
+        <!-- sliders ends -->
+
+        <!-- showcase -->
+        <div id="showcase" >
                 <h4>Showcase</h4>
                 <div class="scrollable">
 
                 </div>
-            </div>
-            <!-- casestudies ends -->
-        </div>  
-        <!-- body end -->
-    </body>
+        </div>
+        <!-- showcase ends -->
+</div>  
+<!-- body end -->
+</body>
 </html>

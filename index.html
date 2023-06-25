@@ -1,28 +1,47 @@
 <html> 
 <head>
 <style>
+/ * / CORE //////////////////// */
 *{
-        font-family: Merriweather;
-       padding: 0;
-       margin: 0;
-       font-size: 18px;
-       line-height: 160%;
-    }
+font-family: Merriweather;
+padding: 0;
+margin: 0;
+font-size: 18px;
+line-height: 160%;
+}
+.content,
 .header{
-   background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
-    color: #FFF;
+   padding-left: 324px;
+}
+/ * / FONT //////////////////// */
+h1,h2, h3,h4{
+    font-weight: 700;
+    line-height: 140%; 
+   font-family: Lora;
+}
+h1{ font-size: 48px; letter-spacing: -1.92px; }
+h2{ font-size: 20px; font-weight: normal; letter-spacing: 0.8px;  }
+h3{ font-size: 28px; letter-spacing: -1.12px; }
+h4{ font-size: 18px; font-family: Merriweather; letter-spacing: -0.36px; }
+p.l, p.l b{ font-size: 24px; line-height: 140%; letter-spacing: -0.48px; }
+.posts p{ font-size: 14px; line-height: 140%; letter-spacing: -0.28px; }
+/ * / STYLE //////////////////// */
+.header{
+background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+color: #FFF;
 }
 body{
-    color: #000;
-    background-color: #FFF;
+color: #000;
+background-color: #FFF;
 }
 .showcase,
 .img, 
 img {
-        background-color: #E3E9F0;
+background-color: #E3E9F0;
 }
+/ * / RADIUS //////////////////// */
 .showcase{
- border-top-radius: 16px;
+border-top-radius: 16px;
 }
 .img, img {
 border-radius: 16px;
@@ -31,56 +50,42 @@ border-radius: 16px;
 .posts img{
 border-radius: 8px;
 }
-.content,
-.header{
-   padding-left: 324px;
-}
-h1,h2, h3,h4{
-    font-weight: 700;
-    line-height: 140%; 
-   font-family: Lora;
-}
-p.l, p.l b{ font-size: 24px; line-height: 140%; letter-spacing: -0.48px; }
-h1{ font-size: 48px; letter-spacing: -1.92px; }
-h2{ font-size: 20px; font-weight: normal; letter-spacing: 0.8px;  }
-h3{ font-size: 28px; letter-spacing: -1.12px; }
-h4{ font-size: 18px; font-family: Merriweather; letter-spacing: -0.36px; }
-.posts p{ font-size: 14px; line-height: 140%; letter-spacing: -0.28px; }
 / * / HEADER //////////////////// */
 .header{
 height: 274px;
 }
 .content > div{
-   margin: 0 0 48px 0;
+margin: 0 0 48px 0;
 }
 / * / INTRO //////////////////// */
-.intro{
+#intro{
 max-width: 724px;
 }
-.intro p{
+#intro p{
    margin: 0 0 36px 0;
 }
 / * / POSTS //////////////////// */
-.posts .post{
+#posts .post{
 display: flex;
 padding: 16px 0px;
 align-items: center;
 gap: 24px;
 flex: 1 0 0;
 }
-.posts .post .img,
-.posts .post img{
+#posts .post .img,
+#posts .post img{
 width: 104px;
 height: 68px;
 display: block;
 }
-.posts p{
+#posts p{
 display: flex;
 flex-direction: column;
 align-self: stretch;
 }
 / * / SLIDER //////////////////// */
-.sliders
+#sliders{
+}
 .slider{
      display: flex;
 width: 1376px;
@@ -94,7 +99,7 @@ width: 398.907px;
 height: 224.385px;
 flex-shrink: 0;
 }
-    </style>
+</style>
 </head>
 <body>
 <div class="header">
@@ -105,7 +110,7 @@ flex-shrink: 0;
  <div class="content">
          
         <!-- intro -->
-        <div class="intro">
+        <div id="intro">
             <p class="l"><b>Hi I’m Peter, a Product designer with more than 15 years professional experience. </b></p>
             <p class="l">I have been creating digital products since the very early days of the internets transition into visual design. text goes here</p>
             <p>For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational insurance and tech-support provider. More information on my background in design is covered in my portfolio slideshow</p>

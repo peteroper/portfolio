@@ -159,10 +159,10 @@ border-radius: 16px 0 0 0;
 #posts img{
 border-radius: 8px;
 }
-.slider ul li:first-child{
+.slider ul li:first-of-type{
 border-radius: 16px 0 0 16px;
 }
-.slider ul li:last-child{
+.slider ul li:last-of-type{
 border-radius: 0 16px 16px 0;
 }
 @media only screen and (max-width: 424px) {
@@ -344,7 +344,7 @@ background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53,
 }
 /*/////////////////////////////////////////////////////////////*/
 .content{
-padding: 24px 0 24px 24px;
+padding: 24px 0 48px 24px;
 }
 .content > div{
 margin: 0 0 28px 0;
@@ -368,6 +368,9 @@ gap: 8px;
 /*/////////////////////////////////////////////////////////////*/
 .slider li{
 width: 268px!important;
+}
+.slider{
+height: 154px;
 }
 /*/////////////////////////////////////////////////////////////*/
 #showcase .scrollable{

@@ -72,17 +72,20 @@ max-width: 724px;
 }
 
 /*/ FONT ////////////////////*/
+*, body{
+    font-size: 10px;
+}
 h1,h2, h3,h4{
     font-weight: 700;
     line-height: 140%; 
    font-family: Lora;
 }
-h1{ font-size: 48px; letter-spacing: -1.92px; }
-h2{ font-size: 20px; font-weight: normal; letter-spacing: 0.8px;  }
-h3{ font-size: 28px; letter-spacing: -1.12px; }
-h4{ font-size: 18px; font-family: Merriweather; letter-spacing: -0.36px; }
-p.l, p.l b{ font-size: 24px; line-height: 140%; letter-spacing: -0.48px; }
-.posts p{ font-size: 14px; line-height: 140%; letter-spacing: -0.28px; }
+h1{ font-size: 4.8em; letter-spacing: -1.92px; }
+h2{ font-size: 2em; font-weight: normal; letter-spacing: 0.8px;  }
+h3{ font-size: 2.8em; letter-spacing: -1.12px; }
+h4{ font-size: 1.8em; font-family: Merriweather; letter-spacing: -0.36px; }
+p.l, p.l b{ font-size: 2.4em; line-height: 140%; letter-spacing: -0.48px; }
+.posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
 /*/ STYLE ////////////////////*/
 #posts h4, #posts h4 a{
 color: #346672;
@@ -292,6 +295,12 @@ height: 424px!important;
 }
 .header > div{
 background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
+}
+}
+/*////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 424px) {
+*, body{
+    font-size: 6px;
 }
 }
 </style>

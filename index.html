@@ -5,6 +5,9 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <meta name="theme-color" content="#346672">
 <style>
+/*/////////////////////////////////////////////////////////////*/
+/* MATERIAL ICONS */
+/*/////////////////////////////////////////////////////////////*/
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -40,7 +43,9 @@
   /* Support for IE. */
   font-feature-settings: 'liga';
 }
-/*/ CORE ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* CORE */
+/*/////////////////////////////////////////////////////////////*/
 *, body{
 font-family: Merriweather;
 padding: 0;
@@ -73,12 +78,12 @@ margin: 0 0 48px 0;
 #intro{
 max-width: 724px;
 }
-
-/*/ FONT ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* FONT SIZE */
+/*/////////////////////////////////////////////////////////////*/
 *, body, p, p b, h1, h2, h3, h4{
     font-size: 10px;
 }
-/*////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 424px) {
 *, body, p, b, h1, h2, h3, h4{
     font-size: 8px;
@@ -96,7 +101,9 @@ h4{ font-size: 1.8em; font-family: Merriweather; letter-spacing: -0.36px; }
 p.l{ font-size: 2.4em; line-height: 140%; letter-spacing: -0.48px; }
 p{ font-size: 1.6em; }
 .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
-/*/ STYLE ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* COLOR */
+/*/////////////////////////////////////////////////////////////*/
 #posts h4, #posts h4 a{
 color: #346672;
 }
@@ -109,7 +116,9 @@ color: #000;
 #posts .icn{
 color: rgba(0, 0, 0, 0.14);
 }
-/*/ BACKGROUNDS ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUNDS */
+/*/////////////////////////////////////////////////////////////*/
 body{
 background-color: #FFF;
 }
@@ -132,12 +141,15 @@ background-position: 0 100%;
 #posts .post > div{
 border-bottom: 1px solid rgba(0, 0, 0, 0.14);
 }
-/*/ BOX SHADOW ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* BOX SHADOWS */
+/*/////////////////////////////////////////////////////////////*/
 .img.e1{
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
-
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
 }
-/*/ RADIUS ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* RADIUS */
+/*/////////////////////////////////////////////////////////////*/
 #showcase .scrollable{
 border-radius: 16px 0 0 0;
 }
@@ -151,7 +163,14 @@ border-radius: 16px 0 0 16px;
 .slider .img:last-child{
 border-radius: 0 16px 16px 0;
 }
-/*/ HEADER ////////////////////*/
+@media only screen and (max-width: 424px) {
+    #showcase .scrollable{
+border-radius: 16px 0 0 16px;
+}
+}
+/*/////////////////////////////////////////////////////////////*/
+/* HEADER */
+/*/////////////////////////////////////////////////////////////*/
 .header div div{
 position: relative;
 display: flex;
@@ -166,7 +185,9 @@ width: 312px;
 height: 248px;
 flex-shrink: 0;
 }
-/*/ INTRO ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* INTRO */
+/*/////////////////////////////////////////////////////////////*/
 #intro p{
 margin: 0 0 12px 0;
 }
@@ -177,7 +198,9 @@ margin: 12px 0 0 0;
 display: block;
 margin: 0 0 12px 0;
 }
-/*/ POSTS ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* POSTS */
+/*/////////////////////////////////////////////////////////////*/
 #posts .post,
 #posts .post > div{
 gap: 24px;
@@ -214,7 +237,9 @@ align-self: stretch;
 width: 20px;
 height: 20px;
 }
-/*/ SLIDER ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* SLIDER */
+/*/////////////////////////////////////////////////////////////*/
 #sliders{
 display: flex;
 flex-direction: column;
@@ -243,7 +268,9 @@ white-space: initial;*/
 display: inline-block;
 vertical-align: top;
 }
-/*/ SHOWCASE ////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* SHOWCASE */
+/*/////////////////////////////////////////////////////////////*/
 #showcase h3{
     margin: 0 0 12px 0;
 }
@@ -252,7 +279,13 @@ width: 100%;
 height: 680px;
 flex-shrink: 0;
 }
-/*/ MEDIA QUERIES ////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+
+/* RESPONSIVE */
+
+/*/////////////////////////////////////////////////////////////*/
+/* DESKTOP */
+/*/////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 1024px) {
 .content,
 .header div div{
@@ -274,10 +307,12 @@ background-position: 100% 0;
 background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
 }
 }
-/*////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* TABLET */
+/*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 1024px) {
 .content{
-    padding: 24px 0 0 24px;
+    padding: 24px 0 24px 24px;
 }
 .header{
 background-size: 125% auto;
@@ -317,6 +352,7 @@ height: 424px!important;
 background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
 }
 }
+/*/////////////////////////////////////////////////////////////*/
 </style>
 </head>
 <body>

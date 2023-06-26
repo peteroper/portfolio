@@ -262,11 +262,19 @@ gap: 16px;
 }
 .slider{
 width: 100%;
+height: 298px;
 overflow-x: auto;
 overflow-y: hidden;
 -webkit-overflow-scrolling: touch;
 overflow: -moz-scrollbars-horizontal;
 white-space: nowrap;
+position: relative;
+}
+.slider ul{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
 }
 .slider li{
 width: 398px;
@@ -432,21 +440,25 @@ height: 424px!important;
         <div id="sliders">
             <div id="slidedeck">
               <h3>Portfolio Slides</h3>
-                <ul class="slider">
+                <div class="slider">
+                <ul>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/slide1.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/slide2.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/slide3.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/slide5.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/slide6.png);"></span></li>
                 </ul>
+                </div>
             </div>
             <!--  ends -->
             <div id="casestudies">
                 <h3>Case Studies</h3>
                 <div class="slider">
+                <ul>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudy1.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudy2.png);"></span></li>
                     <li><span class="img e1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudy3.png);"></span></li>
+                </ul>
                 </div>
             </div>
             <!-- casestudies ends -->

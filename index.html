@@ -314,22 +314,34 @@ background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, r
 /* TABLET */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 1024px) {
-.content{
-    padding: 24px 0 24px 24px;
-}
 .header{
 background-size: 125% auto;
 }
 .header div div{
-   padding: 104px 24px 68px 24px;
-   background-size: 100% auto;
+padding: 104px 24px 68px 24px;
+background-size: 100% auto;
+}
+.header div div{
+align-items: center;
+}
+.header img{
+margin-bottom: 12px;
+}
+.header > div{
+background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+.content{
+padding: 24px 0 24px 24px;
 }
 .content > div{
 margin: 0 0 28px 0;
 }
+/*/////////////////////////////////////////////////////////////*/
 #intro{
 padding-right: 24px;
 }
+/*/////////////////////////////////////////////////////////////*/
 #posts .post .img,
 #posts .post img{
 width: 74px;
@@ -341,21 +353,14 @@ gap: 12px;
 padding-right: 8px;
 gap: 8px;
 }
+/*/////////////////////////////////////////////////////////////*/
 .slider .img,
 .slider img{
 width: 268px!important;
 }
-.header div div{
-align-items: center;
-}
-.header img{
-margin-bottom: 12px;
-}
+/*/////////////////////////////////////////////////////////////*/
 #showcase .scrollable{
 height: 424px!important;
-}
-.header > div{
-background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
 }
 }
 /*/////////////////////////////////////////////////////////////*/

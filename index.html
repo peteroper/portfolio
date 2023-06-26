@@ -64,7 +64,9 @@ overflow: initial;
     background-size: 100% auto;
     background-position: 50%;
 }
-
+.h3{
+margin-bottom: 12px;
+}
 .content{
     padding: 36px 0 0 0;
 }
@@ -207,12 +209,16 @@ gap: 24px;
 }
 #posts .post{
 display: flex;
-padding: 16px 0px;
+margin-bottom: 12px;
 align-items: center;
 flex: 1 0 0;
 }
+#posts .post:last-of-type{
+margin-bottom: 0;
+}
 #posts .post > div{
 display: flex;
+padding-bottom 12px;
 align-items: center;
 flex: 1 0 0;
 }
@@ -271,9 +277,6 @@ vertical-align: top;
 /*/////////////////////////////////////////////////////////////*/
 /* SHOWCASE */
 /*/////////////////////////////////////////////////////////////*/
-#showcase h3{
-    margin: 0 0 12px 0;
-}
 #showcase .scrollable{
 width: 100%;
 height: 680px;

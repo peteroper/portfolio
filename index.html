@@ -439,6 +439,9 @@ overflow: hidden;
 .header div div{
    padding-left: 324px!important;
 }
+.mobile-only{
+display: none;
+}
 /*/////////////////////////////////////////////////////////////*/
 .header{
 height: 274px;
@@ -505,6 +508,16 @@ margin-bottom: 12px;
 }
 .header > div{
 background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+.web-only{
+display: none;
+}
+.mobile-only{
+text-align: center;
+line-height: 32px;
+background-color: #2883BA;
+color: #FFF;
 }
 /*/////////////////////////////////////////////////////////////*/
 .content{
@@ -577,6 +590,7 @@ justify-content: center;
 </head>
 <body>
 <div class="header"><div>
+    <p class="mobile-only">Full Information in Desktop Browsing</p>
     <div>
         <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar2.png);"></span>
         <h1>Peter Roper</h1>
@@ -588,7 +602,7 @@ justify-content: center;
         <!-- intro -->
         <div id="intro">
             <p class="l b"><span>Hi I’m Pete, a British Product Designer based in Tokyo with a back pocket brimming with experience.</span> I have created digital products since the very early days of the internets transition into visual design.</p>
-            <p class="m">For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational insurance and tech-support provider.</p>
+            <p class="m web-only">For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational insurance and tech-support provider.</p>
         </div>
         <!-- intro ends -->
          
@@ -672,6 +686,7 @@ justify-content: center;
                     <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.2.jpg" />
                     </div>
                 </div>
+                <p class="web-only">My day to day work is non disclosure therefore I hope to showcase my visual design ability with some rapid ideation projects. Design processes and how I work professionally can be shared within my casestudy slide deck.</p>
         </div>
         <!-- showcase ends -->
 </div>  

@@ -104,8 +104,8 @@ h3{ font-size: 2.4em; letter-spacing: -1.12px; }
 #contact h3{ font-size: 3.2em; }
 h4{ font-size: 2em; font-family: Merriweather; letter-spacing: -0.36px; }
 p.l{ font-size: 2.2em; line-height: 140%; letter-spacing: -0.48px; }
-p{ font-size: 1.8em; }
-#showcase p, .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
+#showcase nav a.selected, p{ font-size: 1.8em; }
+#showcase nav a, #showcase p, .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
 p.l span{
 font-size: 1em;
 }
@@ -123,6 +123,7 @@ text-decoration: underline;
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
+#showcase nav a,
 h3 a,
 #posts h4, #posts h4 a{
 color: #346672;
@@ -160,6 +161,7 @@ background-position: 50%;
 body{
 background-color: #FFF;
 }
+#showcase nav a,
 #showcase .scrollable,
 #posts .img, 
 #sliders img {
@@ -225,6 +227,11 @@ border-radius: 16px 0 0 16px;
 border-radius: 0 16px 16px 0;
 -webkit-border-radius: 0 16px 16px 0;
   -moz-border-radius: 0 16px 16px 0;
+}
+#showcase nav a{
+border-radius: 100px;
+-webkit-border-radius: 100px;
+  -moz-border-radius: 100px; 
 }
 /*/////////////////////////////////////////////////////////////*/
 /* HEADER */
@@ -351,6 +358,15 @@ background-size: 100% auto;
 /*/////////////////////////////////////////////////////////////*/
 /* SHOWCASE */
 /*/////////////////////////////////////////////////////////////*/
+#showcase nav{
+display: flex;
+gap: 12px;
+}
+#showcase nav a{
+line-height: 48px;
+padding: 0 16px; 
+}
+/*/////////////////////////////////////////////////////////////*/
 #showcase .scrollable{
 width: 100%;
 height: 540px;
@@ -370,13 +386,7 @@ top: 0;
 left: 0;
 right: 0;
 }
-#showcase span{
-height: 100%;
-background-size: auto 100%;
-}
-.showcase1 span{
-padding-left: 90%;
-}
+/*/////////////////////////////////////////////////////////////*/
 .showcase1 div{
 padding: 40px 40px 40px 0;
 }
@@ -617,6 +627,12 @@ justify-content: center;
         <!-- showcase -->
         <div id="showcase" >
                 <h3>Showcase</h3>
+                <nav>
+                    <a href="#">Pulse Football</a>
+                    <a href="#">Japanesey</a>
+                    <a href="#">Adventure Sports</a>
+                    <a href="#">Kokonotori Navi</a>
+                </nav>
                 <div class="scrollable">
                     <div class="showcase1">
                         <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.1.jpg" />

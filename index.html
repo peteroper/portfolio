@@ -165,6 +165,9 @@ background-color: #E3E9F0;
 #contact{
 background-color: #3F464C;
 }
+.showcase1 div{
+background: linear-gradient(90deg, #21134E 0%, #000 100%);
+}
 .header{
 background-color: #346672;
 background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header.png);
@@ -193,6 +196,8 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0
 /*/////////////////////////////////////////////////////////////*/
 /* RADIUS */
 /*/////////////////////////////////////////////////////////////*/
+#showcase .scrollable > div,
+#showcase .scrollable > div span:first-of-type,
 #showcase .scrollable{
 border-radius: 16px 0 0 16px;
 -webkit-border-radius: 16px 0 0 16px;
@@ -346,6 +351,7 @@ height: 540px;
 flex-shrink: 0;
 }
 #showcase .scrollable > div{
+height: 100%;
 display: flex;
 }
 #showcase span{
@@ -353,7 +359,10 @@ height: 100%;
 background-size: auto 100%;
 }
 .showcase1 span{
-padding-left: 150%;
+padding-left: 90%;
+}
+.showcase1 div{
+padding: 40px;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* CONTACT */
@@ -592,6 +601,12 @@ justify-content: center;
                 <div class="scrollable">
                     <div class="showcase1">
                     <span style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.1.jpg);"></span>
+                    <div>
+                        <h3>Pulse Football</h3>
+                        <p>An unique and in depth app for true football fans who need more than just the news.</p>
+                        <p>One stop, football at your finger tips. Provided by algorithm not outlet.</p>
+                    </div>
+                    <span style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.2.jpg);"></span>
                     </div>
                 </div>
         </div>

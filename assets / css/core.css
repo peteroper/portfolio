@@ -1,0 +1,442 @@
+/*/////////////////////////////////////////////////////////////*/
+/* MATERIAL ICONS */
+/*/////////////////////////////////////////////////////////////*/
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* CORE */
+  /*/////////////////////////////////////////////////////////////*/
+  *, body{
+  font-family: 'Merriweather','Lora';
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 18px;
+  line-height: 160%;
+  overflow: initial;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  }
+  .b span{
+  font-weight: bold;
+  }
+  h3{
+  margin-bottom: 12px;
+  }
+  .content{
+  padding: 36px 0 68px 0;
+  }
+  .content > div{
+  margin: 0 0 48px 0;
+  }
+  .content > div:last-of-type{
+  margin: 0;
+  }
+  #sliders p,
+  #contact > div p,
+  #posts,
+  #intro{
+  max-width: 724px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* FONT SIZE */
+  /*/////////////////////////////////////////////////////////////*/
+  *, body, p, p b, h1, h2, h3, h4{
+      font-size: 10px;
+  }
+  @media only screen and (max-width: 424px) {
+  *, body, p, b, h1, h2, h3, h4{
+  font-size: 8px;
+  }
+  }
+  h1,h2, h3,h4{
+  font-weight: 700;
+  line-height: 140%; 
+  font-family: Lora;
+  }
+  h1{ font-size: 4.8em; letter-spacing: -1.92px; }
+  h2{ font-size: 2em; font-weight: normal; letter-spacing: 0.8px;  }
+  h3{ font-size: 2.4em; letter-spacing: -1.12px; }
+  #contact h3{ font-size: 3.2em; }
+  h4{ font-size: 2em; font-family: Merriweather; letter-spacing: -0.36px; }
+  p.l{ font-size: 2.2em; line-height: 160%; letter-spacing: -0.48px; }
+  p.m{ font-size: 1.8em; }
+  p{ font-size: 1.6em; }
+  #showcase nav a, .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
+  p.l span{
+  font-size: 1em;
+  }
+  h3 a{
+  font-size: 0.68em;
+  padding-left: 12px;
+  letter-spacing: 0;
+  display: inline-block;
+  font-weight: normal;
+  text-decoration: none;
+  }
+  h3 a:hover{
+  text-decoration: underline;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* HEADER */
+  /*/////////////////////////////////////////////////////////////*/
+  .header div div{
+  position: relative;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-direction: column;
+  }
+  .header h1, .header h2{
+  line-height: 110%;
+  }
+  .header .img{
+  width: 312px;
+  height: 248px;
+  flex-shrink: 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* INTRO */
+  /*/////////////////////////////////////////////////////////////*/
+  #intro p{
+  margin: 0 0 8px 0;
+  }
+  #intro p:last-of-type{
+  margin: 16px 0 0 0;
+  }
+  #intro p b{
+  display: block;
+  margin: 0 0 12px 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* POSTS */
+  /*/////////////////////////////////////////////////////////////*/
+  #posts .post,
+  #posts .post > div{
+  gap: 24px;
+  }
+  #posts .post{
+  display: flex;
+  margin-bottom: 12px;
+  /*align-items: center;*/
+  flex: 1 0 0;
+  }
+  #posts .post:last-of-type{
+  margin-bottom: 0;
+  }
+  #posts .post > div{
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  }
+  #posts .post div div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  }
+  #posts .post .img,
+  #posts .post img{
+  width: 104px;
+  padding-bottom: 8%;
+  display: block;
+  }
+  #posts p{
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  }
+  #posts .icn{
+  width: 20px;
+  height: 20px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* SLIDER */
+  /*/////////////////////////////////////////////////////////////*/
+  #sliders{
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  }
+  #sliders > div{
+  width: 100%;
+  }
+  #sliders p{
+  margin-bottom: 16px;
+  }
+  .slider{
+  width: 100%;
+  height: 228px;
+  padding-bottom: 28px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-horizontal;
+  white-space: nowrap;
+  position: relative;
+  }
+  .slider ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  }
+  .slider li{
+  width: 398px;
+  margin-right: 12px;
+  display: inline-block;
+  vertical-align: top;
+  }
+   .slider .img,
+  .slider img{
+  display: block;
+  width: 100%;
+  padding-bottom: 56%;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* SHOWCASE */
+  /*/////////////////////////////////////////////////////////////*/
+  #showcase nav{
+  margin: 0 0 16px 0;
+  display: flex;
+  gap: 8px;
+  }
+  #showcase nav a{
+  line-height: 48px;
+  padding: 0 16px; 
+  text-decoration: none;
+  }
+  #showcase nav a.selected{
+  border-width: 1px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #showcase .scrollable{
+  width: 100%;
+  height: 540px;
+  flex-shrink: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-horizontal;
+  position: relative;
+  }
+  #showcase .scrollable > div{
+  height: 100%;
+  padding-right: 40px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  .showcase1 div{
+  padding: 40px 40px 40px 0;
+  }
+  .showcase1 div p{
+  width: 440px;
+  margin-bottom: 12px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* CONTACT */
+  /*/////////////////////////////////////////////////////////////*/
+  #contact > div{ 
+  padding: 96px 0 68px 0;
+  }
+  #contact div div{
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  }
+  #contact ul{
+  display: flex;
+  gap: 24px;
+  }
+  #contact a{
+  width: 76px;
+  height: 76px;
+  display: block;
+  text-indent: -5000px;
+  overflow: hidden;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  
+  /* RESPONSIVE */
+  
+  /*/////////////////////////////////////////////////////////////*/
+  /* DESKTOP */
+  /*/////////////////////////////////////////////////////////////*/
+  @media only screen and (min-width: 1024px) {
+  .content,
+  #contact > div,
+  .header div div{
+padding-left: 324px!important;
+  }
+  .mobile-only{
+  display: none;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  .header{
+  height: 274px;
+  overflow: hidden;
+  }
+  .header div div{
+  height: 275px;
+  position: relative;
+  }
+  .header .img{
+  position: absolute;
+  bottom: 0px;
+  left: 12px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  .content{
+  position: relative;
+  }
+  .side-graphic{
+  width:  186px;
+  padding-top: 128%;
+  position: absolute;
+  left: 58px;
+  top: 20px;
+
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #posts .post > div{
+  padding-bottom: 12px;
+  }
+  #posts .post:last-of-type > div{
+  border: 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  /* TABLET */
+  /*/////////////////////////////////////////////////////////////*/
+  @media only screen and (max-width: 1024px) {
+  .header div div{
+  padding: 104px 24px 68px 24px;
+  }
+  .header div div{
+  align-items: center;
+  }
+  .header .img{
+  margin-bottom: 12px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  .web-only{
+  display: none;
+  }
+  .mobile-only{
+  text-align: center;
+  line-height: 48px;
+  position: absolute;
+  top: 16px;
+  left: 0;
+  right: 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  .content{
+  padding: 24px 0 48px 24px;
+  }
+  .content > div{
+  margin: 0 0 28px 0;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #intro{
+  padding-right: 24px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #posts .post .img,
+  #posts .post img{
+  width: 74px;
+  }
+  #posts .post{
+  gap: 12px;    
+  }
+  #posts .post > div{
+  padding-right: 8px;
+  gap: 0;
+  }
+  #posts .post .icn{
+  display: none;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #sliders{
+  gap: 12px;
+  }
+  #sliders p{
+  padding-right: 24px;
+  }
+  .slider li{
+  width: 268px!important;
+  }
+  .slider{
+  height: 154px;
+  padding-bottom: 4px;
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #showcase .scrollable{
+  height: 424px!important;
+  }
+  .showcase1 div p{
+  width: 280px;
+  }
+  .showcase1 img:first-of-type{
+      margin-left: -150px;
+  }
+  #showcase nav{
+  gap: 8px;
+  }
+  #showcase nav a{
+  line-height: 36px;
+  padding: 0 12px; 
+  }
+  /*/////////////////////////////////////////////////////////////*/
+  #contact > div{
+  background-size: 100% auto;
+  text-align: center;
+  align-items: center;
+  padding: 48px 24px 36px 24px;
+  }
+  #contact ul{
+  align-items: center;
+  justify-content: center;
+  }
+  }
+  /*/////////////////////////////////////////////////////////////*/

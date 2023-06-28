@@ -1,0 +1,195 @@
+/*/////////////////////////////////////////////////////////////*/
+/* COLOR */
+/*/////////////////////////////////////////////////////////////*/
+#showcase nav a,
+h3 a,
+#posts h4, #posts h4 a{
+color: #346672;
+}
+body{
+color: #252D34;
+}
+#showcase1,
+#contact,
+.header{
+ color: #FFF;
+}
+#posts .icn{
+color: rgba(0, 0, 0, 0.14);
+}
+p{
+opacity: 0.8;
+}
+#showcase p,
+#posts p{
+opacity: 0.6;
+}
+p.l{
+opacity: 1.0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUNDS */
+/*/////////////////////////////////////////////////////////////*/
+.img{
+background-repeat: no-repeat;
+background-size: 100% auto;
+background-position: 50%;
+}
+#showcase nav a.selected,
+#contact .img,
+body{
+background-color: #FFF;
+}
+#showcase nav a,
+#showcase .scrollable,
+#posts .img, 
+#sliders img {
+background-color: #E3E9F0;
+}
+#contact{
+background-color: #3F464C;
+}
+#showcase1{
+background-color: #000;
+}
+#showcase1 div{
+background: linear-gradient(90deg, #21134E 0%, #000 100%);
+}
+#showcase1 div.hypothesis{
+background: #000;
+}
+.header{
+background-color: #346672;
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header.png);
+background-repeat: no-repeat;
+background-position: 50% 0;
+}
+.header div div{
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png);
+background-repeat: repeat-x;
+background-position: 0 100%;
+}
+#contact > div{
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/contact-shape.png);
+background-repeat: repeat-x;
+background-position: 0 0;
+}
+#contact .img{
+border: 4px #FFF solid;
+}
+#showcase nav a.selected{
+border: 1px solid #E3E9F0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BOX SHADOWS */
+/*/////////////////////////////////////////////////////////////*/
+.img.e1{
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
+}
+/*/////////////////////////////////////////////////////////////*/
+/* RADIUS */
+/*/////////////////////////////////////////////////////////////*/
+#showcase .scrollable > div,
+#showcase .scrollable > div span:first-of-type,
+#showcase .scrollable{
+border-radius: 16px 0 0 16px;
+-webkit-border-radius: 16px 0 0 16px;
+-moz-border-radius: 16px 0 0 16px;
+}
+#contact .img,
+#posts .img, 
+#posts img{
+border-radius: 8px;
+-webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+.slider ul li:first-of-type .img{
+border-radius: 16px 0 0 16px;
+-webkit-border-radius: 16px 0 0 16px;
+  -moz-border-radius: 16px 0 0 16px;
+}
+.slider ul li:last-of-type .img{
+border-radius: 0 16px 16px 0;
+-webkit-border-radius: 0 16px 16px 0;
+  -moz-border-radius: 0 16px 16px 0;
+}
+#showcase nav a{
+border-radius: 100px;
+-webkit-border-radius: 100px;
+  -moz-border-radius: 100px; 
+}
+/*/////////////////////////////////////////////////////////////*/
+/* HEADER */
+/*/////////////////////////////////////////////////////////////*/
+.header .img{
+background-size: 100% auto;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* POSTS */
+/*/////////////////////////////////////////////////////////////*/
+#posts .post .img,
+#posts .post img{
+background-size: auto 100%;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* SLIDER */
+/*/////////////////////////////////////////////////////////////*/
+ .slider .img,
+.slider img,
+#contact a{
+background-size: 100% auto;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+/* RESPONSIVE */
+
+/*/////////////////////////////////////////////////////////////*/
+/* DESKTOP */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1024px) {
+
+.header{
+background-position: 100% 0;
+}
+.header > div{
+background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+.side-graphic{
+background-size: 100% auto;
+background-repeat: no-repeat;
+}
+/*/////////////////////////////////////////////////////////////*/
+#posts .post > div{
+border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+#posts .post .img,
+#posts .post img{
+background-size: 100% auto;
+}
+/*/////////////////////////////////////////////////////////////*/
+}
+/*/////////////////////////////////////////////////////////////*/
+/* TABLET */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 1024px) {
+.header{
+background-size: 125% auto;
+}
+.header div div{
+background-size: 100% auto;
+}
+.header > div{
+background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+.mobile-only{
+background-color: #2883BA;
+color: #FFF;
+}
+/*/////////////////////////////////////////////////////////////*/
+#contact > div{
+background-size: 100% auto;
+}
+}
+/*/////////////////////////////////////////////////////////////*/

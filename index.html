@@ -14,6 +14,7 @@
 <!--script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
+$(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
     $( ".tab-menu a").removeClass('selected');
@@ -21,6 +22,7 @@ $( ".tab-menu a").on( "click", function() {
     $( ".tab-container").removeClass('tab-selected');
     $(""+id+"").addClass('tab-selected');
     return false;
+});
 });
 </script>
 <style>

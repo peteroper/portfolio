@@ -19,6 +19,7 @@ $( ".tab-menu a").on( "click", function() {
     $(this).addClass('selected');
     $( ".tab-container").removeClass('tab-selected');
     $(""+id+"").addClass('tab-selected');
+    return false;
 });
 </script>
 <style>

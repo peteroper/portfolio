@@ -11,6 +11,16 @@
 <meta property="og:image" content="https://peteroper.github.io/portfolio/assets/imgs/icon-og.jpg">
 <link rel="stylesheet" href="https://peteroper.github.io/portfolio/assets/css/core.css">
 <link rel="stylesheet" href="https://peteroper.github.io/portfolio/assets/css/styles.css">
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script>
+$( ".tab-menu a").on( "click", function() {
+    var id = $(this).attr('id');
+    $( ".tab-menu a").removeClass('selected');
+    $(this).addClass('selected');
+    $( ".tab-container").removeClass('tab-selected');
+    $(""+id+"").addClass('tab-selected');
+});
+</script>
 <style>
 /*/////////////////////////////////////////////////////////////*/
 /* MATERIAL ICONS */
@@ -690,10 +700,10 @@ justify-content: center;
         <div id="showcase" >
                 <h3>Showcase</h3>
                 <nav class="tab-menu">
-                    <a href="#" class="selected">Pulse Football</a>
+                    <a href="#showcase1" class="selected">Pulse Football</a>
                     <!--a href="#">Japanesey</a-->
-                    <a href="#">Adventure Sports</a>
-                    <a href="#">Kokonotori Navi</a>
+                    <a href="#showcase2">Adventure Sports</a>
+                    <a href="#showcase3">Kokonotori Navi</a>
                 </nav>
                 <div class="scrollable">
                     <div id="showcase1" class="tab-container tab-selected">

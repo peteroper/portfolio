@@ -255,11 +255,10 @@ display: none!important;
 .tab-container.tab-selected{
 display: flex!important;
 }
-/*/////////////////////////////////////////////////////////////*/
-#showcase1 div{
+.tab-container div{
 padding: 40px;
 }
-#showcase1 div p{
+.tab-container div p{
 width: 440px;
 margin-bottom: 12px;
 }

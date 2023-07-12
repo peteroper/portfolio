@@ -28,9 +28,9 @@ $(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
     var parent = $(this).parents('.tab-block').attr('id');
-    $("#"+parent+" .tab-menu a").removeClass('selected');
+    $( ".tab-menu a").removeClass('selected');
     $(this).addClass('selected');
-    $("#"+parent+" .tab-container").removeClass('tab-selected');
+    $( ".tab-container").removeClass('tab-selected');
     $("#"+parent+" "+id+"").addClass('tab-selected');
     return false;
 });
@@ -152,6 +152,9 @@ text-decoration: none;
 }
 a:hover{
 text-decoration: underline;
+}
+@media only screen and (max-width: 424px) {
+h4{ font-size: 1.8em;  }
 }
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
@@ -646,13 +649,6 @@ gap: 0;
 #posts .post .icn{
 display: none;
 }
-#posts nav{
-right: 24px;
-}
-#posts nav a{
-width: 28px;
-line-height: 28px;
-}
 /*/////////////////////////////////////////////////////////////*/
 #sliders{
 gap: 12px;
@@ -698,6 +694,47 @@ justify-content: center;
 }
 }
 /*/////////////////////////////////////////////////////////////*/
+/* MOBILE */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 424px) {
+ #posts .post{
+width: 324px;
+ }
+#posts nav{
+display: none;
+}
+#posts .post .img, 
+#posts .post img{
+height: 52px;
+padding-bottom: 0;
+}
+#posts .posts-scrollable{
+width: 100%;
+height: 210px;
+flex-shrink: 0;
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+overflow: -moz-scrollbars-horizontal;
+position: relative;
+}
+#posts .posts-scrollable > div{
+height: 100%;
+display: flex;
+gap: 16px;
+flex-direction: row;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+}
+#posts .posts-scrollable .tab-container{
+    display: flex!important;
+    flex-direction: column;
+}
+/*/////////////////////////////////////////////////////////////*/
+}
+/*/////////////////////////////////////////////////////////////*/
 </style>
 </head>
 <body>
@@ -726,6 +763,7 @@ justify-content: center;
                 <a href="#posts2">2</a>
                 <a href="#posts3">3</a>
             </nav>
+            <div class="posts-scrollable"><div>
             <!-- POSTS TAB 1 -->
             <div id="posts1" class="tab-container tab-selected">
                 <div class="post">
@@ -744,7 +782,7 @@ justify-content: center;
                     <div class="contents">
                         
                         <div>
-                            <h4><a href="https://peteroper.notion.site/The-Importance-of-a-Design-System-e0d344b59def4fdba7c121ba9c1219c0" title="The Importance of a Design System" target="_blank">Importance of a Design System</a></h4>
+                            <h4><a href="https://peteroper.notion.site/The-Importance-of-a-Design-System-e0d344b59def4fdba7c121ba9c1219c0" title="The Importance of a Design System" target="_blank">Design System Importance</a></h4>
                             <p>Is crucial in developing a consistent app.</p>
                         </div>
                         <span class="icn material-icons">chevron_right</span>
@@ -782,7 +820,7 @@ justify-content: center;
                     <div class="contents">
                         
                         <div>
-                            <h4><a href="https://peteroper.notion.site/Visual-Hierachy-Promoting-Engagement-fd774fcefbc040f49741143d7b6f88ca?pvs=4" title="Visual Hierachy & Promoting Engagement" target="_blank">Visual Hierachy & Engagement</a></h4>
+                            <h4><a href="https://peteroper.notion.site/Visual-Hierachy-Promoting-Engagement-fd774fcefbc040f49741143d7b6f88ca?pvs=4" title="Visual Hierachy & Promoting Engagement" target="_blank">Hierachy & Engagement</a></h4>
                             <p>Visual Hierachy principle and Engagement techniques.</p>
                         </div>
                         <span class="icn material-icons">chevron_right</span>
@@ -793,7 +831,7 @@ justify-content: center;
                     <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
                     <div class="contents">
                         <div>
-                            <h4><a href="https://peteroper.notion.site/Design-Ops-isn-t-just-Systems-ac358d9719af4bb7b09a6806f7db9ebb?pvs=4" title="https://peteroper.notion.site/Advocating-a-Design-Culture-1770b2d30df8473d92cc6fbf4004f2b7?pvs=4" target="_blank">Advocating for a Design Culture</a></h4>
+                            <h4><a href="https://peteroper.notion.site/Design-Ops-isn-t-just-Systems-ac358d9719af4bb7b09a6806f7db9ebb?pvs=4" title="https://peteroper.notion.site/Advocating-a-Design-Culture-1770b2d30df8473d92cc6fbf4004f2b7?pvs=4" target="_blank">Advocating a Design Culture</a></h4>
                             <p>Thoughts regarding team dynamics and growth.</p>
                         </div> 
                         <span class="icn material-icons">chevron_right</span>
@@ -837,6 +875,7 @@ justify-content: center;
                     </div>   
                 </div>
                 <!-- post 3 -->
+            </div></div>
             </div>
         </div>
         <!-- posts ends -->

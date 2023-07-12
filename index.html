@@ -27,7 +27,7 @@
 $(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
-    var parent = $(this).parent('.tab-block').attr('id');
+    var parent = $(this).parents('.tab-block').attr('id');
     $("#"+parent+" .tab-menu a").removeClass('selected');
     $(this).addClass('selected');
     $("#"+parent+" .tab-container").removeClass('tab-selected');

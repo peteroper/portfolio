@@ -648,10 +648,34 @@ display: none;
 }
 #posts nav{
 right: 24px;
+display: none;
 }
 #posts nav a{
 width: 28px;
 line-height: 28px;
+}
+#posts .post-scrollable{
+width: 100%;
+height: 204px;
+flex-shrink: 0;
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+overflow: -moz-scrollbars-horizontal;
+position: relative;
+}
+#posts .post-scrollable div{
+height: 100%;
+display: flex;
+gap: 16px;
+flex-direction: column;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+}
+#posts .post-scrollable .tab-container{
+    width: 298px;
 }
 /*/////////////////////////////////////////////////////////////*/
 #sliders{
@@ -726,6 +750,7 @@ justify-content: center;
                 <a href="#posts2">2</a>
                 <a href="#posts3">3</a>
             </nav>
+            <div class="posts-scrollable"><div>
             <!-- POSTS TAB 1 -->
             <div id="posts1" class="tab-container tab-selected">
                 <div class="post">
@@ -837,6 +862,7 @@ justify-content: center;
                     </div>   
                 </div>
                 <!-- post 3 -->
+            </div></div>
             </div>
         </div>
         <!-- posts ends -->

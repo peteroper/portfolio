@@ -27,10 +27,11 @@
 $(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
+    var parent = $(this).parents('.tab-block').attr('id');
     $( ".tab-menu a").removeClass('selected');
     $(this).addClass('selected');
     $( ".tab-container").removeClass('tab-selected');
-    $(""+id+"").addClass('tab-selected');
+    $("#"+parent+" "+id+"").addClass('tab-selected');
     return false;
 });
 });
@@ -718,7 +719,7 @@ justify-content: center;
         <!-- intro ends -->
          
         <!-- posts start -->
-        <div id="posts">
+        <div id="posts" class="tab-block">
             <h3>Design Journal</h3>
             <nav class="tab-menu">
                 <a href="#posts1" class="selected">1</a>
@@ -842,7 +843,7 @@ justify-content: center;
          
 
         <!-- showcase -->
-        <div id="showcase" >
+        <div id="showcase" class="tab-block">
                 <h3>Showcase</h3>
                 <nav class="tab-menu">
                     <a href="#showcase1" class="selected">Pulse Football</a>

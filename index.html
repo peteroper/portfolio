@@ -27,10 +27,11 @@
 $(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
+    var parent = $(this).parents('.tab-block').attr('id');
     $( ".tab-menu a").removeClass('selected');
     $(this).addClass('selected');
     $( ".tab-container").removeClass('tab-selected');
-    $(""+id+"").addClass('tab-selected');
+    $("#"+parent+" "+id+"").addClass('tab-selected');
     return false;
 });
 });
@@ -134,7 +135,7 @@ h4{ font-size: 2em; font-family: Merriweather; letter-spacing: -0.36px; }
 p.l{ font-size: 2.2em; line-height: 160%; letter-spacing: -0.48px; }
 p.m{ font-size: 1.8em; }
 li, p{ font-size: 1.6em; }
-#resume nav a, #showcase nav a, .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
+#resume nav a, #posts nav a, #showcase nav a, .posts p{ font-size: 1.4em; line-height: 140%; letter-spacing: -0.28px; }
 h4 a, p.l span{
 font-size: 1em;
 }
@@ -193,6 +194,7 @@ background-position: 50%;
 body{
 background-color: #FFF;
 }
+#posts nav a.selected,
 #showcase nav a.selected,
 #showcase .scrollable,
 #posts .img, 
@@ -210,6 +212,13 @@ background: linear-gradient(90deg, #21134E 0%, #000 100%);
 }
 #showcase1 div.hypothesis{
 background: #000;
+}
+#showcase2{
+color: #222;
+background-color: #EEAD50;
+}
+#showcase2 div.hypothesis{
+background-color: #EF8E8C;
 }
 .header{
 background-color: #346672;
@@ -230,6 +239,7 @@ background-position: 0 0;
 #contact .img{
 border: 4px #FFF solid;
 }
+#posts nav a,
 #showcase nav a{
 border: 1px solid #E3E9F0;
 }
@@ -266,6 +276,7 @@ border-radius: 0 16px 16px 0;
 -webkit-border-radius: 0 16px 16px 0;
   -moz-border-radius: 0 16px 16px 0;
 }
+#posts nav a,
 #showcase nav a{
 border-radius: 100px;
 -webkit-border-radius: 100px;
@@ -306,6 +317,9 @@ margin: 0 0 12px 0;
 /*/////////////////////////////////////////////////////////////*/
 /* POSTS */
 /*/////////////////////////////////////////////////////////////*/
+#posts{
+    position: relative;
+}
 #posts .post,
 #posts .post > div{
 gap: 24px;
@@ -345,6 +359,22 @@ align-self: stretch;
 #posts .icn{
 width: 20px;
 height: 20px;
+}
+#posts .tab-container.tab-selected{
+    flex-direction: column;
+}
+#posts nav{
+    position: absolute;
+    top: -1px;
+    right: 0;
+}
+#posts nav a{
+    display: inline-block;
+    width: 36px;
+    line-height: 36px;
+    text-align: center;
+    margin: 0 0 0 4px;
+    text-decoration: none;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* SLIDER */
@@ -435,10 +465,10 @@ display: none!important;
 .tab-container.tab-selected{
 display: flex!important;
 }
-.tab-container div{
+#showcase .tab-container div{
 padding: 40px;
 }
-.tab-container div p{
+#showcase .tab-container div p{
 width: 440px;
 margin-bottom: 12px;
 }
@@ -616,6 +646,13 @@ gap: 0;
 #posts .post .icn{
 display: none;
 }
+#posts nav{
+right: 24px;
+}
+#posts nav a{
+width: 28px;
+line-height: 28px;
+}
 /*/////////////////////////////////////////////////////////////*/
 #sliders{
 gap: 12px;
@@ -634,6 +671,7 @@ padding-bottom: 4px;
 #showcase .scrollable{
 height: 424px!important;
 }
+#showcase2 div p,
 #showcase1 div p{
 width: 343px;
 }
@@ -664,7 +702,7 @@ justify-content: center;
 </head>
 <body>
 <div class="header"><div>
-    <p class="mobile-only">Full Information in Desktop Browsing</p>
+    <p class="mobile-only">Full Information when Desktop Browsing</p>
     <div>
         <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar2.png);"></span>
         <h1>Peter Roper</h1>
@@ -681,8 +719,15 @@ justify-content: center;
         <!-- intro ends -->
          
         <!-- posts start -->
-        <div id="posts">
-                <h3>Design Journal <a href="https://peteroper.notion.site/About-this-Design-Journal-afb8ecb77db7481880f3e211a3e8c2b9" title="Notion Design Journal" target="_blank">Notion Introduction</a></h3>
+        <div id="posts" class="tab-block">
+            <h3>Design Journal</h3>
+            <nav class="tab-menu">
+                <a href="#posts1" class="selected">1</a>
+                <a href="#posts2">2</a>
+                <a href="#posts3">3</a>
+            </nav>
+            <!-- POSTS TAB 1 -->
+            <div id="posts1" class="tab-container tab-selected">
                 <div class="post">
                     <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-1.jpg);" ></span>
                     <div class="contents">
@@ -717,12 +762,88 @@ justify-content: center;
                     </div>   
                 </div>
                 <!-- post 3 -->
+            </div>
+
+            <!-- POSTS TAB 2 -->
+            <div id="posts2" class="tab-container">
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        <div>
+                            <h4><a href="https://peteroper.notion.site/A-Hard-Fast-Agile-Process-f6c895bd82b6440daf4622dc3b3bb40b?pvs=4" title="A Hard, Fast & Agile Process" target="_blank">A Hard, Fast & Agile Process</a></h4>
+                            <p>A specific process to accelarate the conceptualisation phase.</p>
+                        </div>
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 1 -->
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        
+                        <div>
+                            <h4><a href="https://peteroper.notion.site/Visual-Hierachy-Promoting-Engagement-fd774fcefbc040f49741143d7b6f88ca?pvs=4" title="Visual Hierachy & Promoting Engagement" target="_blank">Visual Hierachy & Promoting Engagement</a></h4>
+                            <p>Visual Hierachy principle and Engagement techniques.</p>
+                        </div>
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 2 -->
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        <div>
+                            <h4><a href="https://peteroper.notion.site/Design-Ops-isn-t-just-Systems-ac358d9719af4bb7b09a6806f7db9ebb?pvs=4" title="https://peteroper.notion.site/Advocating-a-Design-Culture-1770b2d30df8473d92cc6fbf4004f2b7?pvs=4" target="_blank">Advocating for a Design Culture</a></h4>
+                            <p>Thoughts regarding team dynamics and growth.</p>
+                        </div> 
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 3 -->
+            </div>
+            <!-- POSTS TAB 3 -->
+            <div id="posts3" class="tab-container">
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        <div>
+                            <h4><a href="https://peteroper.notion.site/Football-Design-Principles-71f1ccd0d5054f2f81233868c6f101f2?pvs=4" title="Football & Design Principles" target="_blank">Football & Design Principles</a></h4>
+                            <p>Modern Football and its parallels with Design teams</p>
+                        </div>
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 1 -->
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        
+                        <div>
+                            <h4><a href="https://peteroper.notion.site/The-Importance-of-a-Design-System-e0d344b59def4fdba7c121ba9c1219c0" title="Proactivity & Being that Guy" target="_blank">Proactivity & Being that Guy</a></h4>
+                            <p>Why leveraging this characteristic is beneficial for Prod Dev</p>
+                        </div>
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 2 -->
+                <div class="post">
+                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span>
+                    <div class="contents">
+                        <div>
+                            <h4><a href="https://www.notion.so/peteroper/About-this-Design-Journal-afb8ecb77db7481880f3e211a3e8c2b9?pvs=4" title="About this Design Journal" target="_blank">About this Design Journal</a></h4>
+                            <p>Why I started writing and how it assists me.</p>
+                        </div> 
+                        <span class="icn material-icons">chevron_right</span>
+                    </div>   
+                </div>
+                <!-- post 3 -->
+            </div>
         </div>
         <!-- posts ends -->
          
 
         <!-- showcase -->
-        <div id="showcase" >
+        <div id="showcase" class="tab-block">
                 <h3>Showcase</h3>
                 <nav class="tab-menu">
                     <a href="#showcase1" class="selected">Pulse Football</a>
@@ -786,7 +907,7 @@ justify-content: center;
             <h3>Resume</h3>
             <p>My resume can be downloaded in PDF format. Please feel free to contact me if alternative doc or styling formats are required.</p>
             <nav>
-                <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume12072023.pdf" target="_blank" title="PDF Resume"><span class="icn" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/PDF_24.png);"></span>PDF Resume</a>
+                <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume09072023.pdf" target="_blank" title="PDF Resume"><span class="icn" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/PDF_24.png);"></span>PDF Resume</a>
                 <!--a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume07072023.doc" target="_blank" title="Document Resume"><span class="icn" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/Google_Docs_24.png);"></span>Document Resume : Coming Soon</a-->
             </nav>
         </div>
@@ -807,3 +928,4 @@ justify-content: center;
 </div></div>
 </body>
 </html>
+

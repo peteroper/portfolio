@@ -28,9 +28,9 @@ $(document).ready(function(){
 $( ".tab-menu a").on( "click", function() {
     var id = $(this).attr('href');
     var parent = $(this).parents('.tab-block').attr('id');
-    $( ".tab-menu a").removeClass('selected');
+    $("#"+parent+" .tab-menu a").removeClass('selected');
     $(this).addClass('selected');
-    $( ".tab-container").removeClass('tab-selected');
+    $("#"+parent+" .tab-container").removeClass('tab-selected');
     $("#"+parent+" "+id+"").addClass('tab-selected');
     return false;
 });

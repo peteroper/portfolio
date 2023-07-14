@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <meta name="theme-color" content="#346672">
 <link rel="apple-touch-icon" href="https://peteroper.github.io/portfolio/assets/imgs/icon-apple.jpg">
 <meta property="og:image" content="https://peteroper.github.io/portfolio/assets/imgs/icon-og.jpg">
@@ -79,7 +80,7 @@ $( ".tab-menu a").on( "click", function() {
 /* CORE */
 /*/////////////////////////////////////////////////////////////*/
 *, body{
-font-family: 'Merriweather','Lora';
+font-family: 'Raleway';
 padding: 0;
 margin: 0;
 border: 0;
@@ -87,6 +88,13 @@ font-size: 18px;
 line-height: 160%;
 overflow: initial;
 -webkit-font-smoothing: subpixel-antialiased !important;
+}
+h1,h2,h3,h4,p.l span,p.l,h4 a{
+font-family: 'Merriweather','Lora';
+}
+#showcase p.l,
+p{
+font-family: 'Raleway';
 }
 .b span{
 font-weight: bold;
@@ -906,7 +914,7 @@ right: 0;
                     </div>
                     <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.2.jpg" />
                     <div class="hypothesis">
-                        <h3>Football at your finger tips</h3>
+                        <p class="l">Football at your finger tips</p>
                         <p>Over the last 7-8 years I have noticed football related products becoming more sophisticated. Notable applications would include Fantasy Premier League, Transfermarkt and One Football.</p>
                         <p>Although One Football is pushing boundaries, football news still feels trapped in an outdated media format, where information is spread across multiple articles.</p>
                         <p>Thanks to the advent of AI, it is now possible to aggregate and combine football information to cater to users' specific needs. This includes providing comprehensive analysis, data insights, and an all-in-one football experience.</p>

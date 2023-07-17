@@ -253,7 +253,7 @@ background-repeat: repeat-x;
 background-position: 0 100%;
 }
 #contact > div{
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/contact-shape.png);
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/contact-shape-batsu.png);
 background-repeat: repeat-x;
 background-position: 0 0;
 }
@@ -545,13 +545,13 @@ overflow: hidden;
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 1024px) {
+.mobile-only{
+display: none;
+}
 .content,
 #contact > div,
 .header div div{
-   padding-left: 324px!important;
-}
-.mobile-only{
-display: none;
+   padding-left: 40px!important;
 }
 /*/////////////////////////////////////////////////////////////*/
 .header{
@@ -559,13 +559,15 @@ height: 274px;
 overflow: hidden;
 }
 .header div div{
+width: 724px;
 height: 275px;
 position: relative;
 }
 .header .img{
+margin-top: -124px;
 position: absolute;
-bottom: 0px;
-left: 12px;
+top: 50%;
+right: 0;
 }
 .header{
 background-position: 100% 0;

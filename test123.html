@@ -247,7 +247,7 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-b
 background-repeat: no-repeat;
 background-position: 50% 0;
 }
-.header div div{
+.header div{
 background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png);
 background-repeat: repeat-x;
 background-position: 0 100%;
@@ -549,11 +549,9 @@ overflow: hidden;
 display: none;
 }
 .content,
-#contact > div{
-    padding-left: 40px!important;    
-}
+#contact > div,
 .header div div{
-   padding-left: 278px!important;
+padding-left: 40px!important;
 }
 /*/////////////////////////////////////////////////////////////*/
 .header{
@@ -561,15 +559,17 @@ height: 274px;
 overflow: hidden;
 }
 .header div div{
+width: 724px;
 height: 275px;
 position: relative;
 }
 .header .img{
 position: absolute;
-left: 12px;
+right: 0;
 top: 50%;
 margin-top: -100px;
-scale: 80%;
+width: 250px;
+height: 200px;
 }
 .header{
 background-position: 100% 0;

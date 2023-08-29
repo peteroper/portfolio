@@ -149,6 +149,13 @@ width: 220px;
     margin-bottom: 0 0 4px;
     display: block;
 }
+.navi nav a{
+    display: none;
+}
+.navi nav a:first-of-type,
+.navi .selected a{
+    display: block;
+}
 /*/////////////////////////////////////////////////////////////*/
 /* CONTENT */
 /*/////////////////////////////////////////////////////////////*/
@@ -189,8 +196,8 @@ margin: bottom 16px;
 <body>
 <div class="container">
 <div class="navi">
-    <nav>
-        <a href="#overview">Overview</a>
+    <nav class="selected">
+        <a href="#overview" class="selected">Overview</a>
         <a href="#project">Project</a>
         <a href="#product">Product</a>
         <a href="#context">Context</a>

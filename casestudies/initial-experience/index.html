@@ -43,7 +43,7 @@
   $('nav a').on('click', function(event) {
     event.preventDefault();
     var target = $(this).attr('href');
-    var targetOffset = $(target).offset().top;
+    var targetOffset = $(target).offset().top - 36;
 
     $('html, body').animate({
       scrollTop: targetOffset

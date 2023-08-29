@@ -61,8 +61,8 @@
       
       if (scrollTop >= sectionTop - 36) {
         var sectionId = $(this).attr('id');
+        $('nav, nav a').removeClass('selected');
         $('nav a[href="#' + sectionId + '"]').parent().addClass('selected');
-        $('nav a').removeClass('selected');
         $('nav a[href="#' + sectionId + '"]').addClass('selected');
       }
     });

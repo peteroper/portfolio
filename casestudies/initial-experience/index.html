@@ -111,12 +111,19 @@ h4{ font-size: 1.8em;  }
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
 .section p{
-opacity: 0.68%;
+opacity: 68%;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUND */
+/*/////////////////////////////////////////////////////////////*/
+.section .img{
+background-color: #E9E9ED;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
 /*/////////////////////////////////////////////////////////////*/
 .container{
+display: flex;
 flex-direction: column;
 }
 .navi{
@@ -125,14 +132,33 @@ width: 220px;
 .body{
 width: 748px;
 }
-#section{
-    padding: 0 0 68px 0;
-    margin: 0 0 68px 0;
-    border-width: 0 0 1px 0;
-    border-style: solid;
+.section{
+padding: 0 0 68px 0;
+margin: 0 0 68px 0;
+border-width: 0 0 1px 0;
+border-style: solid;
 }
-#section p{
+.segment{
+padding: 0 0 36px 0;
+}
+.segment h4{
+margin-bottom: 12px;
+}
+.segment p{
 max-width: 668px;
+margin: bottom 16px;
+}
+.segment .img{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+}
+.segment .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 /*/////////////////////////////////////////////////////////////*/
 </style>

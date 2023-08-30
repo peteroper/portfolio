@@ -61,7 +61,7 @@
     $('.section, .segment').each(function() {
       var sectionTop = $(this).offset().top;
 
-      if (scrollTop >= sectionTop - offsetValue) {
+      if (scrollTop == sectionTop - offsetValue) {
         var sectionId = $(this).attr('id');
 
         navLinks.removeClass('selected');
@@ -148,9 +148,6 @@ overflow: initial;
 }
 .b span{
 font-weight: bold;
-}
-h3{
-margin-bottom: 12px;
 }
 li{ list-style-position: inside;}
 

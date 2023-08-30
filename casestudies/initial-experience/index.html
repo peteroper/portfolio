@@ -209,6 +209,9 @@ opacity: 68%;
 .navi a{
 color: #000;
 }
+.special ul li h4:before{
+color: #FFF;
+}
 h3,
 .navi nav.selected a:first-of-type,
 .navi nav .selected{
@@ -220,6 +223,12 @@ h3,
 .navi .back,
 .section .img{
 background-color: #E9E9ED;
+}
+.special{
+background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
+}
+.special ul li h4:before{
+background: #88A4AA;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* BORDERS */
@@ -316,6 +325,10 @@ border: 0;
 /*/////////////////////////////////////////////////////////////*/
 /* SEGMENT */
 /*/////////////////////////////////////////////////////////////*/
+
+/* PROJECT */
+
+/*/////////////////////////////////////////////////////////////*/
 #project ul{
     padding-top: 36px;
     list-style-type: none;
@@ -332,6 +345,25 @@ border: 0;
     display: inline-block;
     border-radius: 100px;
     margin-right: 4px;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+/* SPECIAL */
+
+/*/////////////////////////////////////////////////////////////*/
+.special ul{
+    display: flex;
+    gap: 16px;
+}
+.special ul li{
+    width: 50%;
+    padding: 20px;
+    border-radius: 4px;
+}
+.special ul li h4:before{
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 8px;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TABLETS */
@@ -473,9 +505,28 @@ padding: 16px;
                 <li>App UI is text rich and requires high level of user comprehension.</li>
             </ol>
         </div>
-        <div id="goal" class="segment">
+        <div id="goal" class="segment special">
             <h4>Goal</h4>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
+            <h4>Success Metrics</h4>
+            <ul>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+            </ul>
         </div>
     </div>
     <!-- Definition END -->

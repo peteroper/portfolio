@@ -43,8 +43,19 @@
   var navLinks = $('nav a');
   var navBar = $('nav');
   var offsetValue = 36;
+  var isScrolling = false;
 
   $(window).on('scroll', function() {
+    if (!isScrolling) {
+      isScrolling = true;
+      setTimeout(function() {
+        checkScrollPosition();
+        isScrolling = false;
+      }, 100); // Adjust the throttle interval as needed
+    }
+  });
+
+  function checkScrollPosition() {
     var scrollTop = $(window).scrollTop();
 
     $('.section, .segment').each(function() {
@@ -62,7 +73,7 @@
         }
       }
     });
-  });
+  }
 
   navLinks.on('click', function(event) {
     event.preventDefault();

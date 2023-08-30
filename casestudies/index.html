@@ -374,6 +374,12 @@ margin: bottom 16px;
   background-repeat: no-repeat;
   background-size: auto 100%;
 }
+.tab-container{
+display: none!important;
+}
+.tab-container.tab-selected{
+display: flex!important;
+}
 /*/////////////////////////////////////////////////////////////*/
 /* INTRO */
 /*/////////////////////////////////////////////////////////////*/
@@ -518,13 +524,10 @@ top: 0;
 left: 0;
 right: 0;
 }
-.tab-container{
-display: flex!important;
-}
-#showcase .tab-container div{
+#showcase div{
 padding: 40px;
 }
-#showcase .tab-container div p{
+#showcase div p{
 width: 440px;
 margin-bottom: 12px;
 }
@@ -802,9 +805,9 @@ right: 0;
             <h3><a href="https://peteroper.github.io/portfolio/casestudies/initial-experience/">Content Navigation</a></h3>
             <span class="img"></span>
         </div>
-        <div id="adventurecards" class="scrollable segment">
+        <div id="adventurecards" class="segment">
             <h3><a href="">Information Architecture</a></h3>
-            <div id="showcase2">
+            <div id="showcase2" class="scrollable">
                 <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase2.1.jpg" />
                 <div>
                     <p class="l">Adventure Card is an Adventure Sports and Events organisation with upwards of 100 exciting activities found at over 5000 venues located in The UK and Australia.</p>
@@ -835,28 +838,29 @@ right: 0;
                 <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase2.4.jpg" />
             </div>
         </div>
-        <div id="pulse-football" class="scrollable segment">
-            <div id="showcase1">
+        <div id="pulse-football" class="segment">
+            <h3><a href="">Pulse Football</a></h3>
+            <div id="showcase1" class="scrollable">
                 <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.1.jpg" />
-            <div>     
-                <p class="l">Pulse Football is a one stop indepth app for fans who need more than just the news.</p>
-                <p>Many football fans obsess over the tiniest piece of information. However finding this information involves searching across numerous websites and media platforms to get a comprehensive understanding of whats happening on a daily basis.</p>
-                <p class="l">Product Overview</p>
-                <ol>
-                    <li>All in one application: news, analysis & community.</li>
-                    <li>Apply IA to simplify information gathering.</li>
-                    <li>Refine information based on user interests.</li>
-                    <li>Create Seemless UX with interaction and transitions.</li>
-                </ol>
-            </div>
-            <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.2.jpg" />
-            <div class="hypothesis">
-                <p class="l">Football at your finger tips</p>
-                <p>Over the last 7-8 years I have noticed football related products becoming more sophisticated. Notable applications would include Fantasy Premier League, Transfermarkt and One Football.</p>
-                <p>Although One Football is pushing boundaries, football news still feels trapped in an outdated media format, where information is spread across multiple articles.</p>
-                <p>Thanks to the advent of AI, it is now possible to aggregate and combine football information to cater to users' specific needs. This includes providing comprehensive analysis, data insights, and an all-in-one football experience.</p>
-            </div>
-            <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.3.jpg" />
+                <div>     
+                    <p class="l">Pulse Football is a one stop indepth app for fans who need more than just the news.</p>
+                    <p>Many football fans obsess over the tiniest piece of information. However finding this information involves searching across numerous websites and media platforms to get a comprehensive understanding of whats happening on a daily basis.</p>
+                    <p class="l">Product Overview</p>
+                    <ol>
+                        <li>All in one application: news, analysis & community.</li>
+                        <li>Apply IA to simplify information gathering.</li>
+                        <li>Refine information based on user interests.</li>
+                        <li>Create Seemless UX with interaction and transitions.</li>
+                    </ol>
+                </div>
+                <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.2.jpg" />
+                <div class="hypothesis">
+                    <p class="l">Football at your finger tips</p>
+                    <p>Over the last 7-8 years I have noticed football related products becoming more sophisticated. Notable applications would include Fantasy Premier League, Transfermarkt and One Football.</p>
+                    <p>Although One Football is pushing boundaries, football news still feels trapped in an outdated media format, where information is spread across multiple articles.</p>
+                    <p>Thanks to the advent of AI, it is now possible to aggregate and combine football information to cater to users' specific needs. This includes providing comprehensive analysis, data insights, and an all-in-one football experience.</p>
+                </div>
+                <img src="https://peteroper.github.io/portfolio/assets/imgs/showcase1.3.jpg" />
             </div>
         </div>
     </div>

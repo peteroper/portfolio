@@ -379,11 +379,14 @@ flex: 1;
   display: inline-block;
   white-space: nowrap;
 }
-.gallery .img{
+.gallery .wrap{
   display: inline-block;
-  width: 300px; 
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  width: 624px; 
   margin-right: 12px; 
+}
+.gallery .wrap .img{
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
 }
 /*/////////////////////////////////////////////////////////////*/
 
@@ -654,10 +657,9 @@ padding: 16px;
             <h4>Insights</h4>
             <div class="gallery-container">
                 <div class="gallery">
-                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span>
-                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span>
-                    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span>
-                </div>
+                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
               </div>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
         </div>

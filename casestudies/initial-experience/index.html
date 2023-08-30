@@ -78,6 +78,44 @@
 </script>
 <style>
 /*/////////////////////////////////////////////////////////////*/
+/* MATERIAL ICONS */
+/*/////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/*/////////////////////////////////////////////////////////////*/
 /* CORE */
 /*/////////////////////////////////////////////////////////////*/
 *, body{
@@ -244,6 +282,7 @@ margin: bottom 16px;
 .segment .img{
   position: relative;
   width: 100%;
+  margin-bottom: 12px;
   padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
   display: block;
   border-radius: 4px;
@@ -284,6 +323,7 @@ border: 0;
 <body>
 <div class="container">
 <div class="navi sticky-element">
+    <a href="/casestudies/" class="back"><span class="icn material-icons">chevron_right</span></a>
     <nav class="selected">
         <a href="#overview" class="selected">Overview</a>
         <a href="#project">Project</a>
@@ -333,6 +373,7 @@ border: 0;
     
     <!-- Overview -->
     <div id="overview" class="section">
+        <h3>Intial Experience Revamp</h3>
         <div id="project" class="segment">
             <h4>Project</h4>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>

@@ -227,14 +227,14 @@ background-color: #E9E9ED;
 /*/////////////////////////////////////////////////////////////*/
 .container{
 display: flex;
-gap: 96px;
+gap: 0;
 padding: 96px 0 0 96px;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* NAVI */
 /*/////////////////////////////////////////////////////////////*/
 .navi{
-width: 220px;
+width: 244px;
 }
 .navi nav{
     margin-bottom: 12px;
@@ -261,7 +261,7 @@ width: 220px;
 /* CONTENT */
 /*/////////////////////////////////////////////////////////////*/
 .body{
-width: 748px;
+max-width: 768px;
 }
 .section{
 padding: 0 0 68px 0;
@@ -300,21 +300,30 @@ border: 0;
 /* TABLETS */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 992px) {
-
+.navi nav{
+display: none!important;
+}
+.container{
+padding: 40px;
+}
 /*/////////////////////////////////////////////////////////////*/
 }
 /*/////////////////////////////////////////////////////////////*/
 /* SM TABLETS */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 768px) {
-
+.container{
+padding: 24px;
+}
 /*/////////////////////////////////////////////////////////////*/
 }
 /*/////////////////////////////////////////////////////////////*/
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
-
+.container{
+padding: 16px;
+}
 /*/////////////////////////////////////////////////////////////*/
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -323,7 +332,7 @@ border: 0;
 <body>
 <div class="container">
 <div class="navi sticky-element">
-    <a href="/casestudies/" class="back"><span class="icn material-icons">chevron_right</span></a>
+    <a href="/casestudies/" class="back"><span class="icn material-icons">arrow_back</span></a>
     <nav class="selected">
         <a href="#overview" class="selected">Overview</a>
         <a href="#project">Project</a>

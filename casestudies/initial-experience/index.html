@@ -61,11 +61,13 @@
     $('.section, .segment').each(function() {
       var sectionTop = $(this).offset().top;
 
-      if (scrollTop == sectionTop - offsetValue) {
+      if (scrollTop >= sectionTop - offsetValue) {
         var sectionId = $(this).attr('id');
 
-        navLinks.removeClass('selected');
-        navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
+        if (!navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
+            navLinks.removeClass('selected');
+            navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
+        }
 
         if (!navLinks.filter('[href="#' + sectionId + '"]').parent().hasClass('selected')) {
           navBar.removeClass('selected');

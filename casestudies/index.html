@@ -28,9 +28,12 @@
 <script>
  $(document).ready(function() {
   
-    $(".container").css("display", "none"); // Ensure container is hidden initially
+    $(".body, .navi").css("display", "none"); // Ensure container is hidden initially
   $(window).on("load", function() {
-    $(".container").fadeIn(800); // Fade in the container with ease
+    $(".body").fadeIn(800); 
+    setTimeout(function() {
+        $(".container").fadeIn(800); 
+    }, 600);
   });
 
   var stickyElement = $('.sticky-element');

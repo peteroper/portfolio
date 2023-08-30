@@ -362,6 +362,8 @@ flex: 1;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    align-content: space-between;
+    gap: 16px;
 }
 #pain-points ol li{
 flex: 1;
@@ -393,7 +395,6 @@ flex: 1;
 /* SPECIAL */
 
 /*/////////////////////////////////////////////////////////////*/
-.special
 .special ul{
     display: flex;
     gap: 16px;
@@ -482,9 +483,13 @@ padding: 24px;
 /*/////////////////////////////////////////////////////////////*/
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 576px) {
+@media only screen} and (max-width: 576px) {
 .container{
 padding: 16px;
+}
+.special ul,
+#pain-points ol{
+    flex-direction: column;
 }
 /*/////////////////////////////////////////////////////////////*/
 }

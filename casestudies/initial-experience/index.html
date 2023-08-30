@@ -40,36 +40,42 @@
     }
   });
 
+  var navLinks = $('nav a');
+  var navBar = $('nav');
+  var offsetValue = 36;
+
   $(window).on('scroll', function() {
+    var scrollTop = $(window).scrollTop();
+
     $('.section, .segment').each(function() {
       var sectionTop = $(this).offset().top;
-      var scrollTop = $(window).scrollTop();
-      
-      if (scrollTop >= sectionTop - 36) {
+
+      if (scrollTop >= sectionTop - offsetValue) {
         var sectionId = $(this).attr('id');
-        $('nav a').removeClass('selected');
-        $('nav a[href="#' + sectionId + '"]').addClass('selected');
-        if ($('nav a[href="#' + sectionId + '"]').parent().hasClass('selected')) {
-        } else {
-            $('nav').removeClass('selected');
-            $('nav a[href="#' + sectionId + '"]').parent().addClass('selected');
+
+        navLinks.removeClass('selected');
+        navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
+
+        if (!navLinks.filter('[href="#' + sectionId + '"]').parent().hasClass('selected')) {
+          navBar.removeClass('selected');
+          navLinks.filter('[href="#' + sectionId + '"]').parent().addClass('selected');
         }
-        
-        
       }
     });
   });
 
-  $('nav a').on('click', function(event) {
+  navLinks.on('click', function(event) {
     event.preventDefault();
+
     var target = $(this).attr('href');
-    var targetOffset = $(target).offset().top - 36;
+    var targetOffset = $(target).offset().top - offsetValue;
 
     $('html, body').animate({
       scrollTop: targetOffset
     }, 800);
 
-    $('nav, nav a').removeClass('selected');
+    navBar.removeClass('selected');
+    navLinks.removeClass('selected');
     $(this).parent().addClass('selected');
     $(this).addClass('selected');
   });

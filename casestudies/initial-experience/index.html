@@ -221,7 +221,7 @@ h3,
 .section .img{
 background-color: #E9E9ED;
 }
-.special{
+.special.v1{
 background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
 }
 #project ul span,
@@ -229,6 +229,9 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 2
 background: #88A4AA;
 }
 .special ul li{
+background-color: #E9E9ED;
+}
+.special.v1 ul li{
     background: rgba(255, 255, 255, 0.68);
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -360,13 +363,13 @@ flex: 1;
 /* PAIN POINTS */
 
 /*/////////////////////////////////////////////////////////////*/
-#paint-points ol{
+#pain-points ol{
     padding-top: 36px;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
 }
-#paint-points ol li{
+#pain-points ol li{
 flex: 1;
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -379,7 +382,7 @@ flex: 1;
     display: flex;
     gap: 16px;
 }
-.special{
+.special.v1{
     padding: 24px;
 }
 .special > p{
@@ -398,6 +401,9 @@ flex: 1;
   padding: 20px;
   border-radius: 4px;
   list-style-type: none;
+}
+.special.v2 ul li{
+    width: calc(33% - 50px); /* Adjust the width as needed */
 }
 .special ul li h3:before{
     width: 30px;
@@ -568,7 +574,7 @@ padding: 16px;
                 </li>
             </ol>
         </div>
-        <div id="goal" class="segment special">
+        <div id="goal" class="segment special v1">
             <h4>Goal</h4>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
             <h4>Success Metrics</h4>
@@ -687,6 +693,23 @@ padding: 16px;
         <div id="outcomes" class="segment">
             <h4>Outcomes</h4>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
+        </div>
+        <div id="outcomes" class="segment special v1 v2">
+            <h4>Outcomes</h4>
+            <ul>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+                <li>
+                    <h3>title</h3>
+                    <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
+                </li>
+            </ul>
         </div>
         <div id="next-steps" class="segment">
             <h4>Next Steps</h4>

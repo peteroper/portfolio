@@ -169,7 +169,7 @@ font-size: 8px;
 h1,h2, h3,h4{
 font-weight: 700;
 line-height: 140%; 
-font-family: Lora;
+/*font-family: Lora;*/
 }
 h3 { font-size: 2em; }
 .navi nav a:first-of-type, p{ font-size: 1.6em; }
@@ -201,6 +201,7 @@ h4{ font-size: 1.8em;  }
 .navi a{
 opacity: 50%;    
 }
+#project ul h4 span,
 .navi nav.selected a:first-of-type,
 .navi a.selected{
 opacity: 92%;    
@@ -261,10 +262,14 @@ width: 244px;
     margin-bottom: 12px;
 }
 .navi .back{
+    margin-bottom: 12px;
+    border-radius: 100px;
+}
+.navi .back .icn{
     width: 36px;
     font-size: 20px;
     line-height: 36px;
-    border-radius: 100px;
+    display: block;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* CONTENT */
@@ -307,6 +312,16 @@ border: 0;
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto 100%;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* SEGMENT */
+/*/////////////////////////////////////////////////////////////*/
+#project ul{
+display: flex;
+gap: 24px;
+}
+#project ul h4 span{
+    display: block;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TABLETS */

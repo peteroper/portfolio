@@ -129,9 +129,6 @@ line-height: 160%;
 overflow: initial;
 -webkit-font-smoothing: subpixel-antialiased !important;
 }
-h1,h2,h3,h4,p.l span,p.l,h4 a{
-font-family: 'Merriweather','Lora';
-}
 .b span{
 font-weight: bold;
 }
@@ -264,6 +261,8 @@ width: 244px;
 .navi .back{
     margin-bottom: 12px;
     border-radius: 100px;
+    text-decoration none!important;
+    display: block;
 }
 .navi .back .icn{
     width: 36px;
@@ -317,11 +316,13 @@ border: 0;
 /* SEGMENT */
 /*/////////////////////////////////////////////////////////////*/
 #project ul{
-display: flex;
-gap: 24px;
+    padding-top: 16px;
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
 }
-#project ul h4 span{
-    display: block;
+#project ul h4{
+    margin-bottom: 8px;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TABLETS */

@@ -61,9 +61,15 @@
       
       if (scrollTop >= sectionTop - 36) {
         var sectionId = $(this).attr('id');
-        $('nav, nav a').removeClass('selected');
-        $('nav a[href="#' + sectionId + '"]').parent().addClass('selected');
+        $('nav a').removeClass('selected');
         $('nav a[href="#' + sectionId + '"]').addClass('selected');
+        if ($('nav a[href="#' + sectionId + '"]').parent().hasClass('selected')) {
+        } else {
+            $('nav').removeClass('selected');
+            $('nav a[href="#' + sectionId + '"]').parent().addClass('selected');
+        }
+        
+        
       }
     });
   });
@@ -156,7 +162,6 @@ h4{ font-size: 1.8em;  }
 .navi a{
 opacity: 50%;    
 }
-.navi nav.selected a:nth-child(2),
 .navi nav.selected a:first-of-type,
 .navi a.selected{
 opacity: 92%;    
@@ -206,7 +211,6 @@ width: 220px;
 .navi nav.selected a{
     display: block;
 }
-.navi nav.selected a:nth-child(2),
 .navi nav.selected a:first-of-type,
 .navi .nav .selected{
     font-weight: bold;

@@ -73,7 +73,7 @@
       if (scrollTop >= sectionTop - offsetValue) {
         var sectionId = $(this).attr('id');
 
-        if (navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
+        if (!navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
             navLinks.removeClass('selected');
             navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
         }

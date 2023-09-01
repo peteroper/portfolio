@@ -204,7 +204,12 @@ h2 { font-size: 2.2em; }
 p.l { font-size: 1.8em; }
 h3, .navi nav a:first-of-type, p{ font-size: 1.6em; }
 h4, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
-h3 a, p.l span, p u, p a, li b{
+#showcase h3 a > span,
+h3 a, 
+p.l span, 
+p u, 
+p a, 
+li b{
 font-size: 1em;
 }
 .special ul li h3:before{
@@ -256,11 +261,11 @@ font-weight: bold;
 /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/
-#showcase h3 a span,
 .navi .back,
 .section .img{
 background-color: #E9E9ED;
 }
+#showcase h3 a > span,
 .special.v1{
 background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
 }
@@ -507,11 +512,15 @@ height: 20px;
 }
 #showcase h3 a > span{
     line-height: 30px;
-    padding: 0 8px;
+    padding: 0 12px;
     border-radius: 100px;
     position: absolute;
     top: 0;
     right: 0;
+}
+#showcase h3 a > span .icn{
+    display: inline-block;
+    vertical-align: middle;
 }
 /*/////////////////////////////////////////////////////////////*/
 #showcase .scrollable{

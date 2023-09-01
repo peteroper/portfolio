@@ -175,12 +175,7 @@ line-height: 160%;
 overflow: initial;
 -webkit-font-smoothing: subpixel-antialiased !important;
 }
-.b span{
-font-weight: bold;
-}
 li{ list-style-position: inside;}
-
-
 nav a {  
   font-weight: 400;
   opacity: 50%;
@@ -195,15 +190,14 @@ html, body {
 *, body, p, p b, h1, h2, h3, h4{
     font-size: 10px;
 }
-/*@media only screen and (max-width: 424px) {
+@media only screen and (max-width: 424px) {
 *, body, p, b, h1, h2, h3, h4{
-font-size: 8px;
+font-size: 9.5px;
 }
-}*/
-h1,h2, h3,h4{
-font-weight: 700;
+}
+h1,h2,h3{
 line-height: 140%; 
-/*font-family: Lora;*/
+font-family: Lora;
 }
 h2 { font-size: 2em; }
 h3, .navi nav a:first-of-type, p{ font-size: 1.6em; }
@@ -220,10 +214,6 @@ text-decoration: none;
 a:hover{
 text-decoration: underline;
 }
-@media only screen and (max-width: 424px) {
-    h2{ font-size: 2.4em;  }
-    h4{ font-size: 1.8em;  }
-}
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
@@ -239,18 +229,18 @@ opacity: 92%;
 .section p{
 opacity: 68%;
 }
+.special.v1 > p,
+.navi nav.selected a:first-of-type,
+.navi nav .selected,
+h1,h2,h3{
+opacity: 100%;
+}
 .navi a{
 color: #000;
 }
 #project ul span,
 .special ul li h3:before{
 color: #FFF;
-}
-.special.v1 > p,
-h3,
-.navi nav.selected a:first-of-type,
-.navi nav .selected{
-    font-weight: bold;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
@@ -571,6 +561,20 @@ padding: 16px;
 #pain-points ol{
 flex-direction: column;
 gap: 8px;
+}
+/*/////////////////////////////////////////////////////////////*/
+.special ul{
+gap: 0;
+}
+.special ul li{
+padding: 12px;
+margin-bottom: 8px;
+}
+.special ul li:last-of-type{
+margin-bottom: 0;
+}
+.special.v1{
+padding: 16px;
 }
 /*/////////////////////////////////////////////////////////////*/
 }

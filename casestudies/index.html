@@ -45,11 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
  $(document).ready(function() {
 
-    $(".body, .navi nav, .navi .back").css("display", "none"); // Ensure container is hidden initially
+    $(".body, .navi nav, .navi nav.links, .navi .back").css("display", "none"); // Ensure container is hidden initially
   $(window).on("load", function() {
     $(".body").fadeIn(800); 
     setTimeout(function() {
-        $(".navi nav, .navi .back").fadeIn(800); 
+        $(".navi nav, .navi .back, .navi nav.links").fadeIn(800); 
     }, 600);
   });
 

@@ -235,27 +235,19 @@ font-size: 1em;
 .special ul li h3:before{
     font-size: 0.68em;    
 } 
+@media only screen and (max-width: 992px) {
+    .navi nav.links a{ font-size: 1.8em; }
+}
+/*/////////////////////////////////////////////////////////////*/
+h1, h2, h3,h4,.navi nav a {  
+  font-weight: 400;
+}
 a{
 text-decoration: none;
 }
 a:hover{
 text-decoration: underline;
 }
-@media only screen and (max-width: 992px) {
-    .navi nav.links a{ font-size: 1.8em; }
-}
-h1, h2, h3,h4,.navi nav a {  
-  font-weight: 400;
-}
-/*
-.b span,
-.special > p,
-p.l span,
-h3,
-.navi nav.selected a:first-of-type,
-.navi nav .selected{
-font-weight: bold;
-}*/
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
@@ -274,6 +266,12 @@ opacity: 92%;
 .section p{
 opacity: 68%;
 }
+.b span,
+.special > p,
+p.l span,
+h3,
+.navi nav.selected a:first-of-type,
+.navi nav .selected,
 .section p span{
     opacity: 100%;
 }
@@ -732,9 +730,9 @@ gap: 12px;
 #pulse-football{
 margin-right: -16px;
 }
-#showcase .scrollable{
+/*#showcase .scrollable{
 padding-bottom: 96%;
-}
+}*/
 /*/////////////////////////////////////////////////////////////*/
 #posts{
 margin-right: -16px;

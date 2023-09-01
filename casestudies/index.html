@@ -182,12 +182,8 @@ h1, h2, h3, h3 a, p.l, p.l span{
 font-family: 'Merriweather','Lora';
 font-family: 'Lora';
 }
-.b span{
-font-weight: bold;
-}
 li{ list-style-position: inside;}
 .navi nav a {  
-  font-weight: 400;
   opacity: 50%;
   transition: font-weight 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -214,7 +210,6 @@ text-rendering: optimizeLegibility;
 }
 }
 h1,h2, h3,h4{
-font-weight: 400;
 line-height: 140%; 
 }
 h2 { font-size: 2.2em; }
@@ -242,6 +237,18 @@ text-decoration: underline;
 @media only screen and (max-width: 992px) {
     .navi nav.links{ font-size: 1.6em; }
 }
+h1, h2, h3,h4,.navi nav a {  
+  font-weight: 400;
+}
+/*
+.b span,
+.special > p,
+p.l span,
+h3,
+.navi nav.selected a:first-of-type,
+.navi nav .selected{
+font-weight: bold;
+}*/
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
@@ -278,14 +285,6 @@ color: #FFF;
 .icn{
     color: #346672;
 }
-/*/////////////////////////////////////////////////////////////*/
-/*.special > p,
-p.l span,
-h3,
-.navi nav.selected a:first-of-type,
-.navi nav .selected{
-font-weight: bold;
-}*/
 /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/

@@ -340,7 +340,7 @@ border-style: solid;
 padding-bottom: 36px;
 }
 .section .segment:last-of-type{
-    margin: 0;
+padding-bottom: 0!important;
 }
 .segment h3,
 .segment h4{
@@ -563,6 +563,15 @@ padding: 24px;
 @media only screen and (max-width: 576px) {
 .container{
 padding: 16px;
+}
+.section{
+padding: 0 0 24px 0;
+margin: 0 0 24px 0;
+border-width: 0 0 1px 0;
+border-style: solid;
+}
+.segment{
+padding-bottom: 24px;
 }
 #project ul,
 #pain-points ol,

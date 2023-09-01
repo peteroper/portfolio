@@ -364,6 +364,39 @@ background: #FAA525;
 background: linear-gradient(270deg, #5176BA 0.40%, #32905D 100%);
 }
 /*/////////////////////////////////////////////////////////////*/
+/* HEADER */
+/*/////////////////////////////////////////////////////////////*/
+.header{
+background-color: #346672;
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-batsu.png);
+background-repeat: no-repeat;
+background-position: 50% 0;
+}
+.header div div{
+background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png);
+background-repeat: repeat-x;
+background-position: 0 100%;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* HEADER */
+/*/////////////////////////////////////////////////////////////*/
+.header div div{
+position: relative;
+display: flex;
+gap: 12px;
+justify-content: center;
+flex-direction: column;
+}
+.header h1, .header h2{
+line-height: 110%;
+}
+.header .img{
+width: 312px;
+height: 248px;
+background-size: 100% auto;
+flex-shrink: 0;
+}
+/*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
 /*/////////////////////////////////////////////////////////////*/
 .container{
@@ -595,6 +628,26 @@ margin-bottom: 12px;
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 993px) {
+.header{
+height: 274px;
+overflow: hidden;
+}
+.header div div{
+height: 275px;
+position: relative;
+}
+.header .img{
+position: absolute;
+bottom: 0px;
+left: 12px;
+}
+.header{
+background-position: 100% 0;
+}
+.header > div{
+background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
 .sticky{
     height: 400px;
     position: sticky;
@@ -626,6 +679,23 @@ width: calc(33% - 50px); /* Adjust the width as needed */
 /* TABLETS */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 992px) {
+.header{
+background-size: 125% auto;
+}
+.header div div{
+padding: 104px 24px 68px 24px;
+background-size: 100% auto;
+}
+.header div div{
+align-items: center;
+}
+.header .img{
+margin-bottom: 12px;
+}
+.header > div{
+background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
 .navi nav{
 display: none!important;
 }
@@ -761,6 +831,14 @@ padding-right: 0;
 </style>
 </head>
 <body>
+    <div class="header"><div>
+        <p class="mobile-only">Full Information when Desktop Browsing</p>
+        <div>
+            <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar2.png);"></span>
+            <h1>Peter Roper</h1>
+            <h2>Product Designer</h2>
+        </div>
+    </div></div>
 <div id="fade-container" class="container">
 
 <div class="body">

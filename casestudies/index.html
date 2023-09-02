@@ -139,86 +139,6 @@
 </script>
 <style>
 /*/////////////////////////////////////////////////////////////*/
-/* ANIMATION */
-/*/////////////////////////////////////////////////////////////*/
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
-}
-
-.anime-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* Container is black */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.wavy-element {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #346672;
-    animation: moveUp 3s linear forwards;
-}
-
-.animated-image {
-    max-width: 350px;
-    max-height: 350px;
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards, scaleDown 1s ease-in-out 2s forwards, scaleUp 1s ease-in-out 4s forwards, scaleDownAgain 1s ease-in-out 6s forwards;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes scaleDown {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
-}
-
-@keyframes scaleUp {
-    0% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes scaleDownAgain {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.9);
-    }
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-/*/////////////////////////////////////////////////////////////*/
 /* MATERIAL ICONS */
 /*/////////////////////////////////////////////////////////////*/
 @font-face {
@@ -925,6 +845,10 @@ padding-right: 0;
         <div class="wavy-element">
             <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar2.png" alt="Image" class="animated-image">
         </div>
+    </div>
+    <div id="titlebar">
+        <span class="avatar"></span>
+        <h1>Peter Roper</h1>
     </div>
     <!--div class="header"><div>
 

@@ -45,6 +45,10 @@
 });*/
  $(document).ready(function() {
 
+    setTimeout(function() {
+        $(".hidden").removeClass("hidden");
+    }, 2000); // Show the image after 2 seconds
+
     $(".body, .navi nav, .navi nav.links, .navi .back").css("display", "none"); // Ensure container is hidden initially
   $(window).on("load", function() {
     $(".body").fadeIn(800); 
@@ -134,6 +138,114 @@
 });
 </script>
 <style>
+/*/////////////////////////////////////////////////////////////*/
+/* ANIMATION */
+/*/////////////////////////////////////////////////////////////*/
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.black-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    animation: slideUp 2s ease-in-out forwards, shrinkToCircle 2s ease-in-out 2s forwards;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.hidden {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 2s forwards;
+}
+
+.circle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: pulseCircle 2s ease-in-out 4s forwards, growCircle 2s ease-in-out 6s forwards, moveUpToAvatar 2s ease-in-out 8s forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseCircle {
+    0% {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+    50% {
+        width: 100px;
+        height: 100px;
+        background-color: #ff5733; /* Your desired color */
+    }
+    100% {
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+}
+
+@keyframes shrinkToCircle {
+    to {
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes growCircle {
+    0% {
+        width: 100px;
+        height: 100px;
+        background-color: transparent;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        background-color: transparent;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes moveUpToAvatar {
+    to {
+        top: 10px;
+        left: 10px;
+        transform: translate(0, 0);
+    }
+}
 /*/////////////////////////////////////////////////////////////*/
 /* MATERIAL ICONS */
 /*/////////////////////////////////////////////////////////////*/
@@ -837,13 +949,21 @@ padding-right: 0;
 </style>
 </head>
 <body>
-    <div class="header"><div>
+    <div class="animation-container">
+        <div class="black-screen"></div>
+        <div class="content">
+            <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar2.png" alt="Image" class="hidden">
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <!--div class="header"><div>
         <div>
             <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar2.png);"></span>
             <h1>Peter Roper</h1>
             <h2>Product Designer</h2>
         </div>
-    </div></div>
+    </div></div-->
 <div id="fade-container" class="container">
 
 <div class="body">

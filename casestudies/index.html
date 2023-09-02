@@ -154,24 +154,40 @@ body, html {
     overflow: hidden;
 }
 
-.water-ripple {
+.anime-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Container is black */
+    overflow: hidden;
+}
+
+.wavy-element {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #346672; /* Change to your desired water color */
-    animation: ripple 3s ease-out;
-    transform-origin: 50% 100%;
-    opacity: 0.6;
+    background-color: #346672; /* Background color for the moving element */
+    animation: moveUp 3s linear forwards, wave 3s ease-in-out forwards;
 }
 
-@keyframes ripple {
+@keyframes moveUp {
     0% {
-        transform: scaleY(0.1);
-        opacity: 0.6;
+        transform: translateY(100%);
     }
     100% {
-        transform: scaleY(1);
-        opacity: 0;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        border-radius: 0% 0% 50% 50%;
+    }
+    50% {
+        border-radius: 50% 50% 0% 0%;
+    }
+    100% {
+        border-radius: 0% 0% 50% 50%;
     }
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -877,9 +893,9 @@ padding-right: 0;
 </style>
 </head>
 <body>
-    <div class="water-ripple"></div>
-
-
+    <div class="anime-container">
+        <div class="wavy-element"></div>
+    </div>
     <!--div class="header"><div>
 
         <div>

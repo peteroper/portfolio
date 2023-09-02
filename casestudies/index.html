@@ -225,8 +225,6 @@ text-rendering: optimizeLegibility;
 h1,h2, h3,h4{
 line-height: 140%; 
 }
-h1{ font-size: 4.8em; letter-spacing: -1.92px; }
-h2{ font-size: 2em; font-weight: normal; letter-spacing: 0.8px;  }
 h2, h3, p.l { font-size: 1.8em; }
 .navi nav a:first-of-type, p{ font-size: 1.6em; }
 h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
@@ -387,26 +385,6 @@ background-repeat: repeat-x;
 background-position: 0 100%;
 }
 /*/////////////////////////////////////////////////////////////*/
-/* HEADER */
-/*/////////////////////////////////////////////////////////////*/
-.header div div{
-position: relative;
-display: flex;
-gap: 12px;
-justify-content: center;
-flex-direction: column;
-}
-.header h1, .header h2{
-line-height: 110%;
-}
-.header .img{
-width: 312px;
-height: 248px;
-padding-bottom: 0;
-background-size: 100% auto;
-flex-shrink: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
 /*/////////////////////////////////////////////////////////////*/
 .container{
@@ -423,6 +401,9 @@ display: flex!important;
 /*/////////////////////////////////////////////////////////////*/
 /* NAVI */
 /*/////////////////////////////////////////////////////////////*/
+.navi .avatar{
+    padding-bottom: 88%;
+}
 .navi nav{
     margin-bottom: 12px;
 }

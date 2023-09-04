@@ -444,18 +444,12 @@ display: flex!important;
     justify-content: center;
     align-items: center;
     background-color: #346672;
-    color: #FFF;
     position: fixed;
     z-index: 1000;
 }
 .fullscreen-div img {
     max-width: 100%;
     max-height: 80vh; 
-}
-.fullscreen-div h1 {
-    color: #fff;
-    font-size: 4.2em; 
-    margin-top: 20px; 
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TITLEBAR */
@@ -831,14 +825,15 @@ display: none;
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 768px) {
 .container{
-padding: 24px;
+padding: 104px 20px 68px 20px;
 }
 #titlebar{
-padding: 0 24px;
+padding: 0 20px;
 }
+#posts,
 #adventurecards,
 #pulse-football{
-margin-right: -24px;
+margin-right: -20px;
 }
 /*/////////////////////////////////////////////////////////////*/
 #titlebar{
@@ -857,12 +852,13 @@ transition: background-color 0.6s, color 0.6s;
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
-#titlebar{
-    padding: 0 20px;
+#titlebar h1{
+display: none;
 }
-.container{
-padding: 20px;
+#titlebar.sticky h1{
+display: block;
 }
+/*/////////////////////////////////////////////////////////////*/
 .section{
 padding: 0 0 24px 0;
 margin: 0 0 24px 0;
@@ -887,14 +883,6 @@ gap: 12px;
 #showcase h3 a > span .icn{
 display: none;
 }
-#posts,
-#adventurecards,
-#pulse-football{
-margin-right: -20px;
-}
-/*#showcase .scrollable{
-padding-bottom: 96%;
-}*/
 /*/////////////////////////////////////////////////////////////*/
 #posts .post{
 width: 340px;
@@ -937,8 +925,8 @@ padding-right: 0;
 <body>
     <div class="fullscreen-div">
         <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar.png" alt="Centered Image">
-        <h1>Peter Roper</h1>
     </div>
+
     <div id="titlebar" class="sticky-element"><div>
         <a href="https://peteroper.github.io/portfolio/casestudies/" class="fade-link">
             <span class="avatar" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar-circle.png);"></span>

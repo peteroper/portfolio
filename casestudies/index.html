@@ -51,10 +51,12 @@
 
     $(".body, .navi nav, .navi .back").css("display", "none"); // Ensure container is hidden initially
   $(window).on("load", function() {
-    $(".body").fadeIn(800); 
+    setTimeout(function() {
+        $(".body").fadeIn(800); 
+    }, 2000);
     setTimeout(function() {
         $(".navi nav, .navi .back").fadeIn(800); 
-    }, 600);
+    }, 2600);
   });
 
 

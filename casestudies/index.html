@@ -664,25 +664,6 @@ margin-bottom: 12px;
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 993px) {
-.header{
-height: 274px;
-overflow: hidden;
-}
-.header div div{
-height: 275px;
-position: relative;
-}
-.header .img{
-position: absolute;
-bottom: 0px;
-left: 12px;
-}
-.header{
-background-position: 100% 0;
-}
-.header > div{
-background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
-}
 /*/////////////////////////////////////////////////////////////*/
 a:hover{
 text-decoration: underline;
@@ -747,6 +728,9 @@ display: block!important;
 margin-bottom: 12px;
 padding: 0;
 }
+#titlebar{
+padding: 0 40px;
+}
 .container{
 padding: 40px;
 flex-direction: column;
@@ -786,6 +770,9 @@ display: none;
 .container{
 padding: 24px;
 }
+#titlebar{
+padding: 0 24px;
+}
 #adventurecards,
 #pulse-football{
 margin-right: -24px;
@@ -796,6 +783,9 @@ margin-right: -24px;
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
+#titlebar{
+    padding: 0 20px;
+}
 .container{
 padding: 20px;
 }

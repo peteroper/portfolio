@@ -332,9 +332,9 @@
     background-repeat: repeat-x;
     background-position: 0 100%;
     }
-    </style>
-    <!-- CORE CSS -->
-    <style>
+</style>
+<!-- CORE CSS -->
+<style>
     /*/////////////////////////////////////////////////////////////*/
     /* MATERIAL ICONS */
     /*/////////////////////////////////////////////////////////////*/
@@ -658,32 +658,13 @@
     width: 440px;
     margin-bottom: 12px;
     }
-    </style>
-    <!-- MEDIA QUERIES -->
-    <style>
-    /*/////////////////////////////////////////////////////////////*/
-    /* DESKTOP */
-    /*/////////////////////////////////////////////////////////////*/
-    @media only screen and (min-width: 993px) {
-    .header{
-    height: 274px;
-    overflow: hidden;
-    }
-    .header div div{
-    height: 275px;
-    position: relative;
-    }
-    .header .img{
-    position: absolute;
-    bottom: 0px;
-    left: 12px;
-    }
-    .header{
-    background-position: 100% 0;
-    }
-    .header > div{
-    background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
-    }
+</style>
+<!-- MEDIA QUERIES -->
+<style>
+/*/////////////////////////////////////////////////////////////*/
+/* DESKTOP */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 993px) {
     /*/////////////////////////////////////////////////////////////*/
     a:hover{
     text-decoration: underline;
@@ -719,23 +700,8 @@
     /*/////////////////////////////////////////////////////////////*/
     /* TABLETS */
     /*/////////////////////////////////////////////////////////////*/
-    @media only screen and (max-width: 992px) {
-    .header{
-    background-size: 125% auto;
-    }
-    .header div div{
-    padding: 68px 24px 68px 24px;
-    background-size: 100% auto;
-    }
-    .header div div{
-    align-items: center;
-    }
-    .header .img{
-    margin-bottom: 12px;
-    }
-    .header > div{
-    background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
-    }
+@media only screen and (max-width: 992px) {
+
     /*/////////////////////////////////////////////////////////////*/
     .navi nav{
     display: none!important;
@@ -747,6 +713,9 @@
     .navi nav.links a{
     margin-bottom: 12px;
     padding: 0;
+    }
+    #titlebar{
+    padding: 0 40px;
     }
     .container{
     padding: 40px;
@@ -780,23 +749,29 @@
     }
     /*/////////////////////////////////////////////////////////////*/
     }
-    /*/////////////////////////////////////////////////////////////*/
-    /* SM TABLETS */
-    /*/////////////////////////////////////////////////////////////*/
-    @media only screen and (max-width: 768px) {
-    .container{
-    padding: 24px;
-    }
-    #adventurecards,
-    #pulse-football{
-    margin-right: -24px;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    /* MOBILES */
-    /*/////////////////////////////////////////////////////////////*/
-    @media only screen and (max-width: 576px) {
+/*/////////////////////////////////////////////////////////////*/
+/* SM TABLETS */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 768px) {
+#titlebar{
+padding: 0 24px;
+}
+.container{
+padding: 24px;
+}
+#adventurecards,
+#pulse-football{
+margin-right: -24px;
+}
+/*/////////////////////////////////////////////////////////////*/
+}
+/*/////////////////////////////////////////////////////////////*/
+/* MOBILES */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 576px) {
+#titlebar{
+    padding: 0 20px;
+}
     .container{
     padding: 20px;
     }
@@ -869,7 +844,7 @@
     /*/////////////////////////////////////////////////////////////*/
     }
     /*/////////////////////////////////////////////////////////////*/
-    </style>
+</style>
 </head>
 <body>
 <div id="titlebar"><div>

@@ -49,9 +49,6 @@
     setTimeout(function() {
         $(".fullscreen-div").addClass("loaded");
     }, 400);
-    /*setTimeout(function() {
-        $(".body").fadeIn(800); 
-    }, 1400);*/
     setTimeout(function() {
         $(".navi nav, .navi .back").fadeIn(800);
         $(".fullscreen-div").addClass("none"); 
@@ -303,47 +300,6 @@ background: #88A4AA;
 .navi .back{
     border-radius: 100px;
 }
-/*/////////////////////////////////////////////////////////////*/
-/* SHOWCASE */
-/*/////////////////////////////////////////////////////////////*/
-#showcase2 div,
-#showcase1 div{
-color: #FFF;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase1 div{
-background: linear-gradient(90deg, #21134E 0%, #000 100%);
-}
-#showcase1 div.hypothesis{
-background: #000;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase2{
-background-color: #EEAD50;
-}
-#showcase2 div{
-background: linear-gradient(270deg, #EA6926 0%, #D52D28 66.67%, #C72B26 98.96%);
-}
-#showcase2 div.hypothesis{
-background: #FAA525;
-}
-#showcase2 div.research{
-background: linear-gradient(270deg, #5176BA 0.40%, #32905D 100%);
-}
-/*/////////////////////////////////////////////////////////////*/
-/* HEADER */
-/*/////////////////////////////////////////////////////////////*/
-.header{
-background-color: #346672;
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-batsu.png);
-background-repeat: no-repeat;
-background-position: 50% 0;
-}
-.header div div{
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png);
-background-repeat: repeat-x;
-background-position: 0 100%;
-}
 </style>
 <!-- CORE CSS -->
 <style>
@@ -490,13 +446,6 @@ gap: 24px;
 /*/////////////////////////////////////////////////////////////*/
 /* NAVI */
 /*/////////////////////////////////////////////////////////////*/
-.navi .avatar{
-    width: 100%;
-    display: block;
-    padding-bottom: 88%;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-}
 .navi nav{
     margin-bottom: 12px;
 }
@@ -756,22 +705,6 @@ width: calc(33% - 50px); /* Adjust the width as needed */
 /* TABLETS */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 992px) {
-.header{
-background-size: 125% auto;
-}
-.header div div{
-padding: 68px 24px 68px 24px;
-background-size: 100% auto;
-}
-.header div div{
-align-items: center;
-}
-.header .img{
-margin-bottom: 12px;
-}
-.header > div{
-background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
-}
 /*/////////////////////////////////////////////////////////////*/
 .navi nav#nav1,
 .navi nav#nav2,
@@ -796,10 +729,6 @@ flex-direction: column;
 width: 100%;
 }
 /*/////////////////////////////////////////////////////////////*/
-#showcase .scrollable{
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
 #showcase{
     padding-bottom: 0;
     border: 0!important;

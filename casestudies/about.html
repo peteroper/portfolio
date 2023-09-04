@@ -45,17 +45,19 @@
 });*/
  $(document).ready(function() {
 
+    $(".navi nav, .navi .back, #titlebar").css("display", "none"); // Ensure container is hidden initially
+    $(window).on("load", function() { 
     setTimeout(function() {
-        $(".hidden").removeClass("hidden");
-    }, 2000); // Show the image after 2 seconds
-
-    $(".body, .navi nav, .navi nav.links, .navi .back").css("display", "none"); // Ensure container is hidden initially
-  $(window).on("load", function() {
-    $(".body").fadeIn(800); 
+        $(".fullscreen-div").addClass("loaded");
+    }, 400);
     setTimeout(function() {
-        $(".navi nav, .navi .back, .navi nav.links").fadeIn(800); 
-    }, 600);
-  });
+        $(".navi nav, .navi .back").fadeIn(800);
+        $(".fullscreen-div").addClass("none"); 
+    }, 1400);
+    setTimeout(function() {
+        $("#titlebar").fadeIn(800); 
+    }, 2000);
+    });
 
 
   var stickyElement = $('.sticky-element');
@@ -150,12 +152,16 @@
     overflow: initial;
     -webkit-font-smoothing: subpixel-antialiased !important;
     }
-    /*/////////////////////////////////////////////////////////////*/
-    /* FONT SIZE */
-    /*/////////////////////////////////////////////////////////////*/
-    h2, h3, h3 a, p.l, p.l span{
-    font-family: 'Lora';
-    }
+/*/////////////////////////////////////////////////////////////*/
+/* FONT SIZE */
+/*/////////////////////////////////////////////////////////////*/
+h2, h3, h3 a, p.l, p.l span{
+font-family: 'Lora';
+}
+#intro h2{
+font-family: 'Playfair Display';
+font-weight: 700;
+}
     *, body, p, p b, h1, h2, h3, h4{
         font-size: 10px;
     }
@@ -170,8 +176,7 @@
     line-height: 140%; 
     }
 
-
-    h1{ ffont-weight: 400; }
+    h1{ font-weight: 400; }
     p.l { font-size: 2.2em; line-height: 175%; }
     h1, h2, h3 { font-size: 1.8em; }
     #titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
@@ -189,6 +194,7 @@
         font-size: 0.68em;    
     } 
     @media only screen and (max-width: 992px) {
+        p.l { font-size: 2.0em; }
         #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
         #posts p{ font-size: 1.5em; }
     }
@@ -205,13 +211,14 @@
     .navi a{
     opacity: 50%;    
     }
-    h1,
+    #titlebar.sticky a h1, 
     #posts nav a:hover,
     h3 a,
     .navi nav.selected a:first-of-type,
     .navi a.selected{
     opacity: 92%;    
     }
+    a h1,
     #posts nav a,
     .section p{
     opacity: 68%;
@@ -374,23 +381,40 @@
       /* Support for IE. */
       font-feature-settings: 'liga';
     }
+/*/////////////////////////////////////////////////////////////*/
+/* ANIMATION */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div.loaded {
+    animation: fadeOut 0.6s ease-in-out forwards; /* Adjust the duration as needed */
+}
+.fullscreen-div.none {
+display: none;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+.container {
+opacity: 1;
+transition: opacity 0.6s ease-out;
+}
+.navi nav a {  
+  opacity: 50%;
+  transition: opacity 0.6s ease-in-out;
+}
+.container.fade {
+opacity: 0;
+}
     /*/////////////////////////////////////////////////////////////*/
     /* CORE */
     /*/////////////////////////////////////////////////////////////*/
     li{ list-style-position: inside;}
-    .navi nav a {  
-      opacity: 50%;
-      transition: font-weight 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
     html, body {
       scroll-behavior: smooth;
-    }
-    .container {
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-    }
-    .container.fade {
-    opacity: 0;
     }
     a{
     text-decoration: none;
@@ -409,6 +433,24 @@
     .tab-container.tab-selected{
     display: flex!important;
     }
+/*/////////////////////////////////////////////////////////////*/
+/* Splash */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #346672;
+    position: fixed;
+    z-index: 1000;
+}
+.fullscreen-div img {
+    max-width: 100%;
+    max-height: 80vh; 
+}
     /*/////////////////////////////////////////////////////////////*/
     /* TITLEBAR */
     /*/////////////////////////////////////////////////////////////*/
@@ -444,13 +486,6 @@
     /*/////////////////////////////////////////////////////////////*/
     /* NAVI */
     /*/////////////////////////////////////////////////////////////*/
-    .navi .avatar{
-        width: 100%;
-        display: block;
-        padding-bottom: 88%;
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-    }
     .navi nav{
         margin-bottom: 12px;
     }
@@ -691,7 +726,7 @@
     text-decoration: underline;
     }
     /*/////////////////////////////////////////////////////////////*/
-    .sticky{
+    .navi.sticky{
         height: 400px;
         position: sticky;
         top: 0; 
@@ -749,15 +784,6 @@ align-items: center;
     width: 100%;
     }
     /*/////////////////////////////////////////////////////////////*/
-    #adventurecards,
-    #pulse-football{
-    margin-right: -40px;
-    }
-    #showcase .scrollable{
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
-    /*/////////////////////////////////////////////////////////////*/
     #posts .post .img-wrap{
     width: 74px;
     }
@@ -777,15 +803,25 @@ align-items: center;
 /* SM TABLETS */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 768px) {
-#titlebar{
-padding: 0 24px;
-}
 .container{
-padding: 24px;
+padding: 104px 20px 68px 20px;
 }
-#adventurecards,
-#pulse-football{
-margin-right: -24px;
+#titlebar{
+padding: 0 20px;
+}
+#posts{
+margin-right: -20px;
+}
+/*/////////////////////////////////////////////////////////////*/
+#titlebar{
+transition: background-color 0.6s, color 0.6s;
+}
+#titlebar.sticky div a,
+#titlebar.sticky nav a{
+    color: #FFF;
+}
+#titlebar.sticky{
+    background-color: #346672;
 }
 /*/////////////////////////////////////////////////////////////*/
 }
@@ -793,12 +829,6 @@ margin-right: -24px;
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
-#titlebar{
-    padding: 0 20px;
-}
-    .container{
-    padding: 20px;
-    }
     .section{
     padding: 0 0 24px 0;
     margin: 0 0 24px 0;
@@ -807,7 +837,6 @@ margin-right: -24px;
     padding-bottom: 24px;
     }
     #project ul,
-    #pain-points ol,
     .special ul,
     #pain-points ol{
     flex-direction: column;
@@ -823,14 +852,6 @@ margin-right: -24px;
     #showcase h3 a > span .icn{
     display: none;
     }
-    #posts,
-    #adventurecards,
-    #pulse-football{
-    margin-right: -20px;
-    }
-    /*#showcase .scrollable{
-    padding-bottom: 96%;
-    }*/
     /*/////////////////////////////////////////////////////////////*/
     #posts .post{
     width: 340px;

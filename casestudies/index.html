@@ -44,14 +44,12 @@
   });
 });*/
  $(document).ready(function() {
-    $(".fullscreen-div").addClass("loaded");
-    setTimeout(function() {
-        $(".hidden").removeClass("hidden");
-    }, 2000); // Show the image after 2 seconds
-
     $(".body, .navi nav, .navi .back").css("display", "none"); // Ensure container is hidden initially
-  $(window).on("load", function() {
+    $(window).on("load", function() { 
     setTimeout(function() {
+        $(".fullscreen-div").addClass("loaded");
+    }, 700);
+        setTimeout(function() {
         $(".body").fadeIn(800); 
     }, 1700);
     setTimeout(function() {
@@ -60,7 +58,7 @@
     setTimeout(function() {
         $("#titlebar").fadeIn(800); 
     }, 2600);
-  });
+    });
 
 
   var stickyElement = $('.sticky-element');
@@ -401,9 +399,11 @@ background-position: 0 100%;
         opacity: 0%;
     }
 }
-/* Apply the animation to the full-screen div */
+/*/////////////////////////////////////////////////////////////*/
+/* ANIMATION */
+/*/////////////////////////////////////////////////////////////*/
 .fullscreen-div.loaded {
-    animation: fadeOut 1.4s ease-in-out forwards; /* Adjust the duration as needed */
+    animation: fadeOut 0.6s ease-in-out forwards; /* Adjust the duration as needed */
 }
 .container {
 opacity: 1;

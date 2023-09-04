@@ -152,11 +152,14 @@ overflow: initial;
 font-size: 9.5px;
 }
 }
-h1,h2{
-line-height: 140%; 
-font-family: Lora;
+h1, h2, h3, h3 a, p.l, p.l span{
+font-family: 'Lora';
 }
-h1{ font-size: 1.8em; font-weight: 400; }
+#intro h2{
+font-family: 'Playfair Display';
+font-weight: 700;
+}
+#intro h2{ font-size: 4.2em; }
 h2 { font-size: 2em; }
 #titlebar nav a, h3, .navi nav a:first-of-type, p{ font-size: 1.6em; }
 .segment h4, .navi nav a{ font-size: 1.3em; }
@@ -173,6 +176,7 @@ h1,h2,h3,h4{
     font-weight: 400;
 }
 @media only screen and (max-width: 992px) {
+    p.l { font-size: 2.0em; line-height: 175%; }
     #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
     .special ul li p{ font-size: 1.4em; }
 }
@@ -184,12 +188,13 @@ h1,h2,h3,h4{
 .navi a{
 opacity: 50%;    
 }
-h1,
+#titlebar.sticky a h1, 
 #project ul p,
 .navi nav.selected a:first-of-type,
 .navi a.selected{
 opacity: 92%;    
 }
+a h1,
 .section p{
 opacity: 68%;
 }
@@ -283,6 +288,34 @@ border-radius: 100px;
   font-feature-settings: 'liga';
 }
 /*/////////////////////////////////////////////////////////////*/
+/* ANIMATION */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div.loaded {
+    animation: fadeOut 0.6s ease-in-out forwards; /* Adjust the duration as needed */
+}
+.fullscreen-div.none {
+display: none;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+.container {
+opacity: 1;
+transition: opacity 0.6s ease-out;
+}
+.navi nav a {  
+  opacity: 50%;
+  transition: opacity 0.6s ease-in-out;
+}
+.container.fade {
+opacity: 0;
+}
+/*/////////////////////////////////////////////////////////////*/
 /* CORE */
 /*/////////////////////////////////////////////////////////////*/
 li{ list-style-position: inside;}
@@ -302,6 +335,24 @@ display: flex;
 justify-content: center;
 gap: 0;
 padding: 68px 0 0 0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* Splash */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #346672;
+    position: fixed;
+    z-index: 1000;
+}
+.fullscreen-div img {
+    max-width: 100%;
+    max-height: 80vh; 
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TITLEBAR */
@@ -566,7 +617,7 @@ border: 0;
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 993px) {
-.sticky{
+.navi.sticky{
     height: 400px;
     position: sticky;
     top: 0; 
@@ -616,10 +667,21 @@ width: 100%;
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 768px) {
 .container{
-padding: 24px;
+padding: 104px 20px 68px 20px;
 }
 #titlebar{
-padding: 0 24px;
+padding: 0 20px;
+}
+/*/////////////////////////////////////////////////////////////*/
+#titlebar{
+transition: background-color 0.6s, color 0.6s;
+}
+#titlebar.sticky div a,
+#titlebar.sticky nav a{
+    color: #FFF;
+}
+#titlebar.sticky{
+    background-color: #346672;
 }
 /*/////////////////////////////////////////////////////////////*/
 }
@@ -627,12 +689,6 @@ padding: 0 24px;
 /* MOBILES */
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
-.container{
-padding: 20px;
-}
-#titlebar{
-padding: 0 20px;
-}
 .section{
 padding: 0 0 36px 0;
 margin: 0 0 36px 0;

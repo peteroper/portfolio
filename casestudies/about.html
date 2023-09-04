@@ -341,6 +341,7 @@ background: #88A4AA;
 #posts nav a{
     border-radius: 4px;
 }
+#titlebar .avatar,
 .navi .back{
     border-radius: 100px;
 }
@@ -413,12 +414,21 @@ margin-bottom: 8px;
 /* TITLEBAR */
 /*/////////////////////////////////////////////////////////////*/
 #titlebar{
-width: 1140px;
-height: 56px;
-padding: 0 16px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+#titlebar > div{
+padding: 12px 0;
+max-width: 1140px;
+}
+#titlebar div div{
+display: flex;
+gap: 12px;
+}
+#titlebar .avatar{
+width: 56px;
+height: 56px;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* CONTENT */
@@ -797,14 +807,16 @@ padding-right: 0;
 </style>
 </head>
 <body>
-<div id="titlebar">
-    <span class="avatar"></span>
-    <h1>PR.</h1>
+<div id="titlebar"><div>
+    <div>
+        <span class="avatar"></span>
+        <h1>PR.</h1>
+    </div>
     <nav class="about links">
         <a href="https://peteroper.github.io/portfolio/casestudies/about.html" class="fade-link">About</a>
         <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
     </nav>
-</div>
+</div></div>
 
 <div id="fade-container" class="container">
 

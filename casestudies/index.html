@@ -49,11 +49,11 @@
         $(".hidden").removeClass("hidden");
     }, 2000); // Show the image after 2 seconds
 
-    $(".body, .navi nav, .navi nav.links, .navi .back").css("display", "none"); // Ensure container is hidden initially
+    $(".body, .navi nav, .navi .back").css("display", "none"); // Ensure container is hidden initially
   $(window).on("load", function() {
     $(".body").fadeIn(800); 
     setTimeout(function() {
-        $(".navi nav, .navi .back, .navi nav.links").fadeIn(800); 
+        $(".navi nav, .navi .back").fadeIn(800); 
     }, 600);
   });
 
@@ -726,12 +726,13 @@ margin-bottom: 12px;
 background: linear-gradient(0deg, #709097 0%, #406E79 22%, #42707B 68%, rgba(53, 103, 115, 0.00) 100%);
 }
 /*/////////////////////////////////////////////////////////////*/
-.navi nav{
+.navi nav#nav1,
+.navi nav#nav2,
+.navi nav#nav3{
 display: none!important;
 }
 .navi nav.links{
 width: 100%;
-display: block!important;
 }
 .navi nav.links a{
 margin-bottom: 12px;
@@ -1100,13 +1101,13 @@ padding-right: 0;
     <!-- body ENDS -->
 
     <div class="navi sticky-element">
-        <nav>
+        <nav id="nav1">
             <a href="#intro" class="selected">Introduction</a>
         </nav>
-        <nav>
+        <nav id="nav2">
             <a href="#posts">Design Journal</a>
         </nav>
-        <nav>
+        <nav id="nav3">
             <a href="#showcase">Showcase</a>
             <a href="#initial-experience">Initial Experience</a>
             <a href="#content-navigation">Content Navigation</a>

@@ -44,7 +44,7 @@
   });
 });*/
  $(document).ready(function() {
-
+    $(".fullscreen-div").addClass("loaded");
     setTimeout(function() {
         $(".hidden").removeClass("hidden");
     }, 2000); // Show the image after 2 seconds
@@ -456,8 +456,8 @@ display: flex!important;
 }
 
 /* Apply the animation to the full-screen div */
-.fullscreen-div {
-    animation: fadeOut 3s ease-in-out forwards; /* Adjust the duration as needed */
+.fullscreen-div.loaded {
+    animation: fadeOut 1.4s ease-in-out forwards; /* Adjust the duration as needed */
 }
 /*/////////////////////////////////////////////////////////////*/
 /* TITLEBAR */

@@ -320,6 +320,7 @@ background: #88A4AA;
 .special.v1 ul li{
     background: rgba(255, 255, 255, 0.68);
 }
+#titlebar,
 .img.v1{
     background-color: #FFF;
 }
@@ -342,47 +343,6 @@ background: #88A4AA;
 }
 .navi .back{
     border-radius: 100px;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* SHOWCASE */
-/*/////////////////////////////////////////////////////////////*/
-#showcase2 div,
-#showcase1 div{
-color: #FFF;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase1 div{
-background: linear-gradient(90deg, #21134E 0%, #000 100%);
-}
-#showcase1 div.hypothesis{
-background: #000;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase2{
-background-color: #EEAD50;
-}
-#showcase2 div{
-background: linear-gradient(270deg, #EA6926 0%, #D52D28 66.67%, #C72B26 98.96%);
-}
-#showcase2 div.hypothesis{
-background: #FAA525;
-}
-#showcase2 div.research{
-background: linear-gradient(270deg, #5176BA 0.40%, #32905D 100%);
-}
-/*/////////////////////////////////////////////////////////////*/
-/* HEADER */
-/*/////////////////////////////////////////////////////////////*/
-.header{
-background-color: #346672;
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-batsu.png);
-background-repeat: no-repeat;
-background-position: 50% 0;
-}
-.header div div{
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-shape.png);
-background-repeat: repeat-x;
-background-position: 0 100%;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
@@ -448,6 +408,15 @@ display: flex!important;
 .navi nav.links a{
 padding: 0;
 margin-bottom: 8px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* TITLEBAR */
+/*/////////////////////////////////////////////////////////////*/
+#titlebar{
+height: 56px;
+padding: 0 16px;
+display: flex;
+justify-content: space-between;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* CONTENT */
@@ -730,15 +699,6 @@ flex-direction: column;
 width: 100%;
 }
 /*/////////////////////////////////////////////////////////////*/
-#adventurecards,
-#pulse-football{
-margin-right: -40px;
-}
-#showcase .scrollable{
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
 #posts .post .img-wrap{
 width: 74px;
 }
@@ -759,11 +719,7 @@ display: none;
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 768px) {
 .container{
-padding: 24px;
-}
-#adventurecards,
-#pulse-football{
-margin-right: -24px;
+padding: 48px 24px;
 }
 /*/////////////////////////////////////////////////////////////*/
 }
@@ -772,7 +728,7 @@ margin-right: -24px;
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 576px) {
 .container{
-padding: 20px;
+padding: 40px 20px;
 }
 .section{
 padding: 0 0 24px 0;
@@ -781,10 +737,7 @@ margin: 0 0 24px 0;
 .segment{
 padding-bottom: 24px;
 }
-#project ul,
-#pain-points ol,
-.special ul,
-#pain-points ol{
+.special ul{
 flex-direction: column;
 gap: 12px;
 }
@@ -846,8 +799,8 @@ padding-right: 0;
     <span class="avatar"></span>
     <h1>PR.</h1>
     <nav class="about links">
-        <a href="https://peteroper.github.io/portfolio/casestudies/about.html" class="fade-link">About <span class="icn material-icons">chevron_right</span></a>
-        <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume <span class="icn material-icons">chevron_right</span></a>
+        <a href="https://peteroper.github.io/portfolio/casestudies/about.html" class="fade-link">About</a>
+        <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
     </nav>
 </div>
 

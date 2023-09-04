@@ -140,6 +140,46 @@
 <!-- STYLE CSS -->
 <style>
 /*/////////////////////////////////////////////////////////////*/
+/* FONT SIZE */
+/*/////////////////////////////////////////////////////////////*/
+*, body, p, p b, h1, h2, h3, h4{
+    font-size: 10px;
+}
+@media only screen and (max-width: 424px) {
+*, body, p, b, h1, h2, h3, h4{
+font-size: 9.5px;
+text-rendering: optimizeLegibility;
+}
+}
+#intro h2{ font-size: 4.2em; }
+h1,h2, h3,h4{
+line-height: 140%; 
+}
+h1{ font-size: 2.6em; }
+p.l { font-size: 2.2em; line-height: 175%; }
+h2, h3 { font-size: 1.8em; }
+#titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
+h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
+#showcase h3 a > span,
+h3 a, 
+p.l span, 
+p u, 
+p a, 
+li b{
+font-size: 1em;
+}
+#showcase h3 a > span,
+.special ul li h3:before{
+    font-size: 0.68em;    
+} 
+@media only screen and (max-width: 992px) {
+    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
+}
+/*/////////////////////////////////////////////////////////////*/
+h1, h2, h3,h4,.navi nav a {  
+  font-weight: 400;
+}
+/*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
 .section h4,
@@ -348,50 +388,8 @@ transition: opacity 0.5s ease-out;
 .container.fade {
 opacity: 0;
 }
-/*/////////////////////////////////////////////////////////////*/
-/* FONT SIZE */
-/*/////////////////////////////////////////////////////////////*/
-*, body, p, p b, h1, h2, h3, h4{
-    font-size: 10px;
-}
-@media only screen and (max-width: 424px) {
-*, body, p, b, h1, h2, h3, h4{
-font-size: 9.5px;
-text-rendering: optimizeLegibility;
-}
-}
-#intro h2{ font-size: 5.6em; }}
-h1,h2, h3,h4{
-line-height: 140%; 
-}
-h1{ font-size: 2.6em; }
-h2, h3, p.l { font-size: 1.8em; }
-#titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
-h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
-#showcase h3 a > span,
-h3 a, 
-p.l span, 
-p u, 
-p a, 
-li b{
-font-size: 1em;
-}
-#showcase h3 a > span,
-.special ul li h3:before{
-    font-size: 0.68em;    
-} 
-@media only screen and (max-width: 992px) {
-    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
-}
-/*/////////////////////////////////////////////////////////////*/
-h1, h2, h3,h4,.navi nav a {  
-  font-weight: 400;
-}
 a{
 text-decoration: none;
-}
-a:hover{
-text-decoration: underline;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
@@ -682,6 +680,10 @@ background-position: 100% 0;
 }
 .header > div{
 background: linear-gradient(90deg, #709097 0%, #406E79 22.19%, #42707B 38.51%, rgba(53, 103, 115, 0.00) 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+a:hover{
+text-decoration: underline;
 }
 /*/////////////////////////////////////////////////////////////*/
 .sticky{

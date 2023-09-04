@@ -310,6 +310,7 @@ background-color: #E9E9ED;
 #showcase h3 a > span{
     background: #E3E9F0    
 }
+#titlebar .avatar,
 .special.v1{
 background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
 }
@@ -417,15 +418,16 @@ margin-bottom: 8px;
 /* TITLEBAR */
 /*/////////////////////////////////////////////////////////////*/
 #titlebar{
-display: flex;
-justify-content: space-between;
-align-items: center;
+width: 100%;
 position: sticky;
 top: 0; 
 }
 #titlebar > div{
 padding: 12px 0;
-max-width: 1140px;
+max-width: 1012px;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 #titlebar div div{
 display: flex;

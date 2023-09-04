@@ -137,124 +137,8 @@
 
 });
 </script>
+<!-- STYLE CSS -->
 <style>
-/*/////////////////////////////////////////////////////////////*/
-/* MATERIAL ICONS */
-/*/////////////////////////////////////////////////////////////*/
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-/*/////////////////////////////////////////////////////////////*/
-/* CORE */
-/*/////////////////////////////////////////////////////////////*/
-*, body{
-font-family: 'Raleway';
-padding: 0;
-margin: 0;
-border: 0;
-font-size: 18px;
-line-height: 160%;
-overflow: initial;
--webkit-font-smoothing: subpixel-antialiased !important;
-}
-h1{
-font-family: 'Merriweather','Lora';
-} 
-h2, h3, h3 a, p.l, p.l span{
-font-family: 'Lora';
-}
-li{ list-style-position: inside;}
-.navi nav a {  
-  opacity: 50%;
-  transition: font-weight 0.3s ease-in-out, opacity 0.3s ease-in-out;
-}
-html, body {
-  scroll-behavior: smooth;
-}
-.container {
-opacity: 1;
-transition: opacity 0.5s ease-out;
-}
-.container.fade {
-opacity: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* FONT SIZE */
-/*/////////////////////////////////////////////////////////////*/
-*, body, p, p b, h1, h2, h3, h4{
-    font-size: 10px;
-}
-@media only screen and (max-width: 424px) {
-*, body, p, b, h1, h2, h3, h4{
-font-size: 9.5px;
-text-rendering: optimizeLegibility;
-}
-}
-#intro h2{ font-size: 5.6em; }}
-h1,h2, h3,h4{
-line-height: 140%; 
-}
-h1{ font-size: 2.6em; }
-h2, h3, p.l { font-size: 1.8em; }
-#titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
-h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
-#showcase h3 a > span,
-h3 a, 
-p.l span, 
-p u, 
-p a, 
-li b{
-font-size: 1em;
-}
-#showcase h3 a > span,
-.special ul li h3:before{
-    font-size: 0.68em;    
-} 
-@media only screen and (max-width: 992px) {
-    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
-}
-/*/////////////////////////////////////////////////////////////*/
-h1, h2, h3,h4,.navi nav a {  
-  font-weight: 400;
-}
-a{
-text-decoration: none;
-}
-a:hover{
-text-decoration: underline;
-}
 /*/////////////////////////////////////////////////////////////*/
 /* COLOR */
 /*/////////////////////////////////////////////////////////////*/
@@ -389,13 +273,133 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/header-s
 background-repeat: repeat-x;
 background-position: 0 100%;
 }
+</style>
+<!-- CORE CSS -->
+<style>
+/*/////////////////////////////////////////////////////////////*/
+/* MATERIAL ICONS */
+/*/////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/*/////////////////////////////////////////////////////////////*/
+/* CORE */
+/*/////////////////////////////////////////////////////////////*/
+*, body{
+font-family: 'Raleway';
+padding: 0;
+margin: 0;
+border: 0;
+font-size: 18px;
+line-height: 160%;
+overflow: initial;
+-webkit-font-smoothing: subpixel-antialiased !important;
+}
+h1{
+font-family: 'Merriweather','Lora';
+} 
+h2, h3, h3 a, p.l, p.l span{
+font-family: 'Lora';
+}
+li{ list-style-position: inside;}
+.navi nav a {  
+  opacity: 50%;
+  transition: font-weight 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+.container {
+opacity: 1;
+transition: opacity 0.5s ease-out;
+}
+.container.fade {
+opacity: 0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* FONT SIZE */
+/*/////////////////////////////////////////////////////////////*/
+*, body, p, p b, h1, h2, h3, h4{
+    font-size: 10px;
+}
+@media only screen and (max-width: 424px) {
+*, body, p, b, h1, h2, h3, h4{
+font-size: 9.5px;
+text-rendering: optimizeLegibility;
+}
+}
+#intro h2{ font-size: 5.6em; }}
+h1,h2, h3,h4{
+line-height: 140%; 
+}
+h1{ font-size: 2.6em; }
+h2, h3, p.l { font-size: 1.8em; }
+#titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
+h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
+#showcase h3 a > span,
+h3 a, 
+p.l span, 
+p u, 
+p a, 
+li b{
+font-size: 1em;
+}
+#showcase h3 a > span,
+.special ul li h3:before{
+    font-size: 0.68em;    
+} 
+@media only screen and (max-width: 992px) {
+    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
+}
+/*/////////////////////////////////////////////////////////////*/
+h1, h2, h3,h4,.navi nav a {  
+  font-weight: 400;
+}
+a{
+text-decoration: none;
+}
+a:hover{
+text-decoration: underline;
+}
 /*/////////////////////////////////////////////////////////////*/
 /* LAYOUT */
 /*/////////////////////////////////////////////////////////////*/
 .container{
 display: flex;
 justify-content: center;
-padding: 68spx 0 0 0;
+padding: 68px 0 0 0;
 }
 .tab-container{
 display: none!important;
@@ -653,6 +657,9 @@ padding: 40px;
 width: 440px;
 margin-bottom: 12px;
 }
+</style>
+<!-- MEDIA QUERIES -->
+<style>
 /*/////////////////////////////////////////////////////////////*/
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/

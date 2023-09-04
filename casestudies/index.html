@@ -233,6 +233,8 @@ h3 a,
 nav a{
 color: #000;
 }
+#titlebar.sticky div a,
+#titlebar.sticky nav a,
 .header,
 #project ul span,
 .special ul li h3:before{
@@ -259,6 +261,9 @@ background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 25
 #project ul span,
 .special ul li h3:before{
 background: #88A4AA;
+}
+#titlebar.sticky{
+    background-color: #406E79;
 }
 .special ul li{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #E9E9ED;
@@ -417,6 +422,7 @@ top: 0;
 left: 0;
 right: 0;
 z-index: 100;
+transition: background-color 0.3s, color 0.3s;
 }
 #titlebar > div{
 padding: 12px 0;
@@ -875,7 +881,7 @@ padding-right: 0;
 </style>
 </head>
 <body>
-    <div id="titlebar"><div>
+    <div id="titlebar" class="sticky-element"><div>
         <a href="https://peteroper.github.io/portfolio/casestudies/" class="fade-link">
             <span class="avatar" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar-circle.png);"></span>
             <h1>Peter Roper</h1>

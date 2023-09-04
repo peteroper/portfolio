@@ -514,7 +514,7 @@
     }
     .section p{
     max-width: 668px;
-    margin-bottom 16px;
+    margin-bottom: 16px;
     }
     /*/////////////////////////////////////////////////////////////*/
     /* IMGS */
@@ -586,6 +586,9 @@
   padding: 20px;
   border-radius: 4px;
   list-style-type: none;
+}
+.special ul li p{
+    margin: 0;
 }
 .special ul li h3:before{
     width: 20px;
@@ -674,54 +677,6 @@
     }
     #posts .tab-container.tab-selected{
         flex-direction: column;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    /* SHOWCASE */
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase h3 a{
-        line-height: 30px;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-    }
-    #showcase h3 a > span{
-        line-height: 30px;
-        padding: 0 8px 0 12px;
-    }
-    #showcase h3 a > span .icn{
-        display: inline-block;
-        vertical-align: middle;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase .img{
-        margin-bottom: 0;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase .scrollable{
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-    flex-shrink: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    overflow: -moz-scrollbars-horizontal;
-    position: relative;
-    }
-    #showcase .scrollable > div{
-    height: 100%;
-    padding-right: 40px;
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    }
-    #showcase .scrollable div div{
-    padding: 40px;
-    }
-    #showcase .scrollable div p{
-    width: 440px;
-    margin-bottom: 12px;
     }
 </style>
 <!-- MEDIA QUERIES -->

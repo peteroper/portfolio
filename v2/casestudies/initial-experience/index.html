@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var offsetValue = 36;
   var isScrolling = false;
 
-  /*$(window).on('scroll', function() {
+  $(window).on('scroll', function() {
     if (!isScrolling) {
       isScrolling = true;
       setTimeout(function() {
@@ -112,42 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-  }*/
-
-
-  function checkScrollPosition() {
-  var scrollTop = $(window).scrollTop();
-  var windowHeight = $(window).height();
-  var offsetValue = 10; // Adjust this offset as needed
-
-  $('.section, .segment').each(function() {
-    var sectionTop = $(this).offset().top;
-
-    if (scrollTop >= sectionTop - offsetValue && scrollTop <= sectionTop + $(this).outerHeight() - windowHeight) {
-      var sectionId = $(this).attr('id');
-
-      if (!navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
-        navLinks.removeClass('selected');
-        navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
-      }
-
-      if (!navLinks.filter('[href="#' + sectionId + '"]').parent().hasClass('selected')) {
-        navBar.removeClass('selected');
-        navLinks.filter('[href="#' + sectionId + '"]').parent().addClass('selected');
-      }
-    }
-  });
-}
-
-// Call the function when the page is loaded and when scrolling
-$(document).ready(function() {
-  checkScrollPosition();
-
-  $(window).scroll(function() {
-    checkScrollPosition();
-  });
-});
-
+  }
 
 
 });
@@ -357,7 +322,7 @@ html, body {
 display: flex;
 justify-content: center;
 gap: 0;
-padding: 68px 0 0 0;
+padding: 104px 0 0 0;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* Splash */
@@ -672,6 +637,9 @@ text-decoration: underline;
 }
 #overview > .img{
     display: none;
+}
+#titlebar.sticky{
+    background-color: #FFF;
 }
 /*/////////////////////////////////////////////////////////////*/
 }

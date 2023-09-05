@@ -478,6 +478,9 @@ z-index: 100;
     gap: 12px;
     align-items: center;
     }
+    #titlebar nav a.selected{
+        font-weight: bold;
+    }
     #titlebar .avatar{
     width: 30px;
     height: 30px;
@@ -659,9 +662,30 @@ margin-bottom: 0;
     padding: 24px;
     border-radius: 4px;
 }
-    /*/////////////////////////////////////////////////////////////*/
-    /* POSTS */
-    /*/////////////////////////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////*/
+/* SKILLS */
+/*/////////////////////////////////////////////////////////////*/
+#skills ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Adjust the gap between pills */
+}
+#skills ul li{
+  background-color: #007bff; /* Change the background color */
+  color: #fff; /* Change the text color */
+  border-radius: 20px; /* Adjust the border radius to make it pill-shaped */
+  padding: 4dvi 12px; /* Adjust padding as needed */
+  margin: 2px; /* Adjust margin between pills */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px; /* Adjust the maximum width before overflowing */
+}
+/*/////////////////////////////////////////////////////////////*/
+/* POSTS */
+/*/////////////////////////////////////////////////////////////*/
     #posts nav a{
         border-width: 1px;
         border-style: solid;
@@ -922,7 +946,7 @@ display: none;
         <h1>Peter Roper</h1>
     </a>
     <nav class="about links">
-        <a href="https://peteroper.github.io/portfolio/v2/about.html" class="fade-link">About</a>
+        <a href="https://peteroper.github.io/portfolio/v2/about.html" class="fade-link selected">About</a>
         <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
     </nav>
 </div></div>
@@ -934,9 +958,8 @@ display: none;
         <div class="segment">
             <h2>A Cultural blend of British &amp; Japanese.</h2>
             <p class="l">Originally from Yorkshire, England. I have spent the second half of my life in Japan.</p>
-            <p class="l b">For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational smartphone insurance and tech-support provider. </p>
+            <p>For the last 3 years I have been furthering my skills as a UX Designer at Asurion Japan, a US multinational smartphone insurance and tech-support provider. </p>
             <p>As a senior designer within Asurion Japan's UX team, I have been part of a group of 10~15 designers and researchers who operate within the product development department.</p>
-            <p>Over the past two years, I have worked on Asurion’s flagship product, an au support application for KDDI.  Previous responsibilities at Asurion saw me lead the design tasks for CMS, Admin tools and Chat Systems. In addition to supporting the localization of the companies photo storage app.</p>
         </div>
 
         <div id="interests" class="segment">
@@ -953,6 +976,7 @@ display: none;
         
         <div id="skills" class="segment">
             <h4>UX Skills</h4>
+            <p>Over the past two years, I have worked on Asurion’s flagship product, an au support application for KDDI.  Previous responsibilities at Asurion saw me lead the design tasks for CMS, Admin tools and Chat Systems. In addition to supporting the localization of the companies photo storage app.</p>
             <h4>Design Skills</h4>
             <ul>
                 <li>UI Design</li>
@@ -990,13 +1014,13 @@ display: none;
             <p>Working at Asurion has given me the opportunity to refine the design and development experience I had gained over the previous 10 years and understand its application within a corporate environment.</p>
         </div>
     </div>
-    <div id="about" class="section">
-        <!--div id="Personality" class="segment">
+    <!--div id="about" class="section">
+        <div id="Personality" class="segment">
             <h4>Personality</h4>
             <p>I have a curious and adaptive mindset which means I spend a lot of my time in and out of work exploring and iterating solutions to problems. I often anticipate needs and respond with early outlines and step by step plans to overcome the challenge.</p>
             <p>Whilst being creative minded I am also very methodical and organised. I value hard work and believe increasing performance in the short term leads to better outcomes. I also value humor, good relationships and paying an interest to the people in my life. Empathy and communication are another way i engage creativity.</p>
-        </div-->
-        <!--div id="values" class="segment special">
+        </div>
+        <div id="values" class="segment special">
             <h4>Values</h4>
             <ul>
                 <li>
@@ -1016,9 +1040,9 @@ display: none;
                     <p>I’m a team player and do my best to support and motivate the people around me. I also respect each team members unique talent and perspective which they can share to increase output and productivity.</p>
                 </li>
             </ul>
-        </div-->
+        </div>
     
-    </div>
+    </div-->
 
     <!-- posts start -->
     <div id="posts" class="section tab-block">

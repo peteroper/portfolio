@@ -62,6 +62,10 @@
 
   var stickyElement = $('.sticky-element');
   var initialOffset = stickyElement.offset().top;
+  if (initialOffset === 0) {
+    // Update the initial offset to 120
+    initialOffset = 120;
+}
 
   $(window).on('scroll', function() {
     var scrollPosition = $(window).scrollTop();

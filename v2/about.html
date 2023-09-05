@@ -245,6 +245,7 @@ font-weight: 700;
     nav a{
     color: #000;
     }
+    #skills ul li,
     .header,
     #project ul span,
     .special ul li h3:before{
@@ -268,6 +269,7 @@ font-weight: 700;
     .special.v1{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
     }
+    #skills ul li,
     #project ul span,
     .special ul li h3:before{
     background: #88A4AA;
@@ -299,36 +301,10 @@ font-weight: 700;
     #posts nav a{
         border-radius: 4px;
     }
+    #skills ul li,
     #titlebar .avatar,
     .navi .back{
         border-radius: 100px;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    /* SHOWCASE */
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase2 div,
-    #showcase1 div{
-    color: #FFF;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase1 div{
-    background: linear-gradient(90deg, #21134E 0%, #000 100%);
-    }
-    #showcase1 div.hypothesis{
-    background: #000;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    #showcase2{
-    background-color: #EEAD50;
-    }
-    #showcase2 div{
-    background: linear-gradient(270deg, #EA6926 0%, #D52D28 66.67%, #C72B26 98.96%);
-    }
-    #showcase2 div.hypothesis{
-    background: #FAA525;
-    }
-    #showcase2 div.research{
-    background: linear-gradient(270deg, #5176BA 0.40%, #32905D 100%);
     }
     /*/////////////////////////////////////////////////////////////*/
     /* HEADER */
@@ -670,18 +646,12 @@ margin-bottom: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 4px; /* Adjust the gap between pills */
+  gap: 4px;
 }
 #skills ul li{
-  background-color: #007bff; /* Change the background color */
-  color: #fff; /* Change the text color */
-  border-radius: 20px; /* Adjust the border radius to make it pill-shaped */
-  padding: 4dvi 12px; /* Adjust padding as needed */
-  margin: 2px; /* Adjust margin between pills */
-  white-space: nowrap;
-  overflow: hidden;
+  padding: 4px 12px; 
+  margin: 2px; 
   text-overflow: ellipsis;
-  max-width: 150px; /* Adjust the maximum width before overflowing */
 }
 /*/////////////////////////////////////////////////////////////*/
 /* POSTS */

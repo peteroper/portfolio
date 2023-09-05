@@ -76,8 +76,8 @@
     }
   });
 
-  var navLinks = $('.navi nav a');
-  var navBar = $('.navi nav');
+  var navLinks = $('nav a');
+  var navBar = $('nav');
   var offsetValue = 36;
   var isScrolling = false;
 
@@ -87,7 +87,7 @@
       setTimeout(function() {
         checkScrollPosition();
         isScrolling = false;
-      }, 100); // Adjust the throttle interval as needed
+      }, 600); // Adjust the throttle interval as needed
     }
   });
 

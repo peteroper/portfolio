@@ -1,0 +1,136 @@
+<html>
+<head>
+    <script>
+        const navLinks = document.querySelectorAll('.navi a');
+        const sections = document.querySelectorAll('.section');
+    
+        window.addEventListener('scroll', () => {
+          let closestSection = sections[0];
+    
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top < window.innerHeight) {
+              closestSection = section;
+            }
+          });
+    
+          const id = closestSection.id;
+    
+          navLinks.forEach((link) => {
+            link.classList.remove('selected');
+            if (link.getAttribute('href').slice(1) === id) {
+              link.classList.add('selected');
+            }
+          });
+        });
+    
+        navLinks.forEach((link) => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = e.target.getAttribute('href').slice(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth',
+              });
+            }
+          });
+        });
+      </script>
+<style>
+.container{
+display: flex;
+justify-content: center;
+padding: 104px 0 0 0;
+flex-direction: row-reverse;
+gap: 96px;
+}
+.navi{
+width: 148px;
+}
+.body{
+width: 768px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* NAVI */
+/*/////////////////////////////////////////////////////////////*/
+.navi nav{
+    margin-bottom: 12px;
+}
+.navi nav a{
+    text-decoration: none;
+    margin-bottom: 4px;
+    padding: 0 0 0 12px;
+    display: none;
+}
+.navi nav.links a,
+.navi nav a:first-of-type,
+.navi nav.selected a{
+    display: block;
+}
+.navi nav a:first-of-type{
+    padding-left: 0;
+    margin-bottom: 12px;
+}
+.navi .back{
+    margin-bottom: 12px;
+    display: inline-block;
+}
+.navi .back:hover{
+    text-decoration none!important;
+}
+.navi .back .icn{
+    width: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+}
+.navi nav.links{
+    padding: 16px 0 0 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+.navi nav.links a{
+padding: 0;
+margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="navi">
+            <nav>
+                <a href="#section1">Section 1</a>
+                <a href="#section1a">Section 1a</a>
+                <a href="#section1b">Section 1b</a>
+            </nav>
+            <nav>
+                <a href="#section2">Section 2</a>
+                <a href="#section2a">Section 2a</a>
+                <a href="#section2b">Section 2b</a>
+            </nav>
+        </div>
+        <div class="body">
+            <div id="section1" class="section">
+                <div id="segment1a" class="segment">
+
+                </div>
+                <div id="segment1b" class="segment">
+
+                </div>
+            </div>
+            <div id="section2" class="section">
+                <div id="segment2a" class="segment">
+
+                </div>
+                <div id="segment3b" class="segment">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

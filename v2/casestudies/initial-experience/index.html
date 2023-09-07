@@ -93,10 +93,10 @@ const navs = $('.navi nav');
       if (scrollTop >= sectionTop - offsetValue) {
         var sectionId = $(this).attr('id');
 
-        if (!navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
+       /* if (!navLinks.filter('[href="#' + sectionId + '"]').hasClass('selected')) {
           navLinks.removeClass('selected');
           navLinks.filter('[href="#' + sectionId + '"]').addClass('selected');
-        }
+        }*/
 
         if (!navLinks.filter('[href="#' + sectionId + '"]').parent().hasClass('selected')) {
           navs.removeClass('selected');

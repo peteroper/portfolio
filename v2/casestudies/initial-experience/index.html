@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = $('.navi a');
   const sections = $('.section');
   const segments = $('.segment');
-  const offsetValue = -50; // Adjust this value as needed
+  const offsetValue = 50; // Adjust this value as needed
 
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop();
@@ -157,9 +157,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-    });
-    /* NAV LINKS *////////////////////////////////////////////
-    navLinks.click(function(e) {
+  });
+
+  navLinks.click(function(e) {
     e.preventDefault();
     const targetId = $(this).attr('href').slice(1);
     const targetElement = $('#' + targetId);
@@ -169,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 500);
     }
   });
+
 
 });
 </script>

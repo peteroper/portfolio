@@ -1,42 +1,48 @@
 <html>
 <head>
     <script>
-        const navLinks = document.querySelectorAll('.navi a');
-        const sections = document.querySelectorAll('.section');
-    
-        window.addEventListener('scroll', () => {
-          let closestSection = sections[0];
-    
-          sections.forEach((section) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top < window.innerHeight) {
-              closestSection = section;
-            }
+  const navs = document.querySelectorAll('.navi nav');
+    const navLinks = document.querySelectorAll('.navi a');
+    const sections = document.querySelectorAll('.section');
+
+    window.addEventListener('scroll', () => {
+      let closestSection = sections[0];
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight) {
+          closestSection = section;
+        }
+      });
+
+      const id = closestSection.id;
+
+      navLinks.forEach((link) => {
+        link.classList.remove('selected');
+        if (link.getAttribute('href').slice(1) === id) {
+          link.classList.add('selected');
+          // Adding selected class to the parent <nav> element
+          link.parentElement.classList.add('selected');
+        } else {
+          // Removing selected class from other <nav> elements
+          link.parentElement.classList.remove('selected');
+        }
+      });
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').slice(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth',
           });
-    
-          const id = closestSection.id;
-    
-          navLinks.forEach((link) => {
-            link.classList.remove('selected');
-            if (link.getAttribute('href').slice(1) === id) {
-              link.classList.add('selected');
-            }
-          });
-        });
-    
-        navLinks.forEach((link) => {
-          link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href').slice(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-              window.scrollTo({
-                top: targetElement.offsetTop,
-                behavior: 'smooth',
-              });
-            }
-          });
-        });
+        }
+      });
+    });
       </script>
 <style>
 .container{

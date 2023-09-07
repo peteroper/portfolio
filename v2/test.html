@@ -2,48 +2,63 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
-  const navs = document.querySelectorAll('.navi nav');
-    const navLinks = document.querySelectorAll('.navi a');
-    const sections = document.querySelectorAll('.section');
+        $(document).ready(function() {
+  const navs = $('.navi nav');
+  const navLinks = $('.navi a');
+  const sections = $('.section');
+  const segments = $('.segment');
 
-    window.addEventListener('scroll', () => {
-      let closestSection = sections[0];
+  $(window).scroll(function() {
+    let closestSection = sections[0];
+    let closestSegment = segments[0];
 
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top < window.innerHeight) {
-          closestSection = section;
-        }
-      });
-
-      const id = closestSection.id;
-
-      navLinks.forEach((link) => {
-        link.classList.remove('selected');
-        if (link.getAttribute('href').slice(1) === id) {
-          link.classList.add('selected');
-          // Adding selected class to the parent <nav> element
-          link.parentElement.classList.add('selected');
-        } else {
-          // Removing selected class from other <nav> elements
-          link.parentElement.classList.remove('selected');
-        }
-      });
+    sections.each(function() {
+      const rect = $(this)[0].getBoundingClientRect();
+      if (rect.top >= 0 && rect.top < window.innerHeight) {
+        closestSection = $(this)[0];
+      }
     });
 
-    navLinks.forEach((link) => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = e.target.getAttribute('href').slice(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop,
-            behavior: 'smooth',
-          });
-        }
-      });
+    segments.each(function() {
+      const rect = $(this)[0].getBoundingClientRect();
+      if (rect.top >= 0 && rect.top < window.innerHeight) {
+        closestSegment = $(this)[0];
+      }
     });
+
+    const sectionId = closestSection.id;
+    const segmentId = closestSegment.id;
+
+    navLinks.removeClass('selected');
+    navs.removeClass('selected');
+
+    navLinks.each(function() {
+      if ($(this).attr('href').slice(1) === sectionId) {
+        $(this).addClass('selected');
+        // Adding selected class to the parent <nav> element
+        $(this).parent().addClass('selected');
+      }
+    });
+
+    // Adding selected class to the parent <nav> element of the segment
+    navLinks.each(function() {
+      if ($(this).attr('href').slice(1) === segmentId) {
+        $(this).parent().addClass('selected');
+      }
+    });
+  });
+
+  navLinks.click(function(e) {
+    e.preventDefault();
+    const targetId = $(this).attr('href').slice(1);
+    const targetElement = $('#' + targetId);
+    if (targetElement.length) {
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top
+      }, 500);
+    }
+  });
+});
       </script>
 <style>
 .container{

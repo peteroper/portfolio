@@ -108,7 +108,7 @@ const navs = $('.navi nav');
     segments.each(function() {
       var segmentTop = $(this).offset().top;
 
-      if (scrollTop >= segmentTop - offsetValue) {
+      if (segmentTop >= 0 && scrollTop >= segmentTop - offsetValue) {
         var segmentId = $(this).attr('id');
 
         if (!navLinks.filter('[href="#' + segmentId + '"]').hasClass('selected')) {

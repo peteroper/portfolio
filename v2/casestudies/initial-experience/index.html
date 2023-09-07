@@ -122,6 +122,24 @@ document.addEventListener("DOMContentLoaded", function () {
   $(window).scroll(function() {
     const scrollTop = $(window).scrollTop();
 
+    segments.each(function() {
+      var segmentTop = $(this).offset().top;
+
+      if (scrollTop >= segmentTop - offsetValue) {
+        var segmentId = $(this).attr('id');
+
+        if (!navLinks.filter('[href="#' + segmentId + '"]').hasClass('selected')) {
+          navLinks.removeClass('selected');
+          navLinks.filter('[href="#' + segmentId + '"]').addClass('selected');
+        }
+
+        if (!navLinks.filter('[href="#' + segmentId + '"]').parent().hasClass('selected')) {
+          navs.removeClass('selected');
+          navLinks.filter('[href="#' + segmentId + '"]').parent().addClass('selected');
+        }
+      }
+    });
+
     sections.each(function() {
       var sectionTop = $(this).offset().top;
 
@@ -139,23 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-
-    segments.each(function() {
-      var segmentTop = $(this).offset().top;
-
-      if (scrollTop >= segmentTop - offsetValue) {
-        var segmentId = $(this).attr('id');
-
-        if (!navLinks.filter('[href="#' + segmentId + '"]').hasClass('selected')) {
-          navLinks.removeClass('selected');
-          navLinks.filter('[href="#' + segmentId + '"]').addClass('selected');
-        }
-
-        if (!navLinks.filter('[href="#' + segmentId + '"]').parent().hasClass('selected')) {
-          navs.removeClass('selected');
-          navLinks.filter('[href="#' + segmentId + '"]').parent().addClass('selected');
-        }
-      }
     });
     /* NAV LINKS *////////////////////////////////////////////
     navLinks.click(function(e) {

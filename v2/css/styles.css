@@ -1,0 +1,182 @@
+*, body{
+    font-family: 'Raleway';
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    line-height: 160%;
+    overflow: initial;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+    }
+/*/////////////////////////////////////////////////////////////*/
+/* FONT SIZE */
+/*/////////////////////////////////////////////////////////////*/
+h1, h2, h3, h3 a, p.l, p.l span{
+    font-family: 'Lora';
+}
+#intro h2{
+    /*font-family: 'Playfair Display';*/
+    font-family: 'Merriweather';
+    font-weight: 700;
+}
+*, body, p, p b, h1, h2, h3, h4{
+        font-size: 10px;
+}
+@media only screen and (max-width: 424px) {
+*, body, p, b, h1, h2, h3, h4{
+    font-size: 9.5px;
+    text-rendering: optimizeLegibility;
+}
+}
+#intro h2{ font-size: 4.2em; letter-spacing: -0.5pt; }
+h1,h2, h3,h4{
+    line-height: 140%; 
+}
+h1{ font-weight: 400; }
+h3 { font-size: 2.2em; line-height: 175%; }
+p.l { font-size: 2em; line-height: 175%; }
+.article h3 { font-size: 2em; line-height: 160%; }
+    h2, h1{ font-size: 1.8em; line-height: 160%; }
+    ul li, ol li, #titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
+    #skills ul li, .article p, h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
+    #showcase h3 a > span,
+    h3 a, 
+    p.l span, 
+    p u, 
+    p a, 
+    ol li a,
+    li b{
+    font-size: 1em;
+    }
+    #showcase h3 a > span,
+    .special ul li h3:before{
+        font-size: 0.68em;    
+    } 
+    @media only screen and (max-width: 992px) {
+        p.l { font-size: 2.0em; line-height: 175%; }
+        #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
+        #posts p{ font-size: 1.5em; }
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    h1, h3,h4,.navi nav a {  
+      font-weight: 400;
+    }
+/*/////////////////////////////////////////////////////////////*/
+/* COLOR */
+/*/////////////////////////////////////////////////////////////*/
+.section h4,
+#posts p,
+#titlebar nav a,
+.navi a{
+    color: rgba(0, 0, 0, 0.5);   
+}
+#titlebar.sticky a h1, 
+#posts nav a:hover,
+h3 a,
+.navi nav.selected a:first-of-type,
+.navi a.selected{
+    color: rgba(0, 0, 0, 0.92);   
+}
+a h1,
+#posts nav a,
+.section p{
+    color: rgba(0, 0, 0, 0.68);
+}
+@media only screen and (max-width: 992px) {
+    .navi nav.links{ color rgba(0, 0, 0, 0.92);  }
+}
+/*/////////////////////////////////////////////////////////////*/
+#titlebar div a,
+h3 a,
+nav a{
+    color: #000;
+}
+#skills ul li,
+.header,
+#project ul span,
+.special ul li h3:before{
+    color: #FFF;
+}
+.icn{
+    color: #346672;
+}
+a{
+    color: #4a90e2;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUND */
+/*/////////////////////////////////////////////////////////////*/
+.navi .back,
+.section .img{
+    background-color: #E9E9ED;
+}
+#titlebar .avatar,
+#posts nav a.selected,
+#showcase h3 a > span{
+    background: #E3E9F0    
+}
+.special.v1{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
+}
+#skills ul li,
+#project ul span,
+.special ul li h3:before{
+    background: #88A4AA;
+}
+.special ul li{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #E9E9ED;
+ }
+.special.v1 ul li{
+    background: rgba(255, 255, 255, 0.68);
+}
+.img.v1{
+    background-color: #FFF;
+}
+.fullscreen-div {
+    background-color: rgba(52, 102, 114, 0.96);   
+    /*background-color: #346672;*/
+}
+.img.bg-non{
+    background-color: transparent!important;
+}
+/*/////////////////////////////////////////////////////////////*/
+.img{
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+/*/////////////////////////////////////////////////////////////*/
+/* BORDERS */
+/*/////////////////////////////////////////////////////////////*/
+.navi nav.links,
+.section{
+    border-color: #EFEFEF;
+}
+ #posts nav a{
+    border-color: #E3E9F0;
+ }
+/*/////////////////////////////////////////////////////////////*/
+    #showcase .scrollable,
+    .img,
+    #showcase h3 a > span,
+    #posts nav a{
+        border-radius: 4px;
+    }
+    #skills ul li,
+    #titlebar .avatar,
+    .navi .back{
+        border-radius: 100px;
+    }
+/*/////////////////////////////////////////////////////////////*/
+/* IMGS */
+/*/////////////////////////////////////////////////////////////*/
+.img{
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    padding-bottom: 75%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    display: block;
+}
+.img.sm{
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+}

@@ -1,0 +1,15 @@
+/*/////////////////////////////////////////////////////////////*/
+/* SKILLS */
+/*/////////////////////////////////////////////////////////////*/
+#skills ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  #skills ul li{
+    padding: 4px 12px; 
+    margin: 2px; 
+    text-overflow: ellipsis;
+  }

@@ -1,0 +1,311 @@
+/*/////////////////////////////////////////////////////////////*/
+/* MATERIAL ICONS */
+/*/////////////////////////////////////////////////////////////*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+/*/////////////////////////////////////////////////////////////*/
+/* ANIMATION */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div.loaded {
+    animation: fadeOut 0.6s ease-in-out forwards; /* Adjust the duration as needed */
+}
+.fullscreen-div.none {
+display: none;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+.container {
+opacity: 1;
+transition: opacity 0.6s ease-out;
+}
+.navi nav a {  
+  opacity: 50%;
+  transition: opacity 0.6s ease-in-out;
+}
+.container.fade {
+opacity: 0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* CORE */
+/*/////////////////////////////////////////////////////////////*/
+li{ list-style-position: inside;}
+html, body {
+  scroll-behavior: smooth;
+}
+a{
+text-decoration: none;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* LAYOUT */
+/*/////////////////////////////////////////////////////////////*/
+.container{
+display: flex;
+/*justify-content: center;*/
+padding: 104px 144px 0 96px;
+}
+.tab-container{
+display: none!important;
+}
+.tab-container.tab-selected{
+display: flex!important;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* Splash */
+/*/////////////////////////////////////////////////////////////*/
+.fullscreen-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+.fullscreen-div img {
+    max-width: 100%;
+    max-height: 80vh; 
+}
+/*/////////////////////////////////////////////////////////////*/
+/* TITLEBAR */
+/*/////////////////////////////////////////////////////////////*/
+#titlebar{
+position: fixed;
+top: 0; 
+left: 0;
+right: 0;
+z-index: 100;
+}
+#titlebar > div{
+padding: 12px 144px 12px 96px;
+/*max-width: 1012px;*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0 auto;
+}
+#titlebar div a{
+display: flex;
+gap: 12px;
+align-items: center;
+}
+#titlebar .avatar{
+width: 30px;
+height: 30px;
+background-size: 100% auto;
+}
+#titlebar nav{
+display: flex;
+gap: 24px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* NAVI */
+/*/////////////////////////////////////////////////////////////*/
+.navi nav{
+    margin-bottom: 12px;
+}
+.navi nav a{
+    text-decoration: none;
+    margin-bottom: 4px;
+    padding: 0 0 0 12px;
+    display: none;
+}
+.navi nav.links a,
+.navi nav a:first-of-type,
+.navi nav.selected a{
+    display: block;
+}
+.navi nav a:first-of-type{
+    padding-left: 0;
+    margin-bottom: 12px;
+}
+.navi .back{
+    margin-bottom: 12px;
+    display: inline-block;
+}
+.navi .back:hover{
+    text-decoration none!important;
+}
+.navi .back .icn{
+    width: 36px;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    display: block;
+}
+.navi nav.links{
+    padding: 16px 0 0 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+.navi nav.links a{
+padding: 0;
+margin-bottom: 8px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* CONTENT */
+/*/////////////////////////////////////////////////////////////*/
+.body{
+/*width: 768px;*/
+width: 100%;
+}
+.section{
+padding: 0 0 36px 0;
+margin: 0 0 36px 0;
+border-width: 0 0 1px 0;
+border-style: solid;
+}
+.segment{
+padding-bottom: 36px;
+}
+.section h3{
+margin-bottom: 16px;
+}
+.section h4{
+margin-bottom: 8px;
+}
+.section p{
+max-width: 668px;
+margin-bottom: 16px;
+}
+#intro h2{
+    margin-bottom: 36px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* COLUMNS */
+/*/////////////////////////////////////////////////////////////*/
+.column-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.column{
+    flex: 0 1 calc(50% - 20px); /* Adjust width and margin as needed */
+    display: flex;
+    flex-direction: column;
+}
+.col1 .column:nth-child(1){
+    flex: 0 1 calc(66% - 20px); /* Adjust width and margin as needed */
+}
+.col1 .column:nth-child(2){
+    flex: 0 1 calc(33% - 20px); /* Adjust width and margin as needed */
+}
+/*/////////////////////////////////////////////////////////////*/
+/* IMGS */
+/*/////////////////////////////////////////////////////////////*/
+.tab-container{
+display: none!important;
+}
+.tab-container.tab-selected{
+display: flex!important;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* INTRO */
+/*/////////////////////////////////////////////////////////////*/
+#intro p.l{
+    margin-bottom: 20px;
+}
+#intro:last-child{
+margin: 16px 0 0 0;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* POSTS */
+/*/////////////////////////////////////////////////////////////*/
+#posts nav a{
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 0 0 4px;
+    text-decoration: none;
+}
+/*/////////////////////////////////////////////////////////////*/
+#posts .post,
+#posts .post > div{
+gap: 24px;
+}
+#posts .post{
+display: flex;
+margin-bottom: 20px;
+flex: 1 0 0;
+}
+#posts .post:last-of-type{
+margin-bottom: 0;
+}
+#posts .post > div{
+display: flex;
+flex: 1 0 0;
+}
+#posts .post div div{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex: 1 0 0;
+}
+#posts .post h3{
+    margin-bottom: 0;
+}
+#posts .post .img-wrap{
+width: 104px;
+margin: 0;
+display: block;
+}
+#posts .post .img{
+    background-size: 100% auto;
+    margin-bottom: 0!important;
+}
+#posts p{
+margin: 0;
+display: flex;
+flex-direction: column;
+align-self: stretch;
+}
+#posts .icn{
+width: 20px;
+height: 20px;
+padding: 8px;
+}
+#posts .tab-container.tab-selected{
+    flex-direction: column;
+}

@@ -1,0 +1,211 @@
+/*/////////////////////////////////////////////////////////////*/
+/* DESKTOP */
+/*/////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 993px) {
+/*/////////////////////////////////////////////////////////////*/
+    a:hover{
+    text-decoration: underline;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    .navi.sticky{
+        height: 400px;
+        position: sticky;
+        top: 0; 
+        padding-top: 104px;
+    }
+    .container{
+        flex-direction: row-reverse;
+        gap: 96px;
+    }
+    .navi{
+        width: 148px;
+    }
+    #posts .post > div{
+    align-items: center;
+    }
+    #titlebar.sticky{
+        background-color: #FFF;
+    }
+/*/////////////////////////////////////////////////////////////*/
+}
+    /*/////////////////////////////////////////////////////////////*/
+    /* >= SM TABLETS */
+    /*/////////////////////////////////////////////////////////////*/
+    @media only screen and (min-width: 769px) {
+    .special ul li{
+    width: calc(50% - 50px); /* Adjust the width as needed */
+    }
+    .special.v2 ul li{
+    width: calc(33% - 50px); /* Adjust the width as needed */
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    /* TABLETS */
+    /*/////////////////////////////////////////////////////////////*/
+    @media only screen and (max-width: 992px) {
+    /*/////////////////////////////////////////////////////////////*/
+    .navi nav#nav1,
+    .navi nav#nav2,
+    .navi nav#nav3{
+    display: none!important;
+    }
+    .navi nav.links{
+    width: 100%;
+    }
+    .navi nav.links a{
+    margin-bottom: 12px;
+    padding: 0;
+    }
+    #titlebar{
+    padding: 0 40px;
+    }
+    .container{
+    padding: 40px;
+    flex-direction: column;
+    }
+    .body{
+    width: 100%;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #showcase{
+        padding-bottom: 0;
+        border: 0!important;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #posts .post .img-wrap{
+    width: 74px;
+    }
+    #posts .post{
+    gap: 12px;    
+    }
+    #posts .post > div{
+    padding-right: 8px;
+    gap: 0;
+    }
+    #posts .post .icn{
+    display: none;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    /* SM TABLETS */
+    /*/////////////////////////////////////////////////////////////*/
+    @media only screen and (max-width: 768px) {
+    .container{
+    padding: 104px 20px 68px 20px;
+    }
+    #titlebar{
+    padding: 0 20px;
+    }
+    #posts{
+    margin-right: -20px;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #titlebar{
+    transition: background-color 0.6s, color 0.6s;
+    }
+    #titlebar.sticky div a,
+    #titlebar.sticky nav a{
+        color: #FFF;
+    }
+    #titlebar.sticky{
+        background-color: #346672;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    /* MOBILES */
+    /*/////////////////////////////////////////////////////////////*/
+    @media only screen and (max-width: 576px) {
+    .container{
+    padding-top: 62%;
+    position: relative;
+    }
+    #titlebar h1{
+    display: none;
+    }
+    #titlebar.sticky h1{
+    display: block;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    .section{
+    padding: 0 0 24px 0;
+    margin: 0 0 24px 0;
+    }
+    .segment{
+    padding-bottom: 24px;
+    }
+    #project ul,
+    #pain-points ol,
+    .special ul,
+    #pain-points ol{
+    flex-direction: column;
+    gap: 12px;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #intro{
+    padding-top: 24px;
+    }
+    #intro .img{
+    width: auto;
+    padding-bottom: 62%;
+    background-size: 100% auto;
+    background-color: #FFF;
+    background-position: 0 50%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #showcase .segment{
+        margin-bottom: 24px;
+    }
+    #showcase h3 a > span{
+        width: 68px;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 4px 0 8px;
+    }
+    #showcase h3 a > span .icn{
+    display: none;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    #posts .post{
+    width: 340px;
+     }
+    #posts nav{
+    display: none;
+    }
+    #posts .posts-scrollable{
+    width: 100%;
+    height: 280px;
+    flex-shrink: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow: -moz-scrollbars-horizontal;
+    position: relative;
+    }
+    #posts .posts-scrollable > div{
+    height: 100%;
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    }
+    #posts .post > div{
+    padding-right: 0;
+    }
+    #posts .posts-scrollable .tab-container{
+        display: flex!important;
+        flex-direction: column;
+    }
+    /*/////////////////////////////////////////////////////////////*/
+    }
+    /*/////////////////////////////////////////////////////////////*/s

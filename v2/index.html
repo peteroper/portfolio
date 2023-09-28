@@ -6,12 +6,21 @@
 <meta name="robots" content="noindex, nofollow" />
 <meta name="google-site-verification" content="gdAK0KN1Yy7jAIyafcJnFagF6wj12OobQYi8jAIlgMM" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'-->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
-<!--link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'-->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+
+<!--link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet"-->
+
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<link rel="stylesheet" type="text/css" href="css/device.css">
+
 <meta name="theme-color" content="#346672">
 <link rel="apple-touch-icon" href="https://peteroper.github.io/portfolio/assets/imgs/icon-apple.jpg">
 <meta property="og:image" content="https://peteroper.github.io/portfolio/assets/imgs/icon-og.jpg">
@@ -145,749 +154,44 @@ const navs = $('.navi nav');
     return false;
 });
 
+/* Article columns *////////////////////////////////////////////
+// Get a reference to the article container
+const articleContainer = document.querySelector('.article-container');
+
+// Get all the articles within the container
+const articles = articleContainer.querySelectorAll('.article');
+
+// Define the number of columns (in this case, 3)
+const numColumns = 3;
+
+// Calculate the number of articles per column
+const articlesPerColumn = Math.ceil(articles.length / numColumns);
+
+// Create an array to hold the articles grouped by columns
+const columns = [];
+
+// Split the articles into columns
+for (let i = 0; i < numColumns; i++) {
+    columns.push(Array.from(articles).slice(i * articlesPerColumn, (i + 1) * articlesPerColumn));
+}
+
+// Create new div elements for the columns
+for (let i = 0; i < numColumns; i++) {
+    const columnDiv = document.createElement('div');
+    columnDiv.className = 'column';
+    
+    // Append articles to the respective column div
+    columns[i].forEach((article) => {
+        columnDiv.appendChild(article);
+    });
+
+    // Append the column div to the article container
+    articleContainer.appendChild(columnDiv);
+}
+
 
 });
 </script>
-<!-- STYLE CSS -->
-<style>
-*, body{
-font-family: 'Raleway';
-padding: 0;
-margin: 0;
-border: 0;
-font-size: 18px;
-line-height: 160%;
-overflow: initial;
--webkit-font-smoothing: subpixel-antialiased !important;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* FONT SIZE */
-/*/////////////////////////////////////////////////////////////*/
-h1, h2, h3, h3 a, p.l, p.l span{
-font-family: 'Lora';
-}
-#intro h2{
-font-family: 'Playfair Display';
-font-weight: 700;
-}
-*, body, p, p b, h1, h2, h3, h4{
-    font-size: 10px;
-}
-@media only screen and (max-width: 424px) {
-*, body, p, b, h1, h2, h3, h4{
-font-size: 9.5px;
-text-rendering: optimizeLegibility;
-}
-}
-#intro h2{ font-size: 4.2em; letter-spacing: -0.5pt; }
-h1,h2, h3,h4{
-line-height: 140%; 
-}
-h1{ font-weight: 400; }
-p.l { font-size: 2.2em; line-height: 175%; }
-h1, h2, h3 { font-size: 1.8em; }
-#titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6em; }
-h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3em; }
-#showcase h3 a > span,
-h3 a, 
-p.l span, 
-p u, 
-p a, 
-li b{
-font-size: 1em;
-}
-#showcase h3 a > span,
-.special ul li h3:before{
-    font-size: 0.68em;    
-} 
-@media only screen and (max-width: 992px) {
-    p.l { font-size: 2.0em; line-height: 175%; }
-    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
-    #posts p{ font-size: 1.5em; }
-}
-/*/////////////////////////////////////////////////////////////*/
-h1, h2, h3,h4,.navi nav a {  
-  font-weight: 400;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* COLOR */
-/*/////////////////////////////////////////////////////////////*/
-.section h4,
-#posts p,
-#titlebar nav a,
-.navi a{
-opacity: 50%;    
-}
-#titlebar.sticky a h1, 
-#posts nav a:hover,
-h3 a,
-.navi nav.selected a:first-of-type,
-.navi a.selected{
-opacity: 92%;    
-}
-a h1,
-#posts nav a,
-.section p{
-opacity: 68%;
-}
-.b span,
-.special > p,
-p.l span,
-h3,
-.navi nav.selected a:first-of-type,
-.navi nav .selected,
-.section p span{
-    opacity: 100%;
-}
-@media only screen and (max-width: 992px) {
-    .navi nav.links{ opacity: 92%;   }
-}
-/*/////////////////////////////////////////////////////////////*/
-#titlebar div a,
-h3 a,
-nav a{
-color: #000;
-}
-.header,
-#project ul span,
-.special ul li h3:before{
-color: #FFF;
-}
-.icn{
-color: #346672;
-}
-a{
-color: #4a90e2;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* BACKGROUND */
-/*/////////////////////////////////////////////////////////////*/
-.navi .back,
-.section .img{
-background-color: #E9E9ED;
-}
-#titlebar .avatar,
-#posts nav a.selected,
-#showcase h3 a > span{
-    background: #E3E9F0    
-}
-.special.v1{
-background: linear-gradient(0deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.68) 100%), #88A4AA;
-}
-#project ul span,
-.special ul li h3:before{
-background: #88A4AA;
-}
-.special ul li{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #E9E9ED;
-}
-.special.v1 ul li{
-    background: rgba(255, 255, 255, 0.68);
-}
-.img.v1{
-    background-color: #FFF;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* BORDERS */
-/*/////////////////////////////////////////////////////////////*/
-.navi nav.links,
-.section{
-    border-color: #EFEFEF;
-}
-#posts nav a{
-    border-color: #E3E9F0;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase .scrollable,
-.img,
-#showcase h3 a > span,
-#posts nav a{
-    border-radius: 4px;
-}
-#titlebar .avatar,
-.navi .back{
-    border-radius: 100px;
-}
-</style>
-<!-- CORE CSS -->
-<style>
-/*/////////////////////////////////////////////////////////////*/
-/* MATERIAL ICONS */
-/*/////////////////////////////////////////////////////////////*/
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-}
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-/*/////////////////////////////////////////////////////////////*/
-/* ANIMATION */
-/*/////////////////////////////////////////////////////////////*/
-.fullscreen-div.loaded {
-    animation: fadeOut 0.6s ease-in-out forwards; /* Adjust the duration as needed */
-}
-.fullscreen-div.none {
-display: none;
-}
-@keyframes fadeOut {
-    0% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-    }
-}
-.container {
-opacity: 1;
-transition: opacity 0.6s ease-out;
-}
-.navi nav a {  
-  opacity: 50%;
-  transition: opacity 0.6s ease-in-out;
-}
-.container.fade {
-opacity: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* CORE */
-/*/////////////////////////////////////////////////////////////*/
-li{ list-style-position: inside;}
-html, body {
-  scroll-behavior: smooth;
-}
-a{
-text-decoration: none;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* LAYOUT */
-/*/////////////////////////////////////////////////////////////*/
-.container{
-display: flex;
-justify-content: center;
-padding: 104px 0 0 0;
-}
-.tab-container{
-display: none!important;
-}
-.tab-container.tab-selected{
-display: flex!important;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* Splash */
-/*/////////////////////////////////////////////////////////////*/
-.fullscreen-div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #346672;
-    position: fixed;
-    z-index: 1000;
-}
-.fullscreen-div img {
-    max-width: 100%;
-    max-height: 80vh; 
-}
-/*/////////////////////////////////////////////////////////////*/
-/* TITLEBAR */
-/*/////////////////////////////////////////////////////////////*/
-#titlebar{
-position: fixed;
-top: 0; 
-left: 0;
-right: 0;
-z-index: 100;
-}
-#titlebar > div{
-padding: 12px 0;
-max-width: 1012px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 0 auto;
-}
-#titlebar div a{
-display: flex;
-gap: 12px;
-align-items: center;
-}
-#titlebar .avatar{
-width: 30px;
-height: 30px;
-background-size: 100% auto;
-}
-#titlebar nav{
-display: flex;
-gap: 24px;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* NAVI */
-/*/////////////////////////////////////////////////////////////*/
-.navi nav{
-    margin-bottom: 12px;
-}
-.navi nav a{
-    text-decoration: none;
-    margin-bottom: 4px;
-    padding: 0 0 0 12px;
-    display: none;
-}
-.navi nav.links a,
-.navi nav a:first-of-type,
-.navi nav.selected a{
-    display: block;
-}
-.navi nav a:first-of-type{
-    padding-left: 0;
-    margin-bottom: 12px;
-}
-.navi .back{
-    margin-bottom: 12px;
-    display: inline-block;
-}
-.navi .back:hover{
-    text-decoration none!important;
-}
-.navi .back .icn{
-    width: 36px;
-    font-size: 16px;
-    line-height: 36px;
-    text-align: center;
-    display: block;
-}
-.navi nav.links{
-    padding: 16px 0 0 0;
-    border-width: 1px 0 0 0;
-    border-style: solid;
-}
-.navi nav.links a{
-padding: 0;
-margin-bottom: 8px;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* CONTENT */
-/*/////////////////////////////////////////////////////////////*/
-.body{
-width: 768px;
-}
-.section{
-padding: 0 0 36px 0;
-margin: 0 0 36px 0;
-border-width: 0 0 1px 0;
-border-style: solid;
-}
-.segment{
-padding-bottom: 36px;
-}
-.section h3{
-margin-bottom: 16px;
-}
-.section h4{
-margin-bottom: 8px;
-}
-.section p{
-max-width: 668px;
-margin-bottom: 16px;
-}
-#intro h2{
-    margin-bottom: 36px;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* IMGS */
-/*/////////////////////////////////////////////////////////////*/
-.img{
-  position: relative;
-  width: 100%;
-  margin-bottom: 12px;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-  display: block;
-}
-.img{
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: auto 100%;
-}
-.tab-container{
-display: none!important;
-}
-.tab-container.tab-selected{
-display: flex!important;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* INTRO */
-/*/////////////////////////////////////////////////////////////*/
-#intro p{
-margin: 0 0 8px 0;
-}
-#intro p:last-of-type{
-margin: 16px 0 0 0;
-}
-#intro p b{
-display: block;
-margin: 0 0 12px 0;
-}
-#intro .img{
-    display: none;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* POSTS */
-/*/////////////////////////////////////////////////////////////*/
-#posts nav a{
-    border-width: 1px;
-    border-style: solid;
-    display: inline-block;
-    width: 30px;
-    line-height: 30px;
-    text-align: center;
-    margin: 0 0 0 4px;
-    text-decoration: none;
-}
-/*/////////////////////////////////////////////////////////////*/
-#posts .post,
-#posts .post > div{
-gap: 24px;
-}
-#posts .post{
-display: flex;
-margin-bottom: 20px;
-flex: 1 0 0;
-}
-#posts .post:last-of-type{
-margin-bottom: 0;
-}
-#posts .post > div{
-display: flex;
-flex: 1 0 0;
-}
-#posts .post div div{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-flex: 1 0 0;
-}
-#posts .post h3{
-    margin-bottom: 0;
-}
-#posts .post .img-wrap{
-width: 104px;
-margin: 0;
-display: block;
-}
-#posts .post .img{
-    background-size: 100% auto;
-    margin-bottom: 0!important;
-}
-#posts p{
-margin: 0;
-display: flex;
-flex-direction: column;
-align-self: stretch;
-}
-#posts .icn{
-width: 20px;
-height: 20px;
-padding: 8px;
-}
-#posts .tab-container.tab-selected{
-    flex-direction: column;
-}
-/*/////////////////////////////////////////////////////////////*/
-/* SHOWCASE */
-/*/////////////////////////////////////////////////////////////*/
-#showcase{
-    border-bottom: 0;
-}
-#showcase h3 a{
-    line-height: 30px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-}
-#showcase h3 a > span{
-    line-height: 30px;
-    padding: 0 8px 0 12px;
-}
-#showcase h3 a > span .icn{
-    display: inline-block;
-    vertical-align: middle;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase .img{
-    margin-bottom: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase .scrollable{
-width: 100%;
-padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-flex-shrink: 0;
-overflow-x: auto;
-overflow-y: hidden;
--webkit-overflow-scrolling: touch;
-overflow: -moz-scrollbars-horizontal;
-position: relative;
-}
-#showcase .scrollable > div{
-height: 100%;
-padding-right: 40px;
-display: flex;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-}
-#showcase .scrollable div div{
-padding: 40px;
-}
-#showcase .scrollable div p{
-width: 440px;
-margin-bottom: 12px;
-}
-</style>
-<!-- MEDIA QUERIES -->
-<style>
-/*/////////////////////////////////////////////////////////////*/
-/* DESKTOP */
-/*/////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 993px) {
-/*/////////////////////////////////////////////////////////////*/
-a:hover{
-text-decoration: underline;
-}
-/*/////////////////////////////////////////////////////////////*/
-.navi.sticky{
-    height: 400px;
-    position: sticky;
-    top: 0; 
-    padding-top: 104px;
-}
-.container{
-    flex-direction: row-reverse;
-    gap: 96px;
-}
-.navi{
-    width: 148px;
-}
-#posts .post > div{
-align-items: center;
-}
-#titlebar.sticky{
-    background-color: #FFF;
-}
-/*/////////////////////////////////////////////////////////////*/
-}
-/*/////////////////////////////////////////////////////////////*/
-/* >= SM TABLETS */
-/*/////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 769px) {
-.special ul li{
-width: calc(50% - 50px); /* Adjust the width as needed */
-}
-.special.v2 ul li{
-width: calc(33% - 50px); /* Adjust the width as needed */
-}
-/*/////////////////////////////////////////////////////////////*/
-}
-/*/////////////////////////////////////////////////////////////*/
-/* TABLETS */
-/*/////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 992px) {
-/*/////////////////////////////////////////////////////////////*/
-.navi nav#nav1,
-.navi nav#nav2,
-.navi nav#nav3{
-display: none!important;
-}
-.navi nav.links{
-width: 100%;
-}
-.navi nav.links a{
-margin-bottom: 12px;
-padding: 0;
-}
-#titlebar{
-padding: 0 40px;
-}
-.container{
-padding: 40px;
-flex-direction: column;
-}
-.body{
-width: 100%;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase{
-    padding-bottom: 0;
-    border: 0!important;
-}
-/*/////////////////////////////////////////////////////////////*/
-#posts .post .img-wrap{
-width: 74px;
-}
-#posts .post{
-gap: 12px;    
-}
-#posts .post > div{
-padding-right: 8px;
-gap: 0;
-}
-#posts .post .icn{
-display: none;
-}
-/*/////////////////////////////////////////////////////////////*/
-}
-/*/////////////////////////////////////////////////////////////*/
-/* SM TABLETS */
-/*/////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 768px) {
-.container{
-padding: 104px 20px 68px 20px;
-}
-#titlebar{
-padding: 0 20px;
-}
-#posts{
-margin-right: -20px;
-}
-/*/////////////////////////////////////////////////////////////*/
-#titlebar{
-transition: background-color 0.6s, color 0.6s;
-}
-#titlebar.sticky div a,
-#titlebar.sticky nav a{
-    color: #FFF;
-}
-#titlebar.sticky{
-    background-color: #346672;
-}
-/*/////////////////////////////////////////////////////////////*/
-}
-/*/////////////////////////////////////////////////////////////*/
-/* MOBILES */
-/*/////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 576px) {
-.container{
-padding-top: 62%;
-position: relative;
-}
-#titlebar h1{
-display: none;
-}
-#titlebar.sticky h1{
-display: block;
-}
-/*/////////////////////////////////////////////////////////////*/
-.section{
-padding: 0 0 24px 0;
-margin: 0 0 24px 0;
-}
-.segment{
-padding-bottom: 24px;
-}
-#project ul,
-#pain-points ol,
-.special ul,
-#pain-points ol{
-flex-direction: column;
-gap: 12px;
-}
-/*/////////////////////////////////////////////////////////////*/
-#intro{
-padding-top: 24px;
-}
-#intro .img{
-width: auto;
-padding-bottom: 62%;
-background-size: 100% auto;
-background-color: #FFF;
-background-position: 0 50%;
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-}
-/*/////////////////////////////////////////////////////////////*/
-#showcase .segment{
-    margin-bottom: 24px;
-}
-#showcase h3 a > span{
-    width: 68px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 4px 0 8px;
-}
-#showcase h3 a > span .icn{
-display: none;
-}
-/*/////////////////////////////////////////////////////////////*/
-#posts .post{
-width: 340px;
- }
-#posts nav{
-display: none;
-}
-#posts .posts-scrollable{
-width: 100%;
-height: 280px;
-flex-shrink: 0;
-overflow-x: auto;
-overflow-y: hidden;
--webkit-overflow-scrolling: touch;
-overflow: -moz-scrollbars-horizontal;
-position: relative;
-}
-#posts .posts-scrollable > div{
-height: 100%;
-display: flex;
-gap: 8px;
-flex-direction: row;
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-}
-#posts .post > div{
-padding-right: 0;
-}
-#posts .posts-scrollable .tab-container{
-    display: flex!important;
-    flex-direction: column;
-}
-/*/////////////////////////////////////////////////////////////*/
-}
-/*/////////////////////////////////////////////////////////////*/
-</style>
 </head>
 <body>
     <div class="fullscreen-div">
@@ -900,173 +204,104 @@ padding-right: 0;
             <h1>Peter Roper</h1>
         </a>
         <nav class="about links">
-            <a href="https://peteroper.github.io/portfolio/v2/about.html" class="fade-link">About</a>
-            <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
+            <a href="about.html" class="fade-link">About</a>
+            <a href="assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
         </nav>
     </div></div>
 
 <div id="fade-container" class="container">
 
 <div class="body">
-    <div id="intro" class="section">
-        <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/tkyo.png);" ></span>
-        <h2>Hello, I'm Peter.</h2>
-        <p class="l b"><span>A Product Designer based in Tokyo with a back pocket brimming with experience.</span> I have created digital products since the very early days of the internets transition into visual design.</p>
-        <p>Read more about my <a href="https://peteroper.github.io/portfolio/v2/about.html">background and experience</a> working as a Product Designer.</p>
+    <div id="intro" class="section column-container col1">
+      
+      <div class="column">
+        <h2>Pushing the needle while<br /> engaging my creative intuition.</h2>
+        <p class="l b"><span>Hi I'm Peter, a Product Designer based in Tokyo.</span> As a Senior Designer at Asurion Japan, I lead the UX & UI design for clients au and docomo.</p>
+        <p>Read more about my <a href="about.html">background and experience</a> working as a Product Designer.</p>
+      </div>
+      <div class="column">
+        <span class="img bg-non" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.png);" ></span>
+      </div>
     </div>
-
-            <!-- posts start -->
-            <div id="posts" class="section tab-block">
-                <h4>Design Journal</h4>
-                <div class="posts-scrollable"><div>
-                <!-- POSTS TAB 1 -->
-                <div id="posts1" class="segment tab-container tab-selected">
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-1.jpg);"></span></span>
-                        <div class="contents">
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/Establishing-UX-Principles-d559d589b7364aceb43f5883ec46739e?pvs=4" title="Establishing Design Principles" target="_blank">Establishing UX Principles</a></h3>
-                                <p>Is necessary so all heads are pointing in the same direction.</p>
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 1 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-2.png);" ></span></span>
-                        <div class="contents">
-                            
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/The-Importance-of-a-Design-System-e0d344b59def4fdba7c121ba9c1219c0" title="The Importance of a Design System" target="_blank">Design System Importance</a></h3>
-                                <p>Is crucial in developing a consistent app.</p>
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 2 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-3.png);" ></span></span>
-                        <div class="contents">
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/Design-Ops-isn-t-just-Systems-ac358d9719af4bb7b09a6806f7db9ebb?pvs=4" title="Design Ops isnt just systems" target="_blank">DesignOps isn't just Systems</a></h3>
-                                <p>Design ops lays the foundations for a strong design team.</p>
-                            </div> 
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 3 -->
+    <div id="journal" class="section">
+        <h4>Design Journal</h4>
+        <div class="article-container">
+            <div class="article section">
+                <h3 class="title">Continously Improving with A/B Testing and Product Analytics</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in metus vel sapien feugiat sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in metus vel sapien feugiat sollicitudin.</p>
+                <span class="img"></span>
+                <div class="meta">
+                    <span class="tag">Journal</span>
+                    <span class="date">September 25, 2023</span>
                 </div>
-        
-                <!-- POSTS TAB 2 -->
-                <div id="posts2" class="segment tab-container">
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/Football-Design-Principles-71f1ccd0d5054f2f81233868c6f101f2?pvs=4" title="Football & Design Principles" target="_blank">Football & Design Principles</a></h3>
-                                <p>Modern Football and its parallels with Design teams</p>
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>
-                    </div>
-                    <!-- post 1 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/Visual-Hierachy-Promoting-Engagement-fd774fcefbc040f49741143d7b6f88ca?pvs=4" title="Visual Hierachy & Promoting Engagement" target="_blank">Hierachy & Engagement</a></h3>
-                                <p>Visual Hierachy principle and Engagement techniques.</p>
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 2 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/Design-Ops-isn-t-just-Systems-ac358d9719af4bb7b09a6806f7db9ebb?pvs=4" title="https://peteroper.notion.site/Advocating-a-Design-Culture-1770b2d30df8473d92cc6fbf4004f2b7?pvs=4" target="_blank">Advocating a Design Culture</a></h3>
-                                <p>Thoughts regarding team dynamics and growth.</p>
-                            </div> 
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 3 -->
-                </div>
-                <!-- POSTS TAB 3 -->
-                <div id="posts3" class="segment tab-container">
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            <div>
-                                
-                                <h3><a href="https://peteroper.notion.site/Design-Vocabulary-Exercise-ba9eeee2c07b49f19e7905e5df450916?pvs=4" title="Design Language Exercise" target="_blank">Design Language Exercise</a></h3>
-                                <p>An ice breaking exercise for design teams.</p>
-                                <!--h4><a href="https://peteroper.notion.site/A-Hard-Fast-Agile-Process-f6c895bd82b6440daf4622dc3b3bb40b?pvs=4" title="A Hard, Fast & Agile Process" target="_blank">A Hard, Fast & Agile Process</a></h4>
-                                <p>A specific process to accelarate the conceptualisation phase.</p-->
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 1 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            
-                            <div>
-                                <h3><a href="https://peteroper.notion.site/The-Importance-of-a-Design-System-e0d344b59def4fdba7c121ba9c1219c0" title="Proactivity & Being that Guy" target="_blank">Proactivity & Being that Guy</a></h3>
-                                <p>Why leveraging this characteristic is beneficial for Prod Dev</p>
-                            </div>
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 2 -->
-                    <div class="post">
-                        <span class="img-wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);" ></span></span>
-                        <div class="contents">
-                            <div>
-                                <h3><a href="https://www.notion.so/peteroper/About-this-Design-Journal-afb8ecb77db7481880f3e211a3e8c2b9?pvs=4" title="About this Design Journal" target="_blank">About this Design Journal</a></h3>
-                                <p>Why I started writing and how it assists me.</p>
-                            </div> 
-                            <span class="icn material-icons">chevron_right</span>
-                        </div>   
-                    </div>
-                    <!-- post 3 -->
-                </div>
-                
-                </div></div>
-        
-                <nav class="tab-menu">
-                    <a href="#posts1" class="selected">1</a>
-                    <a href="#posts2">2</a>
-                    <a href="#posts3">3</a>
-                </nav>
-        
             </div>
-            <!-- posts ends -->
+            <div class="article section">
+                <h3 class="title">Optimizing the Initial Experience</h3>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in metus vel sapien feugiat sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in metus vel sapien feugiat sollicitudin.</p>
+                <span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.png);"></span>
+                <div class="meta">
+                    <span class="tag">Case study</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">Working as a Designer & Front end Developer</h3>
+                <p class="description">From 2006 to 2016 I worked as both a designer and front end developer for a bookings organization.</p>
+                <span class="img"></span>
+                <div class="meta">
+                    <span class="tag">About Me</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">How I advocated & defined Design principles for the Tsukasapo app</h3>
+                <p class="description">Design Principles are the building blocks of a design system which define its guidelines for all team members to follow.</p>
+                <span class="img"></span>
+                <div class="meta">
+                    <span class="tag">Journal</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">Improving Adventure Cards Information Architecture</h3>
+                <p class="description">I revisited one of my former products to apply newly learnt UX skills and outline how I would resolve past challenges.</p>
+                <span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase2.png);"></span>
+                <div class="meta">
+                    <span class="tag">Case study</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">Automating a Userflow & UI Screen Repository</h3>
+                <p class="description">Growing up I was interested in visual design and had a skill for technical 3D drawing. In 1996 computer based design was limited so my focus was directed towards hand drawn architectural drawings and 3D models for industrial design school projects.</p>
+                <span class="img"></span>
+                <div class="meta">
+                    <span class="tag">About Me</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">Pulse Football a rapid ideation</h3>
+                <p class="description"></p>
+                <span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase3.png);"></span>
+                <div class="meta">
+                    <span class="tag">Case study</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+            <div class="article section">
+                <h3 class="title">Formative Years in Design</h3>
+                <p class="description">Growing up I was interested in visual design and had a skill for technical 3D drawing. This led me to study Product Design & Development at University.</p>
+                <span class="img"></span>
+                <div class="meta">
+                    <span class="tag">About Me</span>
+                    <span class="date">September 25, 2023</span>
+                </div>
+            </div>
+        </div>
 
-    <!-- showcase -->
-    <div id="showcase" class="section">
-        <h4>Showcase</h4>
-        <div id="initial-experience" class="segment">
-            <h3><a href="https://peteroper.github.io/portfolio/v2/casestudies/initial-experience/" class="fade-link">Optimizing the Initial Experience <!--span>Case Study <span class="icn material-icons">chevron_right</span></span--></a></h3>
-            <a href="https://peteroper.github.io/portfolio/v2/casestudies/initial-experience/" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.png);" class="fade-link img"></a>
-        </div>
-        <!--div id="content-navigation" class="segment">
-            <h3><a href="https://peteroper.github.io/portfolio/casestudies/initial-experience/" class="fade-link">Enhancing Content Browsing</a></h3>
-            <a href="https://peteroper.github.io/portfolio/casestudies/initial-experience/" class="img fade-link" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy2.1.png);"></a>
-        </div-->
-        <div id="adventurecards" class="segment">
-            <h3><a href="https://peteroper.github.io/portfolio/v2/casestudies/adventurecards/">Refining Information Architecture</a></h3>
-            <a href="https://peteroper.github.io/portfolio/v2/casestudies/adventurecards/" class="img fade-link" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase2.png);"></a> 
-        </div>
-        <div id="pulse-football" class="segment">
-            <h3><a href="https://peteroper.github.io/portfolio/v2/casestudies/pulse-football/">Conceptual Football App</a></h3>
-            <a href="https://peteroper.github.io/portfolio/v2/casestudies/pulse-football/" class="img fade-link" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase3.png);"></a>
-        </div>
     </div>
-    <!-- showcase ends -->
+
 
     </div>
     <!-- body ENDS -->
@@ -1076,14 +311,11 @@ padding-right: 0;
             <a href="#intro" class="selected">Introduction</a>
         </nav>
         <nav id="nav2">
-            <a href="#posts">Design Journal</a>
-        </nav>
-        <nav id="nav3">
-            <a href="#showcase">Showcase</a>
-            <a href="#initial-experience">Initial Experience</a>
-            <a href="#content-navigation">Content Navigation</a>
-            <a href="#adventurecards">Adventure Cards</a>
-            <a href="#pulse-football">Pulse Football</a>
+            <a href="#journal">Design Journal</a>
+            <a href="#casestudies">Case Studies</a>
+            <a href="#journal">Journal</a>
+            <a href="#process">Process</a>
+            <a href="#about">About</a>
         </nav>
         <nav class="links">
             <a href="https://www.linkedin.com/in/peter-roper" target="_blank">LinkedIn</a>

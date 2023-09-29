@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://peteroper.github.io/portfolio/assets/imgs/icon-og.jpg">
 
 <link rel="stylesheet" type="text/css" href="../../css/css.css">
-<link rel="stylesheet" type="text/css" href="../../css/index.css">
+<link rel="stylesheet" type="text/css" href="../../css/casestudy.css">
 <link rel="stylesheet" type="text/css" href="../../css/styles.css">
 <link rel="stylesheet" type="text/css" href="../../css/device.css">
 
@@ -157,59 +157,13 @@ const navs = $('.navi nav');
     </div></div>
 <div id="fade-container" class="container">
 
-<div class="navi sticky-element">
-    <a href="../../index.html" class="back fade-link"><span class="icn material-icons">arrow_back</span></a>
-    <nav class="selected">
-        <a href="#overview" class="selected">Overview</a>
-        <a href="#project">Project</a>
-        <a href="#product">Product</a>
-        <a href="#context">Context</a>
-    </nav>
-    <nav>
-        <a href="#definition">Definition</a>
-        <a href="#problem">Problem</a>
-        <a href="#pain-points">Pain Points</a>
-        <a href="#goal">Goal</a>
-        <a href="#final-design">Final Design</a>
-    </nav>
-    <nav>
-        <a href="#synthesis">Synthesis</a>
-        <a href="#research">Research</a>
-        <a href="#insights">Insights</a>
-        <a href="#persona">Persona</a>
-        <a href="#hypothesis">Hypothesis</a>
-    </nav>
-    <nav>
-        <a href="#discovery">Discovery</a>
-        <a href="#concept-design">Concept Design</a>
-        <a href="#ideation">Ideation</a>
-        <a href="#design-decisions">Decisions</a>
-    </nav>
-    <nav>
-        <a href="#design">Design</a>
-        <a href="#prototyping">Prototyping</a>
-        <a href="#usability-testing">Usability Testing</a>
-        <a href="#ut-insights">Insights</a>
-        <a href="#refinement">Refinement</a>
-    </nav>
-    <nav>
-        <a href="#development">Development</a>
-        <a href="#design-handoff">Hand Off</a>
-        <a href="#design-system">Design System</a>
-    </nav>
-    <nav>
-        <a href="#summary">Summary</a>
-        <a href="#outcomes">Outcomes</a>
-        <a href="next-steps">Next Steps</a>
-        <a href="#task-summary">Summary</a>
-    </nav>
-</div>
 <div class="body">
     
 <!-- Overview -->
-<div id="overview" class="section">
-    <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.png);"></span>
+<div id="intro" class="section">
     <h2>Optimizing the Initial Experience</h2>
+    <span class="img xs" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.png);"></span>
+    
         <div id="project" class="segment">
             <p>I work as a Senior UX Designer for the au Tsukasapo project. One of my tasks is to lead upstream concept design creation by synthesising research insights and converting into prototypes for Road Map and Backlog items.</p>
             <ul>
@@ -234,12 +188,12 @@ const navs = $('.navi nav');
         </div>
         <div id="product" class="segment">
             <h4>Product</h4>
-            <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span>
+            <!--span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span-->
             <p>The Tsukasapo app is a premium tech support & solutions subscription service provided as part of a broader device protection plan for au customers (KDDI). </p>
         </div>
         <div id="context" class="segment">
             <h4>Context</h4>
-            <span class="img v1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.2.png);" ></span>
+            <span class="wrap"><span class="img v1" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.2.png);" ></span></span>
             <p>Senior and Low literacy users account for x% of the .</p>
         </div>
     </div>
@@ -247,6 +201,7 @@ const navs = $('.navi nav');
 
      <!-- Definition -->
      <div id="definition" class="section">
+        <h3>Defining the problem and solution and measuring the success</h3>
         <div id="problem" class="segment">
             <h4>Problem</h4>
             <p>The Tsukasapo service has over 4million paid subsribers however less than 50% of customers have progressed beyond the tsukasapo apps provisioning flow and a further drop in active users is seen after day 1 viewing is completed.</p>
@@ -255,15 +210,15 @@ const navs = $('.navi nav');
             <h4>Pain Points</h4>
             <ol>
                 <li>
-                    <h3>Value Proposition</h3>
+                    <h2>Value Proposition</h2>
                     <p>The apps value proposition is not clear to users.</p>
                 </li>
                 <li>
-                    <h3>Long Provisioning</h3>
+                    <h2>Long Provisioning</h2>
                     <p>Provisioning has many steps which require high level of user comprehension.</p>
                 </li>
                 <li>
-                    <h3>User Comprehension</h3>
+                    <h2>User Comprehension</h2>
                     <p>App UI is text rich and requires high level of user comprehension.</p>
                 </li>
             </ol>
@@ -274,64 +229,76 @@ const navs = $('.navi nav');
             <h4>Success Metrics</h4>
             <ul>
                 <li>
-                    <h3>Provisioning KPI</h3>
+                    <h2>Provisioning KPI</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>Return User KPI</h3>
+                    <h2>Return User KPI</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>User Notification Permission</h3>
+                    <h2>User Notification Permission</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>Interestes Completion</h3>
+                    <h2>Interestes Completion</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
             </ul>
         </div>
         <div id="final-design" class="segment">
-            <h4>Final Design</h4>
-            <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span>
-            <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
+
+                <h4>Final Design</h4>
+                <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <span class="wrap"><span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                        <span class="wrap"><span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                        <span class="wrap"><span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                  </div>
+                </div>
         </div>
     </div>
     <!-- Definition END -->
 
      <!-- Synthesis-->
      <div id="synthesis" class="section">
+        <h3>Synthesising Insights and Data to define the problem</h3>
         <div id="research" class="segment special">
             <h4>Research</h4>
             <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
             <ul>
                 <li>
-                    <h3>User Interviews</h3>
+                    <h2>User Interviews</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>Product Analytics</h3>
+                    <h2>Product Analytics</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>Competitive Analysis</h3>
+                    <h2>Competitive Analysis</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
                 <li>
-                    <h3>title</h3>
+                    <h2>title</h2>
                     <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO</p>
                 </li>
             </ul>
         </div>
-        <div id="insights" class="segment">
-            <h4>Insights</h4>
-            <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
-            <div class="gallery-container">
-                <div class="gallery">
-                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
-                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
-                    <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
-              </div>
+        <div id="insights" class="segment column-container col1">
+            <div class="column">
+                <h4>Insights</h4>
+                <p>OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO OOOO OOOO OOO OO OOOOO.</p>
+            </div>
+            <div class="column">
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/casestudies/casestudy1.1.png);" ></span></span>
+                  </div>
+                </div>
             </div>
         </div>
         <div id="persona" class="segment">
@@ -428,6 +395,55 @@ const navs = $('.navi nav');
     <!-- Summary END -->
 
 </div>
+
+<div class="navi sticky-element">
+    <a href="../../index.html" class="back fade-link"><span class="icn material-icons">arrow_back</span></a>
+    <nav class="selected">
+        <a href="#intro" class="selected">Overview</a>
+        <a href="#project">Project</a>
+        <a href="#product">Product</a>
+        <a href="#context">Context</a>
+    </nav>
+    <nav>
+        <a href="#definition">Definition</a>
+        <a href="#problem">Problem</a>
+        <a href="#pain-points">Pain Points</a>
+        <a href="#goal">Goal</a>
+        <a href="#final-design">Final Design</a>
+    </nav>
+    <nav>
+        <a href="#synthesis">Synthesis</a>
+        <a href="#research">Research</a>
+        <a href="#insights">Insights</a>
+        <a href="#persona">Persona</a>
+        <a href="#hypothesis">Hypothesis</a>
+    </nav>
+    <nav>
+        <a href="#discovery">Discovery</a>
+        <a href="#concept-design">Concept Design</a>
+        <a href="#ideation">Ideation</a>
+        <a href="#design-decisions">Decisions</a>
+    </nav>
+    <nav>
+        <a href="#design">Design</a>
+        <a href="#prototyping">Prototyping</a>
+        <a href="#usability-testing">Usability Testing</a>
+        <a href="#ut-insights">Insights</a>
+        <a href="#refinement">Refinement</a>
+    </nav>
+    <nav>
+        <a href="#development">Development</a>
+        <a href="#design-handoff">Hand Off</a>
+        <a href="#design-system">Design System</a>
+    </nav>
+    <nav>
+        <a href="#summary">Summary</a>
+        <a href="#outcomes">Outcomes</a>
+        <a href="next-steps">Next Steps</a>
+        <a href="#task-summary">Summary</a>
+    </nav>
+</div>
+
 </div>
 </body>
 </html>

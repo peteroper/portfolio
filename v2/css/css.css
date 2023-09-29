@@ -58,7 +58,6 @@ opacity: 1;
 transition: opacity 0.6s ease-out;
 }
 .navi nav a {  
-  opacity: 50%;
   transition: opacity 0.6s ease-in-out;
 }
 .container.fade {
@@ -131,7 +130,8 @@ align-items: center;
 #titlebar .avatar{
 width: 30px;
 height: 30px;
-background-size: 100% auto;
+
+background-size: 100% auto!important;
 }
 #titlebar nav{
 display: flex;
@@ -200,6 +200,9 @@ padding-bottom: 36px;
 .section h4{
 margin-bottom: 8px;
 }
+.section .wrap,
+.section .img,
+.section ul,
 .section h3,
 .section p{
 max-width: 668px;

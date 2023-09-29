@@ -11,10 +11,16 @@
     flex-direction: column;
 }
 .article{
-    margin-bottom: 24px;
+    padding-bottom: 36px;
+    border-bottom: 1px;
+    border-style: solid;
+    margin-bottom: 36px;
     flex-direction: column;
     /*flex-grow: 1;*/
     display: flex;
+}
+.column .article:last-of-type{
+    border: 0;
 }
 .tag {
     background-color: #007BFF;

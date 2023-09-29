@@ -197,12 +197,10 @@ border-style: solid;
 .segment{
 padding-bottom: 36px;
 }
-.section h3{
-margin-bottom: 16px;
-}
 .section h4{
 margin-bottom: 8px;
 }
+.section h3,
 .section p{
 max-width: 668px;
 margin-bottom: 16px;
@@ -228,6 +226,9 @@ margin-bottom: 16px;
 }
 .col1 .column:nth-child(2){
     flex: 0 1 calc(33% - 20px); /* Adjust width and margin as needed */
+}
+.col2 .column{
+    flex: 0 1 calc(50% - 20px); /* Adjust width and margin as needed */
 }
 /*/////////////////////////////////////////////////////////////*/
 /* IMGS */

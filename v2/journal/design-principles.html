@@ -1,25 +1,29 @@
 <html> 
 <head>
-<title>About | Peter Roper Product Designer</title>
+<title>Journal : Defining Design Principles | Peter Roper Product Designer</title>
 <meta name="viewport" content="width=device-width,	 initial-scale=1.0">
 <meta http-equiv="content-Type" content="text/html; charset=utf-8">
 <meta name="robots" content="noindex, nofollow" />
 <meta name="google-site-verification" content="gdAK0KN1Yy7jAIyafcJnFagF6wj12OobQYi8jAIlgMM" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
+<!--link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet"-->
+
+<link rel="stylesheet" type="text/css" href="../css/css.css">
+<link rel="stylesheet" type="text/css" href="../css/index.css">
+<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<link rel="stylesheet" type="text/css" href="../css/device.css">
+
 <meta name="theme-color" content="#346672">
 <link rel="apple-touch-icon" href="https://peteroper.github.io/portfolio/assets/imgs/icon-apple.jpg">
 <meta property="og:image" content="https://peteroper.github.io/portfolio/assets/imgs/icon-og.jpg">
-
-<link rel="stylesheet" type="text/css" href="css/css.css">
-<link rel="stylesheet" type="text/css" href="css/about.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<link rel="stylesheet" type="text/css" href="css/device.css">
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKDNBLWNTV"></script>
 <script>
@@ -50,7 +54,6 @@
   });
 });*/
  $(document).ready(function() {
-
     $(".navi nav, .navi .back, #titlebar").css("display", "none"); // Ensure container is hidden initially
     $(window).on("load", function() { 
     setTimeout(function() {
@@ -153,13 +156,13 @@ const navs = $('.navi nav');
 
 /* Article columns *////////////////////////////////////////////
 // Get a reference to the article container
-const articleContainer = document.querySelector('.columns');
+const articleContainer = document.querySelector('.article-container');
 
 // Get all the articles within the container
-const articles = articleContainer.querySelectorAll('.segment');
+const articles = articleContainer.querySelectorAll('.article');
 
 // Define the number of columns (in this case, 3)
-const numColumns = 2;
+const numColumns = 3;
 
 // Calculate the number of articles per column
 const articlesPerColumn = Math.ceil(articles.length / numColumns);
@@ -186,6 +189,7 @@ for (let i = 0; i < numColumns; i++) {
     articleContainer.appendChild(columnDiv);
 }
 
+
 });
 </script>
 </head>
@@ -193,170 +197,47 @@ for (let i = 0; i < numColumns; i++) {
     <div class="fullscreen-div">
         <img src="https://peteroper.github.io/portfolio/assets/imgs/avatar.png" alt="Centered Image">
     </div>
-    
-<div id="titlebar" class="sticky-element"><div>
-    <a href="index.html" class="fade-link">
-        <span class="avatar" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar-circle.png);"></span>
-        <h1>Peter Roper</h1>
-    </a>
-    <nav class="about links">
-        <a href="about.html" class="fade-link">About</a>
-        <a href="https://peteroper.github.io/portfolio/assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
-    </nav>
-</div></div>
+
+    <div id="titlebar" class="sticky-element"><div>
+        <a href="https://peteroper.github.io/portfolio/v2/" class="fade-link">
+            <span class="avatar" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar-circle.png);"></span>
+            <h1>Peter Roper</h1>
+        </a>
+        <nav class="about links">
+            <a href="/about/" class="fade-link">About</a>
+            <a href="assets/resume/peterroper_resume20072023.pdf" target="_blank">Resume</a>
+        </nav>
+    </div></div>
 
 <div id="fade-container" class="container">
 
-<div class="body">
+    <div class="body">
+    
     <div id="intro" class="section">
-        <div class="article-container">
+        <h2>Defining Design Principles for a product</h2>
+        <div class="column-container col1">
             <div class="column">
-                <div class="segment">
-                    <h2>A cultural blend of<br /> British and Japanese<br/> influences.</h2>
-                    <p class="l">Hailing from Yorkshire, England, I've dedicated the latter half of my life to Japan, where I've nurtured my family and channeled my creative problem-solving instincts as a product designer and <a href="#">home improvement enthusiast.</a></p>
-                    <p>For the last 3 years I have been furthering my skills as a Senior UX Designer at Asurion Japan, a multinational organization providing device protection and tech-support. For a closer look at my background and experience in design please take a look at the following:</p>
-                    <ol>
-                        <li><a href="#">Formative years in Design</a></li>
-                        <li><a href="#">Working as a Designer & Front End Developer</a></li>
-                        <li><a href="#">Senior Design with Asurion</a></li>
-                    </ol>
-                </div>
+                <h3>title</h3>
+                <p>description</p>
             </div>
+            <div class="column"></div>
+        </div>
+        <div class="column-container col1">
             <div class="column">
-                <span class="wrap"><span class="img sm" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about.jpg);"></span></span>
+                <h3>title</h3>
+                <p>description</p>
             </div>
-        _</div>
-    </div>
-    <div id="background" class="section">
-        <h4>Background</h4>
-        <div class="article-container columns">
-        <div id="philosophy" class="segment">
-            <h3>Design Philosophy</h3>
-            <p>My career has been shaped by my appreciation for aesthetics, a user-centered approach, deep thinking, and intuition, all of which have ignited my creative passion. Nevertheless, I've come to realize that decision-making, well-structured processes, long-term planning, and the measurement of success are powerful tools that bring even greater satisfaction when it comes to problem-solving.</p>
+            <div class="column"></div>
         </div>
-        <div id="principles" class="segment">
-            <h3>Design Principles</h3>
-            <p>These may vary depending on the project,  however I try to adhere to visual design principles that closely resonate with Steve Krug’s concepts presented in ‘Don’t Make Me Think.’  When crafting UI designs, I prefer to emphasize and advocate for principles such as composition, hierarchy, scanability, and intuitive navigation, all of which are fundamental for creating user-friendly interfaces.</p>
-            <p>For UX design, heuristic laws inform my design decisions when consider screen content and user journeys. Jakob’s, Hick’s and Miller’s law influence my decisions to create simple, concise and easy to understand experiences.</p>
-            <ol>
-                <li><a href="#">How I helped define design principles for a product</a></li>
-            </ol>
-        </div>
-        <div id="product" class="segment">
-            <h3>Project Awareness</h3>
-            <p>Project requirements vary so It’s crucial to understand the product and service in detail along with knowing it’s context for both its users and business needs. This information then gives you the necessary information to make well informed design decisions.</p>
-            <ol>
-                <li><a href="#">How I created an automated User flow</a></li>
-            </ol>
-        </div>
-        <div id="iterative" class="segment">
-            <h3>Iterative Design & Continuous Improvement</h3>
-            <p>I highly value product ownership, iteration and testing. Harnessing these collectively allows a team to look at the broader user experience and incrementally refine a products value, design and usability with the overall aim of improving user satisfaction.</p>
-            <p>While feature design captures attention, continuously improving a product can have an equal or greater influence on user satisfaction.</p>
-            <ol>
-                <li><a href="#">A/B Testing</a></li>
-                <li><a href="#">Heuristic Evaluation</a></li>
-            </ol>
-        </div>
+        <div class="column-container col1">
+            <div class="column">
+                <h3>title</h3>
+                <p>description</p>
+            </div>
+            <div class="column"></div>
         </div>
     </div>
-
-    <div id="experience" class="section">
-        <h4>Experience</h4>
-        <div class="article-container">
-        <div class="column">
-            <div id="process" class="segment">
-                <span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about1.1.png);"></span>
-                <h2>How I like to work</h2>
-                <p>As a design generalist I maintain a broad skill with the aim of effectively supporting my team. I appreciate hard work and combine it with a methodical approach so that I can get the most work done in the shortest length of time. This allows me to share early and optimize the time available to collaborate with team members.</p>
-                <p>I observe and look out for problems. Whether related to a product, process or individual I’m usually prepared in advance to advocate ideas and proposals.I enjoy team work and contributing to a culture. Building relationships at work is as important as the products built. I enjoy a joke and take an interest in people, giving encouragement when needed.</p>
-            </div>
-            <div id="goals" class="segment">
-                <h2>How I envision the next 3 years</h2>
-                <ul>
-                    <li>To work on successful products and help to shape that success.</li>
-                    <li>Develop design leadership and management skills.</li>
-                    <li>Advocate for the design team and give the team a role in wider decision making.</li>
-                    <li>Establish and be part of a rich design culture.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="column">
-            <div id="skills">
-                <h2>Product Design & Development Skills</h2>
-                <div id="general-skills" class="segment">
-
-                <h4>Generalist Skills</h4>
-                <ul>
-                <li>UI/UX</li>
-                <li>User Research</li>
-                <li>Usability Testing</li>
-                <li>Prototyping</li>
-                <li>Wireframing</li>
-                <li>Design Systems</li>
-                <li>Guidelines & Documentation</li>
-                <li>Accesibility</li>
-                <li>Design Thinking</li>
-                <li>Principles & Rules</li>
-                <li>Advocating Design</li>
-                <li>Branding</li>
-                <li>Illustration</li>
-                <li>Animations</li>
-                <li>Video Editting</li>
-                </ul>
-            </div>
-            <div id="design-skills" class="segment">
-                <h4>Design Skills</h4>
-                <ul>
-                <li>Figma</li>
-                <li>Illustrator</li>
-                <li>After Effects</li>
-                <li>Premiere</li>
-                <li>Photoshop</li>
-                <li>Notion</li>
-                </ul>
-            </div>
-            <div id="product-skills" class="segment">
-                <h4>Product Skills</h4>
-                <ul>
-                <li>Product Ownership</li>
-                <li>Continous Improvement</li>
-                <li>Agile Sprints</li>
-                <li>Analytics</li>
-            </ul>
-        </div>
-            <div id="dev-skills" class="segment">
-            <h4>Development Skills</h4>
-            <ul>
-                <li>Frontend Dev</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>JS</li>
-                <li>SASS</li>
-                <li>Web. Optimization</li>
-                <li>SEO</li>
-                <li>PHP</li>
-                <li>SQL</li>
-                <li>Git</li>
-                </ul>
-            </div>
-        <div id="dev-skills" class="segment">
-            <h4>Platform Experience</h4>
-            <ul>
-                <li>App Design</li>
-                <li>Responsive Web.</li>
-                <li>CMS & Admin Tools</li>
-                <li>Wordpress</li>
-                <li>HTML Emails</li>
-                <li>Printed Media</li>
-                <li>B2C</li>
-                <li>B2B</li>
-            </ul>
-        </div>
-    </div></div>
-</div>
-</div>
-
+      
     <!-- posts start -->
     <div id="posts" class="section tab-block">
         <h4>Design Journal</h4>
@@ -487,35 +368,12 @@ for (let i = 0; i < numColumns; i++) {
 
     </div>
     <!-- posts ends -->
+
     </div>
     <!-- body ENDS -->
 
     <div class="navi sticky-element">
-        <a href="index.html" class="back fade-link"><span class="icn material-icons">arrow_back</span></a>
-        <nav class="selected">
-            <a href="#intro">About</a>
-        </nav>
-        <nav>
-            <a href="#background">Background</a>
-            <a href="#philosophy">Design Philosophy</a>
-            <a href="#principles">Design Principles</a>
-            <a href="#product">Project Awareness</a>
-            <a href="#iterative">Iterative Design</a>
-        </nav>
-        <nav>
-            <a href="#experience">Experience</a>
-            <a href="#experience">Process</a>
-            <a href="#interests">Goals</a>
-            <a href="#design-skills">Skills</a>
-        </nav>
-        <nav>
-            <a href="#posts">Design Journal</a>
-        </nav>
-        <nav class="links">
-            <a href="https://www.linkedin.com/in/peter-roper" target="_blank">LinkedIn</a>
-            <!--a href="#">LINE</a-->
-            <a href="mailto:peter.roper.jp@gmail.com">Email</a>
-        </nav>    
+        <a href="../index.html" class="back fade-link"><span class="icn material-icons">arrow_back</span></a> 
     </div>
     <!-- NAVI ENDS -->
 

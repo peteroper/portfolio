@@ -13,3 +13,7 @@
     margin: 2px; 
     text-overflow: ellipsis;
   }
+  #intro .img{
+    padding-bottom: 136%;
+    background-color: transparent!important;
+  }

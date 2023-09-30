@@ -224,12 +224,13 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.
 .dark-mode #posts nav a,
 .dark-mode .section ul li,
 .dark-mode .section p{
-    color: rgba(0255, 255, 255, 0.68);
+    color: rgba(255, 255, 255, 0.68);
 }
 @media only screen and (max-width: 992px) {
     .dark-mode .navi nav.links{ color rgba(255, 255, 255, 0.92);  }
 }
 /*/////////////////////////////////////////////////////////////*/
+.dark-mode .icn,
 .dark-mode,
 .dark-mode #titlebar div a,
 .dark-mode h3 a,
@@ -242,32 +243,27 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.
 .dark-mode .special ul li h3:before{
     color: #000;
 }
-.dark-mode .icn{
-    color: #346672;
-}
 /*/////////////////////////////////////////////////////////////*/
 /* BORDERS */
 /*/////////////////////////////////////////////////////////////*/
 .dark-mode .article,
 .dark-mode .navi nav.links,
 .dark-mode .section{
-    border-color: #666;
+    border-color: rgba(0, 0, 0, 0.68);
 }
- #posts nav a{
-    border-color: #666;
+.dark-mode #posts nav a{
+    border-color: rgba(0, 0, 0, 0.68);
  }
  /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/
-.dark-mode #titlebar.sticky{
-    background-color: #222;
-}
+.dark-mode #titlebar.sticky,
 .dark-mode{
-    background-color: #2D2D2D;
+    background-color: #252D34;
 }
 .dark-mode .navi .back,
 .dark-mode .section .img{
-    background-color: #666;
+    background-color: rgba(0, 0, 0, 0.68);
 }
 .dark-mode #titlebar .avatar,
 .dark-mode #posts nav a.selected,
@@ -284,6 +280,6 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.
     background-color: #666;
 }
 /*/////////////////////////////////////////////////////////////*/
-.page-index #intro .img{
+.dark-mode .page-index #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar4.png);
     }

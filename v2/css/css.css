@@ -79,7 +79,7 @@ text-decoration: none;
 .container{
 display: flex;
 /*justify-content: center;*/
-padding: 104px 144px 0 96px;
+padding: 104px 40px 0 40px;
 }
 .tab-container{
 display: none!important;
@@ -115,7 +115,7 @@ right: 0;
 z-index: 100;
 }
 #titlebar > div{
-padding: 12px 144px 12px 96px;
+padding: 12px 40px 12px 40px;
 /*max-width: 1012px;*/
 display: flex;
 justify-content: space-between;
@@ -211,27 +211,10 @@ margin-bottom: 16px;
 #intro h2{
     margin-bottom: 36px;
 }
-/*/////////////////////////////////////////////////////////////*/
-/* COLUMNS */
-/*/////////////////////////////////////////////////////////////*/
-.column-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.column{
-    flex: 0 1 calc(50% - 20px); /* Adjust width and margin as needed */
-    display: flex;
-    flex-direction: column;
-}
-.col1 .column:nth-child(1){
-    flex: 0 1 calc(66% - 20px); /* Adjust width and margin as needed */
-}
-.col1 .column:nth-child(2){
-    flex: 0 1 calc(33% - 20px); /* Adjust width and margin as needed */
-}
-.col2 .column{
-    flex: 0 1 calc(50% - 20px); /* Adjust width and margin as needed */
+ol li{
+    margin-left: 16px;
+    padding-left: 16px;
+    list-style-position: outside;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* IMGS */

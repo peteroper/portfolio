@@ -54,9 +54,12 @@ li b{
     font-size: 0.68em;    
 } 
 @media only screen and (max-width: 992px) {
-    p.l { font-size: 2.0em; line-height: 175%; }
-    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }
+    /*p.l { font-size: 2.0em; line-height: 175%; }
+    #titlebar nav a, .navi nav.links a{ font-size: 1.8em; }*/
     #posts p{ font-size: 1.5em; }
+}
+@media only screen and (max-width: 768px) {
+    #intro h2{ font-size: 2.8rem; letter-spacing: -0.5pt; }
 }
 /*/////////////////////////////////////////////////////////////*/
 .navi nav.selected a:first-of-type{
@@ -71,12 +74,21 @@ h1, h3,h4,.navi nav a {
 a{
     color: #4a90e2;
 }
+#skills ul li{
+    color: #FFF;
+}
 /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/
 .fullscreen-div {
     background-color: rgba(52, 102, 114, 0.96);   
     /*background-color: #346672;*/
+}
+#skills ul li{
+ background-color: #000;
+}
+#skills ul li{
+background-color: #346672;
 }
 .img.bg-non{
     background-color: transparent!important;
@@ -152,7 +164,6 @@ h3 a,
 nav a{
     color: #000;
 }
-#skills ul li,
 .header,
 #project ul span,
 .special ul li h3:before{
@@ -237,7 +248,6 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.
 .dark-mode nav a{
     color: #FFF;
 }
-.dark-mode #skills ul li,
 .dark-mode .header,
 .dark-mode #project ul span,
 .dark-mode .special ul li h3:before{

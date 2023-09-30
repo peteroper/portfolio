@@ -1,15 +1,9 @@
-.article-container {
+/*.article-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
-}
-
-.column {
-    flex: 0 1 calc(33.33% - 20px); /* Adjust width and margin as needed */
-    display: flex;
-    flex-direction: column;
-}
+}*/
 .article{
     padding-bottom: 36px;
     border-bottom: 1px;

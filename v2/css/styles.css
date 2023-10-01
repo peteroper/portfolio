@@ -207,8 +207,11 @@ nav a{
 }
 /*/////////////////////////////////////////////////////////////*/
 .page-index #intro .img{
-background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.png);
 }
+.page-about #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about1.png);
+}   
 /*/////////////////////////////////////////////////////////////*/
 
 /* DARK */
@@ -292,4 +295,7 @@ background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.
 /*/////////////////////////////////////////////////////////////*/
 .dark-mode .page-index #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar4.png);
-    }
+}
+.dark-mode .page-about #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-2.png);
+}  

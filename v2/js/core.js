@@ -128,6 +128,9 @@ function toggleDarkMode() {
   const isDarkMode = document.body.classList.toggle('dark-mode');
   setDarkModePreference(isDarkMode);
   
+  const themeColorMetaTag = document.querySelector("meta[name=theme-color]");
+  themeColorMetaTag.setAttribute("content", isDarkMode ? "#252D34" : "#fff");
+
   // Change button text based on dark mode state
   const darkModeToggleBtn = document.getElementById('darkModeToggle');
   darkModeToggleBtn.textContent = isDarkMode ? 'Light Mode' : 'Dark Mode';

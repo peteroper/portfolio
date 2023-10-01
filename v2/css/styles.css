@@ -88,7 +88,7 @@ a{
  background-color: #000;
 }
 #skills ul li{
-background-color: #346672;
+background-color: #89A6AE;
 }
 .img.bg-non{
     background-color: transparent!important;
@@ -207,10 +207,10 @@ nav a{
 }
 /*/////////////////////////////////////////////////////////////*/
 .page-index #intro .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar3.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/index-light.png);
 }
 .page-about #intro .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about1.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-light.png);
 }   
 /*/////////////////////////////////////////////////////////////*/
 
@@ -251,6 +251,7 @@ nav a{
 .dark-mode nav a{
     color: #FFF;
 }
+.dark-mode #skills ul li,
 .dark-mode .header,
 .dark-mode #project ul span,
 .dark-mode .special ul li h3:before{
@@ -294,8 +295,8 @@ nav a{
 }
 /*/////////////////////////////////////////////////////////////*/
 .dark-mode .page-index #intro .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/avatar4.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/index-dark.png);
 }
 .dark-mode .page-about #intro .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-2.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-dark.png);
 }  

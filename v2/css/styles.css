@@ -66,10 +66,10 @@ li b{
     #posts p{ font-size: 1.5em; }
 }
 @media only screen and (max-width: 768px) {
-    #intro h2{ font-size: 2.8rem; }
+    #intro h2{ font-size: 3rem; }
     h3 { font-size: 2.2rem; }
     .post h3, .article h3 { font-size: 2rem; }
-    ul li, ol li, p{ font-size: 1.7rem; }
+    ul li, ol li, p{ font-size: 1.8rem; }
     #skills ul li, .post p a, .article p a, .navi nav.links a{ font-size: 1.6rem; }
     .post p, .article p{ font-size: 1.5rem; }
     h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.4rem; }

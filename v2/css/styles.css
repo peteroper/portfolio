@@ -70,7 +70,9 @@ li b{
     h3 { font-size: 2.2rem; }
     .post h3, .article h3 { font-size: 2rem; }
     ul li, ol li, p{ font-size: 1.7rem; }
-    .navi nav.links a{ font-size: 1.6rem; }
+    #skills ul li, .post p a, .article p a, .navi nav.links a{ font-size: 1.6rem; }
+    .post p, .article p{ font-size: 1.5rem; }
+    h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.4rem; }
 }
 /*/////////////////////////////////////////////////////////////*/
 h3,

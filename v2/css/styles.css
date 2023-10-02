@@ -104,6 +104,37 @@ background-color: #89A6AE;
     background-size: auto 100%;
   }
 /*/////////////////////////////////////////////////////////////*/
+#casestudy1.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase1.png);
+}
+#casestudy2.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase4.png);
+}
+#casestudy3.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase2.png);
+}
+#casestudy4.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/showcase3.png);
+}
+#formative-design.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post3_3.png);
+}
+#design-dev.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post2_2.png);
+}
+#userflow.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post4_1.png);
+}
+#design-system.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post2_3.png);
+}
+#design-principles.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post3_2.png);
+}
+#ab-testing.article .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post1_2.png);
+}
+/*/////////////////////////////////////////////////////////////*/
 .casestudy1 #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/kv_casestudy_1.png);
 }

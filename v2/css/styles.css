@@ -14,15 +14,14 @@
 h1, h2, h3 a{
     font-family: 'Lora';
 }
+#pain-points li h2,
+.special li h2,
 p.l, p.l span,
 h3,
 #intro h2{
     font-family: 'Merriweather';
 }
-h3,
-#intro h2{
-    font-weight: 700;
-}
+/*/////////////////////////////////////////////////////////////*/
 *, body, p, p b, h1, h2, h3, h4{
         font-size: 10px;
 }
@@ -32,17 +31,21 @@ h3,
     text-rendering: optimizeLegibility;
 }
 }
-#intro h2{ font-size: 4.2rem; letter-spacing: -0.5pt; }
+
 h1,h2, h3,h4{
     line-height: 140%; 
 }
-h1{ font-weight: 400; }
+/*/////////////////////////////////////////////////////////////*/
+#intro h2{ font-size: 4.2rem; letter-spacing: -0.5pt; }
 h3 { font-size: 2.4rem; line-height: 175%; letter-spacing: -0.25pt; }
-.post h3, p.l { font-size: 2rem; line-height: 175%; }
-.article h3 { font-size: 2rem; line-height: 160%; }
+.post h3, .article h3 { font-size: 2.2rem; line-height: 160%; }
+p.l { font-size: 2rem; line-height: 175%; }
+.post h3, .article h3 { font-size: 2rem; line-height: 160%; }
 h2, h1{ font-size: 1.8rem; line-height: 160%; }
 ul li, ol li, #titlebar nav a, .navi nav a:first-of-type, p{ font-size: 1.6rem; }
-#skills ul li, .post p, .article p, h4, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3rem; }
+#skills ul li, .post p a, .article p a{ font-size: 1.4rem; }
+h4, .post p, .article p, #posts nav a, .navi nav a, .navi nav.links a{ font-size: 1.3rem; }
+.tag, .date{ font-size: 1.2rem; }
 #showcase h3 a > span,
 h3 a, 
 p.l span, 
@@ -63,13 +66,19 @@ li b{
     #posts p{ font-size: 1.5em; }
 }
 @media only screen and (max-width: 768px) {
-    #intro h2{ font-size: 2.8rem; letter-spacing: -0.5pt; }
+    #intro h2{ font-size: 2.8rem; }
+    h3 { font-size: 2.2rem; }
+    .post h3, .article h3 { font-size: 2rem; }
+    ul li, ol li, p{ font-size: 1.7rem; }
+    .navi nav.links a{ font-size: 1.6rem; }
 }
 /*/////////////////////////////////////////////////////////////*/
+h3,
+#intro h2,
 .navi nav.selected a:first-of-type{
     font-weight: 700;
 }
-h1, h3,h4,.navi nav a {  
+h3 a, h1, h4, .navi nav a {  
     font-weight: 400;
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -78,12 +87,16 @@ h1, h3,h4,.navi nav a {
 a{
     color: #4a90e2;
 }
+.tag,
 #skills ul li{
     color: #FFF;
 }
 /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/
+.tag {
+    background-color: #007BFF;
+}
 .fullscreen-div {
     background-color: rgba(52, 102, 114, 0.96);   
     /*background-color: #346672;*/
@@ -91,6 +104,7 @@ a{
 #skills ul li{
  background-color: #000;
 }
+#project ul span,
 #skills ul li{
 background-color: #89A6AE;
 }
@@ -185,17 +199,33 @@ background-color: #89A6AE;
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post4_3.png);
 } 
 /*/////////////////////////////////////////////////////////////*/
-    #showcase .scrollable,
-    .img,
-    #showcase h3 a > span,
-    #posts nav a{
+/* BORDER RADIUS */
+/*/////////////////////////////////////////////////////////////*/
+#showcase .scrollable,
+#showcase h3 a > span,
+#posts nav a{
+    border-radius: 4px;
+}
+.post .img{
+    border-radius: 8px;
+}
+.img,
+.article .img{
+    border-radius: 12px;
+}
+#skills ul li,
+#titlebar .avatar,
+.navi .back{
+    border-radius: 100px;
+}
+@media only screen and (max-width: 768px) {
+    .img{
+        border-radius: 8px;
+    }
+    .post .img{
         border-radius: 4px;
     }
-    #skills ul li,
-    #titlebar .avatar,
-    .navi .back{
-        border-radius: 100px;
-    }
+}
 /*/////////////////////////////////////////////////////////////*/
 /* IMGS */
 /*/////////////////////////////////////////////////////////////*/
@@ -234,6 +264,7 @@ h3 a,
 .navi nav.selected a{
     color: rgba(0, 0, 0, 1.0);   
 }
+.date,
 a h1,
 #posts nav a,
 .section ul li,
@@ -322,6 +353,7 @@ nav a{
 .dark-mode .navi nav.selected a{
     color: rgba(255, 255, 255, 1.0);   
 }
+.dark-mode .date,
 .dark-mode a h1,
 .dark-mode #posts nav a,
 .dark-mode .section ul li,

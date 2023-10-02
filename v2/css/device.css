@@ -17,29 +17,32 @@
 /*/////////////////////////////////////////////////////////////*/
 /* DESKTOP */
 /*/////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1024px) {
 /*/////////////////////////////////////////////////////////////*/
-    a:hover{
+a:hover{
     text-decoration: underline;
-    }
-    /*/////////////////////////////////////////////////////////////*/
-    .navi.sticky{
-        height: 400px;
-        position: sticky;
-        top: 0; 
-        padding-top: 104px;
-    }
-    #intro,
-    .container{
-        flex-direction: row-reverse;
-        gap: 40px;
-    }
-    .navi{
-        width: 148px;
-    }
-    #posts .post > div{
-    align-items: center;
-    }
+}
+.column .article:last-of-type{
+    border: 0;
+}
+/*/////////////////////////////////////////////////////////////*/
+.navi.sticky{
+    height: 400px;
+    position: sticky;
+    top: 0; 
+    padding-top: 104px;
+}
+#intro,
+.container{
+    flex-direction: row-reverse;
+    gap: 40px;
+}
+.navi{
+    width: 148px;
+}
+#posts .post > div{
+align-items: center;
+}
 /*/////////////////////////////////////////////////////////////*/
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -89,6 +92,7 @@
 /*/////////////////////////////////////////////////////////////*/
 @media only screen and (max-width: 1024px) {
     /*/////////////////////////////////////////////////////////////*/
+    .navi nav,
     .navi nav#nav1,
     .navi nav#nav2,
     .navi nav#nav3{
@@ -96,6 +100,7 @@
     }
     .navi nav.links{
     width: 100%;
+    display: block!important;
     }
     .navi nav.links a{
     margin-bottom: 12px;
@@ -108,6 +113,8 @@
     width: 100%;
     }
     /*/////////////////////////////////////////////////////////////*/
+    .column:last-of-type .article:last-of-type,
+    #design-journal,
     #showcase{
         padding-bottom: 0;
         border: 0!important;
@@ -145,8 +152,25 @@
         margin-bottom: 24px;
     }
     ol li{
-        margin-left: 12px;
-        padding-left: 12px;
+        margin-left: 16px;
+        padding-left: 8px;
+    }
+   /*/////////////////////////////////////////////////////////////*/
+    .navi .back{
+        background-color: #346672!important;
+        box-shadow: #000;
+        position: fixed;
+        bottom: 16px;
+        left: 16px; 
+        opacity: 88%;  
+        z-index: 100; 
+    }
+    .navi .back .icn{
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 24px;
+        color: #FFF!important;
     }
     /*/////////////////////////////////////////////////////////////*/
     /*#titlebar{

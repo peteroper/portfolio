@@ -297,6 +297,9 @@ nav a{
 .page-about #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-light.png);
 }   
+.page-asurion #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/asurion-light.png);
+}   
 /*/////////////////////////////////////////////////////////////*/
 
 /* DARK */
@@ -385,3 +388,6 @@ nav a{
 .dark-mode .page-about #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/about-dark.png);
 }  
+.dark-mode .page-asurion #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/asurion-dark.png);
+}   

@@ -279,7 +279,7 @@ margin: 0;
 display: block;
 }
 #posts .post .img{
-    background-size: 100% auto;
+    background-size: auto 100%;
     margin-bottom: 0!important;
 }
 #posts p{

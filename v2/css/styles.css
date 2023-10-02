@@ -102,40 +102,40 @@ background-color: #89A6AE;
     background-size: auto 100%;
   }
 #posts1 .post:nth-child(1) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post1_1.png);
 } 
 #posts1 .post:nth-child(2) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post1_2.png);
 } 
 #posts1 .post:nth-child(3) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post1_3.png);
 } 
 #posts2 .post:nth-child(1) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post2_1.png);
 } 
 #posts2 .post:nth-child(2) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/pos2_2.png);
 } 
 #posts2 .post:nth-child(3) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post2_3.png);
 } 
 #posts3 .post:nth-child(1) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post3_1.png);
 } 
 #posts3 .post:nth-child(2) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post3_2.png);
 } 
 #posts3 .post:nth-child(3) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post3_3.png);
 } 
 #posts4 .post:nth-child(1) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post4_1.png);
 } 
 #posts4 .post:nth-child(2) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post4_2.png);
 } 
 #posts4 .post:nth-child(3) .img{
-    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post-img.png);
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post4_3.png);
 } 
 /*/////////////////////////////////////////////////////////////*/
     #showcase .scrollable,

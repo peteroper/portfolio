@@ -17,8 +17,10 @@ h1, h2, h3 a{
 p.l, p.l span,
 h3,
 #intro h2{
-    /*font-family: 'Playfair Display';*/
     font-family: 'Merriweather';
+}
+h3,
+#intro h2{
     font-weight: 700;
 }
 *, body, p, p b, h1, h2, h3, h4{

@@ -78,6 +78,7 @@ text-decoration: none;
 /*/////////////////////////////////////////////////////////////*/
 .container{
 display: flex;
+max-width: 1400px;
 /*justify-content: center;*/
 padding: 104px 40px 0 40px;
 }
@@ -115,8 +116,9 @@ right: 0;
 z-index: 100;
 }
 #titlebar > div{
+
 padding: 12px 40px 12px 40px;
-/*max-width: 1012px;*/
+max-width: 1400px;
 display: flex;
 justify-content: space-between;
 align-items: center;

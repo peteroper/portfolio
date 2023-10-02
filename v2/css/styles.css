@@ -103,6 +103,20 @@ background-color: #89A6AE;
     background-repeat: no-repeat;
     background-size: auto 100%;
   }
+/*/////////////////////////////////////////////////////////////*/
+.casestudy1 #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/kv_casestudy_1.png);
+}
+.casestudy2 #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/kv_casestudy_2.png);
+}
+.casestudy3 #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/kv_casestudy_3.png);
+}
+.casestudy4 #intro .img{
+    background-image: url(https://peteroper.github.io/portfolio/assets/imgs/kv_casestudy_4.png);
+}
+/*/////////////////////////////////////////////////////////////*/
 #posts1 .post:nth-child(1) .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/post1_1.png);
 } 

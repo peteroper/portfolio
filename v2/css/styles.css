@@ -80,7 +80,7 @@ h3,
 .navi nav.selected a:first-of-type{
     font-weight: 700;
 }
-h3 a, h1, h4, .navi nav a {  
+.special h2, h3 a, h1, h4, .navi nav a {  
     font-weight: 400;
 }
 /*/////////////////////////////////////////////////////////////*/
@@ -89,6 +89,9 @@ h3 a, h1, h4, .navi nav a {
 a{
     color: #4a90e2;
 }
+.special.v1 p,
+.special.v1 h4,
+.special.v1 h2,
 .tag,
 #skills ul li{
     color: #FFF;
@@ -106,6 +109,7 @@ a{
 #skills ul li{
  background-color: #000;
 }
+.special.v1,
 #project ul span,
 #skills ul li{
 background-color: #89A6AE;
@@ -304,6 +308,7 @@ nav a{
  /*/////////////////////////////////////////////////////////////*/
 /* BACKGROUND */
 /*/////////////////////////////////////////////////////////////*/
+.special ul li,
 .navi .back,
 .section .img{
     background-color: #E9E9ED;
@@ -313,11 +318,8 @@ nav a{
 #showcase h3 a > span{
     background: #E3E9F0    
 }
-.special ul li{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #E9E9ED;
- }
 .special.v1 ul li{
-    background: rgba(0, 0, 0, 0.68);
+    background: rgba(37, 45, 52, 0.24);  
 }
 #titlebar.sticky,
 .img.v1{
@@ -400,6 +402,9 @@ nav a{
 .dark-mode{
     background-color: #252D34;
 }
+.dark-mode .special.v1{
+    background:rgba(52, 102, 114, 0.96); 
+}
 .dark-mode .navi .back,
 .dark-mode .section .img{
     background-color: rgba(0, 0, 0, 0.68);
@@ -409,11 +414,11 @@ nav a{
 .dark-mode #showcase h3 a > span{
     background: #666;    
 }
+.dark-mode .special.v1 ul li{
+    background:rgba(0, 0, 0, 0.14); 
+}
 .dark-mode .special ul li{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.68) 0%, rgba(255, 255, 255, 0.68) 100%), #E9E9ED;
- }
- .dark-mode .special.v1 ul li{
-    background: rgba(255, 255, 255, 0.68);
+    background:rgba(52, 102, 114, 0.36); 
 }
 .dark-mode .img.v1{
     background-color: #666;

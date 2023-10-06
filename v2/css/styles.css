@@ -14,6 +14,7 @@
 h1, h2, h3 a{
     font-family: 'Lora';
 }
+p b,
 #pain-points li h2,
 .special li h2,
 p.l, p.l span,
@@ -261,6 +262,7 @@ background-color: #89A6AE;
 .navi a{
     color: rgba(0, 0, 0, 0.5);   
 }
+.section p b,
 #titlebar.sticky a h1, 
 #posts nav a:hover,
 h3 a,
@@ -351,6 +353,7 @@ nav a{
 .dark-mode .navi a{
     color: rgba(255, 255, 255, 0.5);   
 }
+.dark-mode .section p b,
 .dark-mode #titlebar.sticky a h1, 
 .dark-mode #posts nav a:hover,
 .dark-mode h3 a,

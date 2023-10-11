@@ -22,7 +22,7 @@
 @media only screen and (max-width: 576px) {
 /*/////////////////////////////////////////////////////////////*/
 .page-index #intro{
-    padding: 76px 12px 20px 12px;
+    padding: 64px 12px 20px 12px;
     margin: -76px -12px 20px -12px;
 }
 .page-index #intro,

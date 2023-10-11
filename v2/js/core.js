@@ -129,7 +129,11 @@ function toggleDarkMode() {
   setDarkModePreference(isDarkMode);
   
   const themeColorMetaTag = document.querySelector("meta[name=theme-color]");
-  themeColorMetaTag.setAttribute("content", isDarkMode ? "#252D34" : "#fff");
+  if (document.body.classList.contains('screen-index')) {
+    // Your code for when the body has the class "screen-index"
+  } else {
+    themeColorMetaTag.setAttribute("content", isDarkMode ? "#252D34" : "#fff");
+  }
 
   // Change button text based on dark mode state
   const darkModeToggleBtn = document.getElementById('darkModeToggle');

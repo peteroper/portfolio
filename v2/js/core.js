@@ -123,6 +123,8 @@ function setDarkModePreference(isDarkMode) {
   document.cookie = darkModeCookie;
 }
 
+document.addEventListener("DOMContentLoaded", toggleDarkMode);
+
 // Function to toggle dark mode, update the UI, and change the button text
 function toggleDarkMode() {
   const isDarkMode = document.body.classList.toggle('dark-mode');

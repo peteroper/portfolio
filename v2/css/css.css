@@ -210,6 +210,9 @@ margin-bottom: 8px;
 max-width: 668px;
 margin-bottom: 16px;
 }
+.section li{
+    margin-bottom: 8px;
+}
 #intro h2{
     margin-bottom: 36px;
 }

@@ -275,6 +275,7 @@ h3 a,
 .date,
 a h1,
 #posts nav a,
+.section ol li,
 .section ul li,
 .section p{
     color: rgba(0, 0, 0, 0.68);
@@ -366,6 +367,7 @@ nav a{
 .dark-mode .date,
 .dark-mode a h1,
 .dark-mode #posts nav a,
+.dark-mode .section ol li,
 .dark-mode .section ul li,
 .dark-mode .section p{
     color: rgba(255, 255, 255, 0.68);

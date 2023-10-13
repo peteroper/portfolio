@@ -207,6 +207,7 @@ margin-bottom: 8px;
 .section ul,
 .section ol,
 .section h3,
+.section h5,
 .section p{
 max-width: 668px;
 margin-bottom: 16px;
@@ -231,6 +232,26 @@ display: none!important;
 .tab-container.tab-selected{
 display: flex!important;
 }
+/*/////////////////////////////////////////////////////////////*/
+.gallery-container {
+    margin-bottom: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .gallery {
+      width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .gallery .wrap{
+    display: inline-block;
+    width: 84%; 
+    margin-right: 12px; 
+    position: relative;
+  }
+  .gallery.sm .wrap{
+    width: 36%; 
+  }
 /*/////////////////////////////////////////////////////////////*/
 /* INTRO */
 /*/////////////////////////////////////////////////////////////*/

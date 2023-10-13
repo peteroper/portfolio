@@ -113,22 +113,6 @@ flex: 1;
     background-size: 100% auto;
 }
 /*/////////////////////////////////////////////////////////////*/
-.gallery-container {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-.gallery {
-    width: 100%;
-  display: inline-block;
-  white-space: nowrap;
-}
-.gallery .wrap{
-  display: inline-block;
-  width: 84%; 
-  margin-right: 12px; 
-  position: relative;
-}
-/*/////////////////////////////////////////////////////////////*/
 
 /* SPECIAL */
 

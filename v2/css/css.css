@@ -232,6 +232,9 @@ display: none!important;
 .tab-container.tab-selected{
 display: flex!important;
 }
+#intro .img.xs{
+    max-width: 100%;
+}
 /*/////////////////////////////////////////////////////////////*/
 .gallery-container {
     margin-bottom: 16px;

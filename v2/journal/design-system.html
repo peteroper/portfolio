@@ -60,7 +60,8 @@
     <div class="body">
     
     <div id="intro" class="section">
-        <h2>Design System : Migrating from Figma Styles to Primitive and Token Variables</h2>
+        <h2>Design System : Migrating from Figma Styles<br /> to Primitive and Token Variables</h2>
+        <span class="img xs"></span>
         <div class="column-container col1">
             <div class="column">  
                 <p>Past experience as a Front End Developer had seen me integrate a comprehensive SCSS library so I was pleased to see Figma release the design variables feature.</p>
@@ -89,22 +90,41 @@
                 <h3>Implementation Process</h3>
                 <ol>
                     <li>
-                        <strong>Creating Primitive Variables from the style guide</strong>: This process was straightforward since the styles were already well-documented. Switching from descriptive values such as “moonlight” or “silver” to a 100-900 range proved valuable as it made it easier to interpret when selecting at the token level.
+                        <b>Creating Primitive Variables from the style guide</b><br>
+                        This process was straightforward since the styles were already well-documented. Switching from descriptive values such as “moonlight” or “silver” to a 100-900 range proved valuable as it made it easier to interpret when selecting at the token level.
                         <ul>
                             <li>Set brand or theme variants at this level to leverage additional mode creation.</li>
                             <li>Deactivate these values from sync to reduce the volume of choices.</li>
                         </ul>
                     </li>
                     <li>
-                        <strong>Application of Design Tokens</strong>: Precision in the naming convention and grouping was crucial, and this became more apparent when inspecting in the development mode.
+                        <b>Application of Design Tokens</b><br>
+                        Precision in the naming convention and grouping was crucial, and this became more apparent when inspecting in the development mode.
                         <ul>
                             <li>Apply values to specific properties to reduce the volume of choices.</li>
                         </ul>
                     </li>
-                    <li><strong>Integration with Components</strong>: Although labor-intensive, this step is necessary.</li>
-                    <li><strong>Synchronization and Updates in Figma Screen Repository</strong>: I maintain a repository of screens that sync across all our design files.</li>
-                    <li><strong>Await Future Updates</strong>: Since not all styles can be added as variables, I am eagerly awaiting future updates to expand the design system further.</li>
+                    <li>
+                        <b>Integration with Components</b><br>
+                        Although labor-intensive, this step is necessary.
+                    </li>
+                    <li>
+                        <b>Synchronization and Updates in Figma Screen Repository</b><br>
+                        I maintain a repository of screens that sync across all our design files.
+                    </li>
+                    <li>
+                        <b>Await Future Updates</b><br>
+                        Since not all styles can be added as variables, I am eagerly awaiting future updates to expand the design system further.
+                    </li>
                 </ol>
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/presentation1.png);" ></span></span>
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/presentation2.png);" ></span></span>
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/presentation3.png);" ></span></span>
+                        <span class="wrap"><span class="img" style="background-image: url(https://peteroper.github.io/portfolio/assets/imgs/presentation4.png);" ></span></span>
+                    </div>
+                </div>
             </div>
             <div class="column"></div>
         </div>
@@ -112,14 +132,13 @@
     <div class="section">
         <div class="column-container col1">
             <div class="column">  
-                <h2>Collaboration and Integration</h2>
+                <h3>Collaboration and Integration</h3>
                 <p>It’s still quite early since I made the changes, but as I noticed with the Figma screen repository and component library, when team members begin syncing files and using existing components and screens from the design resource, the changes become more widely accepted.</p>
                 <p>I’m eager to witness the voluntary application of design tokens. The adoption level can be gauged by the use of spacing values and widths, which, while beneficial for a designer, might not be as straightforward to set up as color values.</p>
-
-                <h2>Future Outlook</h2>
+                <h3>Future Outlook</h3>
                 <p>The feature is still in Beta mode which gives me hope that some of the challenges I’ve experienced will be flagged by the community and resolved with later updates.</p>
 
-                <p><strong>Problems</strong></p>
+                <h5>Problems</h5>
                 <ol>
                     <li>Selecting variables while working on designs can be clunky and inhibit your productivity.</li>
                     <li>Not all variables can be added currently; such as gradients, font sizes and light heights.</li>

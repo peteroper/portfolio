@@ -60,25 +60,70 @@
     <div class="body">
     
     <div id="intro" class="section">
-        <h2>Applying Primitives & Design tokens to a Design System</h2>
+        <h2>Design System : Migrating from Figma Styles to Primitive and Token Variables</h2>
         <div class="column-container col1">
-            <div class="column">
-                <h3>title</h3>
-                <p>description</p>
+            <div class="column">  
+                <p>Past experience as a Front End Developer had seen me integrate a comprehensive SCSS library so I was pleased to see Figma release the design variables feature.</p>
+                <h3>Challenges with Figma styles</h3>
+                <p>Design styles don't help with making system-wide changes, leading to the need for time-consuming manual adjustments for each instance. Meanwhile, designers might find it challenging to select the right values without having to refer to documentation.</p>
+                <h3>Benefits of transitioning to  Figma design variables</h3>
+                <ol>
+                    <li>Centralizes style values for easy changes and simplified maintenance, enabling mode and theme creation.</li>
+                    <li>Helps designers make informed choices with a clear set of variables and provides guidance for cohesive design decisions.</li>
+                    <li>Simplifies the design-to-development process with a shared language.</li>
+                </ol>
+                <h3>Is it worth doing?</h3>
+                <p>Definitely. I was convinced when I saw that variables could be assigned to specific properties, like colors for fill or borders. This approach improves design creation and ensures consistency, as it reduces the need to choose from numerous color styles. Instead, the options are often simplified and clearly labeled.</p>
+                <p>On the downside, it can be time-consuming to reapply styles and properties to components and screen templates.</p>
             </div>
             <div class="column"></div>
         </div>
+    </div>
+
+    <div class="section">
         <div class="column-container col1">
-            <div class="column">
-                <h3>title</h3>
-                <p>description</p>
+            <div class="column">  
+                <h3>The Move to Primitive and Token Variables</h3>
+                <p>I enjoyed the initial application of labels and values as while I had a learnt understanding of when to apply values I had to consider how to make it clear for designers less familiar.</p>
+                <p>Also some of the theoretical work of deciding between primary, secondary and tertiary colors or introducing accent, contract and highlight lead to some enjoyable discussions with colleagues.</p>
+                <h3>Implementation Process</h3>
+                <ol>
+                    <li>
+                        <strong>Creating Primitive Variables from the style guide</strong>: This process was straightforward since the styles were already well-documented. Switching from descriptive values such as “moonlight” or “silver” to a 100-900 range proved valuable as it made it easier to interpret when selecting at the token level.
+                        <ul>
+                            <li>Set brand or theme variants at this level to leverage additional mode creation.</li>
+                            <li>Deactivate these values from sync to reduce the volume of choices.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Application of Design Tokens</strong>: Precision in the naming convention and grouping was crucial, and this became more apparent when inspecting in the development mode.
+                        <ul>
+                            <li>Apply values to specific properties to reduce the volume of choices.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Integration with Components</strong>: Although labor-intensive, this step is necessary.</li>
+                    <li><strong>Synchronization and Updates in Figma Screen Repository</strong>: I maintain a repository of screens that sync across all our design files.</li>
+                    <li><strong>Await Future Updates</strong>: Since not all styles can be added as variables, I am eagerly awaiting future updates to expand the design system further.</li>
+                </ol>
             </div>
             <div class="column"></div>
         </div>
+    </div>
+    <div class="section">
         <div class="column-container col1">
-            <div class="column">
-                <h3>title</h3>
-                <p>description</p>
+            <div class="column">  
+                <h2>Collaboration and Integration</h2>
+                <p>It’s still quite early since I made the changes, but as I noticed with the Figma screen repository and component library, when team members begin syncing files and using existing components and screens from the design resource, the changes become more widely accepted.</p>
+                <p>I’m eager to witness the voluntary application of design tokens. The adoption level can be gauged by the use of spacing values and widths, which, while beneficial for a designer, might not be as straightforward to set up as color values.</p>
+
+                <h2>Future Outlook</h2>
+                <p>The feature is still in Beta mode which gives me hope that some of the challenges I’ve experienced will be flagged by the community and resolved with later updates.</p>
+
+                <p><strong>Problems</strong></p>
+                <ol>
+                    <li>Selecting variables while working on designs can be clunky and inhibit your productivity.</li>
+                    <li>Not all variables can be added currently; such as gradients, font sizes and light heights.</li>
+                </ol>
             </div>
             <div class="column"></div>
         </div>

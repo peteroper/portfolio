@@ -327,6 +327,9 @@ nav a{
 .img.v1{
     background-color: #FFF;
 }
+body{
+    background-color: #F5F5F5;
+}
 /*/////////////////////////////////////////////////////////////*/
 .page-index #intro .img{
     background-image: url(https://peteroper.github.io/portfolio/assets/imgs/index-light.png);

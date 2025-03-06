@@ -1,0 +1,263 @@
+/*/////////////////////////////////////////////////////////////*/
+
+/* GENERIC */
+
+/*/////////////////////////////////////////////////////////////*/
+body{
+    width:  360px;
+    padding: 18px;
+    font-family: arial;
+}
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp *{
+    padding: 0;
+    margin: 0;
+}
+.quiz-cmp a{
+    text-decoration: none;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+/* START CARD */
+
+/*/////////////////////////////////////////////////////////////*/
+#quiz .start-card{
+    padding: 36px 18px;
+    text-align: center;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#quiz .start-card > *{
+    margin-bottom: 18px;
+}
+#quiz .start-card .time{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+#quiz .start-card .img{
+    width: 96px;
+    height: 96px;
+    display: inline-block;
+    margin: 0 auto 18px auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+#quiz .start-card .btn{
+    line-height: 48px;
+    margin: 0!important;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+/* QUIZ */
+
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .quiz{
+    display: flex;
+    flex-direction: column;
+
+}
+.quiz-cmp .quiz > * {
+    margin-bottom: 12px;
+}
+/*/////////////////////////////////////////////////////////////*/
+#quiz .quiz .img{
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+    background-position: 50%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+}
+#quiz .quiz .img .animation{
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* COUNTDOWN */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .countdown {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+.quiz-cmp .countdown .counter {
+    height: 12px;
+    position: relative;
+    flex-grow: 1;
+    font-size: 18px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.quiz-cmp .countdown .bar{
+    display: block;
+    height: 100%;
+    width: 100%;
+    transition: width 1s ease-in-out;
+}
+.quiz-cmp .countdown .time {
+    margin-left: 10px;
+    font-size: 16px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* ANSWERS */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .answers{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+.quiz-cmp .answers > *{
+    margin-bottom: 8px;
+}
+.quiz-cmp .answers li a{
+    line-height: 48px;
+    padding: 0 12px;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    display: block;
+}
+/*.quiz-cmp .answers li a span{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}*/
+/*/////////////////////////////////////////////////////////////*/
+/* DESCRIPTION */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .description{
+    border-width: 1px;
+    border-style: solid;
+    padding: 18px;
+}
+/*/////////////////////////////////////////////////////////////*/
+
+/* STYLES */
+
+/*/////////////////////////////////////////////////////////////*/
+/* COLOR */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .quiz.incorrect .answers li.selected a,
+.quiz-cmp .answers li.correct a.selected,
+#quiz .start-card .btn{
+    color: #FFF;
+}
+.quiz-cmp .answers li a{
+    color:#EB5505;
+}
+.quiz-cmp .quiz.incorrect .answers li.correct a,
+.quiz-cmp .quiz.timesup .answers li.correct a{
+    color: #1EAD78;
+}
+.quiz-cmp .quiz.timesup .answers li a,
+.quiz-cmp .quiz.incorrect .answers li a{
+    color: #9B9B9B;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BORDER COLOR */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .description,
+.quiz-cmp .answers li a,
+#quiz .start-card{
+    border-color: #E6E6E6;
+}
+.quiz-cmp .quiz.incorrect .answers li.correct a,
+.quiz-cmp .quiz.timesup .answers li.correct a{
+    border-color: #9CDBC4;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUND COLOR */
+/*/////////////////////////////////////////////////////////////*/
+#quiz .start-card{
+    background-color: #FFF;
+}
+.quiz-cmp .countdown .counter,
+#quiz .quiz .img{
+    background-color: #E6E6E6;
+}
+#quiz .start-card .btn{
+    background-color: #EB5505;
+}
+.quiz-cmp .quiz.incorrect .countdown .bar,
+.quiz-cmp .quiz.incorrect .answers li.selected a{
+    background: #DC5F5A;
+}
+.quiz-cmp .quiz.correct .countdown .bar,
+.quiz-cmp .answers li.correct a.selected{
+    background: #1EAD78;
+}
+.quiz-cmp .quiz.incorrect .answers li.correct a,
+.quiz-cmp .quiz.timesup .answers li.correct a{
+ background-color: #D5F5EC;
+}
+.quiz-cmp .countdown .bar{
+    background: linear-gradient(270deg, #FF8400 0%, #DC5F5A 100%);
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BACKGROUND IMAGE */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .start-card .img{
+    background-image: url(../images/quiz.png);
+}
+.quiz-cmp .quiz.correct .img .animation{
+    background-image: url(../images/maru-animation.png);
+}
+.quiz-cmp .quiz.incorrect .img .animation{
+    background-image: url(../images/batsu-animation.png);
+}
+.quiz-cmp .quiz.timesup .img .animation{
+    background-image: url(../images/timesup-animation.png);
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BORDER RADIUS */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .description,
+#quiz .quiz .img,
+.quiz-cmp .countdown .bar,
+#quiz .start-card{
+    border-radius: 16px;
+}
+.quiz-cmp .answers li a,
+.counter,
+#quiz .start-card .btn{
+    border-radius: 100px;
+}
+/*/////////////////////////////////////////////////////////////*/
+/* BOX SHADOW */
+/*/////////////////////////////////////////////////////////////*/
+.quiz-cmp .start-card{
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 1px 0px rgba(0, 0, 0, 0.20);
+}
+.quiz-cmp .answers li a{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20), 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px -1px 4px 0px rgba(0, 0, 0, 0.08);
+}
+.quiz-cmp .quiz.correct .answers li a,
+.quiz-cmp .quiz.timesup .answers li a,
+.quiz-cmp .quiz.incorrect .answers li a{
+    box-shadow: none;
+}
+.quiz-cmp .quiz.incorrect .answers li .selected,
+.quiz-cmp .quiz.correct .answers li .selected {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.24) inset;
+}
+.quiz-cmp .answers li.correct a.noselection{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.08);
+}

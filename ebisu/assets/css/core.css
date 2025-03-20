@@ -276,17 +276,19 @@ footer .img{
 .contact .img{
     float: right;
 }
-.contact h3 a:before,
-.contact p a:before{
-    content: '';
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    display: inline-block;
+.contact p,
+.contact h3,
+.contact .heading{
+    align-items: center;
+    display: flex;
 }
-.contact h3 a:before{
-    width: 40px;
-    height: 40px;
+.contact .heading h3{
+    margin-bottom: 0;
+}
+.contact p .material-icons{
+    margin-right: 8px;
+}
+.contact h3 .material-icons{
     margin-right: 12px;
 }
 #directions{

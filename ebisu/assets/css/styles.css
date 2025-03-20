@@ -152,6 +152,7 @@ footer .copyright,
 .button{
     background-color: var(--accent-color);
 }
+header,
 header .primary,
 header .language a,
 body,

@@ -136,7 +136,7 @@ header .language{
     overflow: hidden;
 }
 header .language.active{
-    height: 96px;
+    height: 108px;
     position: relative;
     z-index: 1000;
 }

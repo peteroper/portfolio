@@ -1,0 +1,316 @@
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* CORE */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-position: inside;
+}
+html,
+body,
+header,
+footer,
+section{
+    width: 100%;
+}
+header,
+.heading,
+.container{
+    max-width: 1360px;
+    margin: 0 auto;
+}
+/*//////////////////////////////////////////////////*/
+/* FLEX */
+/*//////////////////////////////////////////////////*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex .col{
+    flex: 1;
+    box-sizing:border-box;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    .flex{
+        flex-direction: column;
+    }
+    .container.flex{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    #hero .flex{
+        flex-direction: column-reverse;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* IMG */
+/*//////////////////////////////////////////////////*/
+.img{
+    display: block;
+}
+.message{
+    display: flex;
+    align-items: center;
+}
+.message:before{
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+}
+/*//////////////////////////////////////////////////*/
+/* BUTTON */
+/*//////////////////////////////////////////////////*/
+.button{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    transform: translateY(-3px); /* Lift effect */
+}
+.button:active {
+    transform: translateY(0); /* Button returns to normal position */
+}
+.button:disabled {
+    background-color: #b0c4de; /* Light greyish blue */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+#lang.button:hover{
+    transform: none;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* SECTIONS */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* HEADER */
+/*//////////////////////////////////////////////////*/
+header{
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    /*align-items: center;*/
+}
+header .logo{
+    width: 200px;
+    height: 48px;
+    text-indent: -5000px;
+    overflow: hidden;
+}
+header nav{
+    display: flex;
+}
+header .primary{
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+header .social a{
+    text-indent: -5000px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px; 
+}
+/*/////////////////////////*/
+header .language{
+    margin-top: 6px;
+    height: 32px;
+    padding: 0;
+    overflow: hidden;
+}
+header .language.active{
+    height: 96px;
+    position: relative;
+    z-index: 1000;
+}
+header .language.active,
+header .language a:last-of-type{
+    border: none!important;
+}
+header .language a{
+    display: block;
+}
+/*/////////////////////////*/
+.menu-icon{
+    margin-top: 11px;
+    height: 25px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    margin: 2.2px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header{
+        height: 68px;
+    }
+    header .social{
+        display: none;
+    }
+    .menu-icon {
+      display: flex;
+    }
+    header .primary{
+        flex-direction: column;
+        justify-content: left;
+        position: fixed;
+        align-items: start;
+        top: 68px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        z-index: 1000;
+    }
+    header .primary.active{
+        display: flex;
+    }
+    header .logo{
+        width: auto;
+        height: 40px;
+        flex-grow: 1;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* FOOTER */
+/*//////////////////////////////////////////////////*/
+footer p,
+footer h3,
+footer .heading{
+    align-items: center;
+    display: flex;
+}
+footer .heading h3{
+    margin-bottom: 0;
+}
+footer p .material-icons{
+    margin-right: 8px;
+}
+footer h3 .material-icons{
+    margin-right: 12px;
+}
+/*/////////////////////////*/
+footer .col:last-of-type{
+    overflow: hidden;
+}
+footer .img{
+    float: right;
+}
+/*//////////////////////////////////////////////////*/
+/* BENEFITS */
+/*//////////////////////////////////////////////////*/
+#benefits h3{
+    position: relative;
+}
+#benefits h3:after{
+    content: '';
+    width: 36px;
+    margin-left: -18px;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+}
+/*//////////////////////////////////////////////////*/
+/* TESTIMONIALS */
+/*//////////////////////////////////////////////////*/
+#testimonials cite{
+    align-items: center;
+    display: flex;
+}
+#testimonials cite .img{
+    margin-bottom: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #testimonials .flex{
+        flex-direction: row;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    #testimonials .flex{
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+      }
+      #testimonials .col {
+        flex: 0 0 auto; 
+        width: 300px; 
+        min-width: 300px; 
+      }
+}
+/*//////////////////////////////////////////////////*/
+/* CONTACT */
+/*//////////////////////////////////////////////////*/
+#address .flex{
+    flex-wrap: nowrap;
+}
+#address .flex .img{
+    margin: 0;
+}
+.contact .img{
+    float: right;
+}
+.contact h3 a:before,
+.contact p a:before{
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    display: inline-block;
+}
+.contact h3 a:before{
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+#directions{
+    padding-top: 0;
+}
+#directions .col{
+    position: relative;
+}
+#directions .col:after{
+    content: '';
+    position: absolute;
+    right: -22px;
+    top: 45px;
+}
+#directions .col:last-of-type:after{
+    display: none;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #directions .col:after{
+        top: auto;
+        right: auto;
+        left: 50%;
+        bottom: -16px;
+        margin-left: -10px;
+    }
+}

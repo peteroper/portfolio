@@ -1,0 +1,512 @@
+:root {
+    /* Colors */
+    --primary-color: #052D60;
+    --secondary-color: #F4F5F9;
+    --accent-color: #4C7EF9;
+    --contrast-color: #FFCC00;
+    --background-color: #FFF;
+    --text-color: #2A2242;
+    --light-text-color: #666;
+    --invert-text-color: #FFF;
+}
+/*//////////////////////////////////////////////////*/
+/* COLOR */
+/*//////////////////////////////////////////////////*/
+.contact a,
+header nav a,
+body{
+    color: var(--text-color);
+}
+.button.outline,
+#benefits .col:nth-child(even) h3{
+    color: var(--primary-color);
+}
+header .primary a.active{
+    color: var(--accent-color);
+}
+header .language.active a,
+footer .button.outline,
+footer a,
+footer,
+footer p,
+#benefits .col:nth-child(odd),
+#benefits .col:nth-child(odd) p,
+#hero,
+#hero p,
+.button{
+    color: var(--invert-text-color);
+}
+cite,
+li,
+p{
+    color: var(--light-text-color);
+}
+footer p,
+#hero p,
+#benefits .col:nth-child(odd) p{
+    opacity: 0.68;
+}
+header .message:before{
+    opacity: 0.5;
+}
+footer .message:before{
+    filter: invert(1);
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary a{
+        color: var(--invert-text-color);
+    }
+    header .primary a.active{
+        color: var(--contrast-color);
+    }
+}
+/*//////////////////////////////////////////////////*/
+header .language a:hover,
+.button:hover,
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*//////////////////////////////////////////////////*/
+/* BORDER COLOR */
+/*//////////////////////////////////////////////////*/
+#directions .col:after,
+header .language a,
+footer .heading,
+.button.outline,
+#benefits h3:after{
+    border-style: solid;
+}
+/*/////////////////////////*/
+.button.outline{
+    border-width: 1px;
+}
+header .language a,
+footer .heading{
+    border-width: 0 0 1px 0;
+}
+#benefits h3:after{
+    border-width: 0 0 2px 0;
+}
+#directions .col:after{
+    border-width: 10px 0 10px 14px;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #directions .col:after{
+        border-width: 14px 10px 0 10px;
+    }
+}
+/*/////////////////////////*/
+.button.outline,
+#benefits h3:after{
+    border-color: var(--primary-color);
+}
+#benefits .col:nth-child(odd) h3:after{
+    border-color: var(--background-color);
+}
+footer .button.outline,
+footer .heading{
+    border-color: var(--invert-color);
+}
+#directions .col:after{
+    border-color: var(--contrast-color);
+}
+header .language a{
+    border-color: rgba(255, 255, 255, 0.25);
+}
+/*/////////////////////////*/
+@media (min-width: 1024px) {
+#directions .col:after{
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+}
+/*/////////////////////////*/
+@media (max-width: 1023px) {
+    #directions .col:after{
+        border-left-color: transparent;
+        border-right-color: transparent;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* BACKGROUND COLOR */
+/*//////////////////////////////////////////////////*/
+.menu-icon div,
+footer,
+#benefits .col:nth-child(odd),
+#hero{
+    background-color: var(--primary-color);
+}
+#contact-info .col,
+header .language a:hover,
+.img,
+#benefits{
+    background-color: var(--secondary-color);
+}
+header .language.active a,
+footer .copyright,
+.button{
+    background-color: var(--accent-color);
+}
+header .primary,
+header .language a,
+body,
+#benefits .col{
+    background-color: var(--background-color);
+}
+/*/////////////////////////*/
+.button.outline{
+    background-color: transparent!important;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+        background-color: var(--accent-color);
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* BORDER RADIUS */
+/*//////////////////////////////////////////////////*/
+.button,
+#testimonials cite .img{
+    border-radius: 1000px;
+}
+.language.button{
+    border-radius: 20px;
+}
+.language.button.active{
+    border-radius: 12px;
+}
+/*//////////////////////////////////////////////////*/
+/* SPACING */
+/*//////////////////////////////////////////////////*/
+footer,
+section{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+header{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+header,
+.heading,
+.container{
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
+#contact-info .col,
+#benefits .col{
+    padding: 1.5rem;
+}
+footer .copyright{
+    padding: 1rem 0;
+}
+footer .heading{
+    padding: 0 0 1.5rem 0;
+}
+footer{
+    padding-bottom: 0!important;
+}
+.button{
+    padding: 0.75rem 1.5rem;
+}
+header .language a,
+.button.md{
+    padding: 0.5rem 1rem;
+}
+.button.sm{
+    padding: 0.25rem 0.5rem; 
+}
+.language.button{
+    padding: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    footer,
+    section{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    header,
+    .heading,
+    .container{
+        padding-left: 1.25rem; 
+        padding-right: 1.25rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+.heading{
+    margin-bottom: 2rem;
+}
+h1,
+h2,
+h3{
+    margin-bottom: 1.5rem;
+}
+.img,
+p{
+    margin-bottom: 1rem;
+}
+.heading h2,
+.heading h3{
+    margin-bottom: 0.25rem;
+}
+.container > *:last-child,
+.heading > *:last-child{
+margin-bottom: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .heading{
+        margin-bottom: 1.5rem;
+    }
+    h3{
+        margin-bottom: 1.25rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+#testimonials .flex{
+    gap: 6rem;
+}
+header nav.primary,
+.flex{
+    gap: 2rem;
+}
+footer .heading{
+    gap: 1.5rem;
+}
+header nav,
+header{
+    gap: 1rem;
+}
+#testimonials cite{
+    gap: 0.75rem;
+}  
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #testimonials .flex{
+        gap: 2rem;
+    }
+    header nav.primary,
+    .flex{
+       gap: 1.5rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* FONT */
+/*//////////////////////////////////////////////////*/
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif, "Hiragino Kaku Gothic Pro", "Meiryo", "Microsoft YaHei", "SimSun", "Noto Sans", "Noto Sans CJK", sans-serif;
+}
+.japanese-text {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", "Yu Gothic", sans-serif;
+}
+.chinese-text {
+    font-family: "Microsoft YaHei", "SimSun", "PingFang SC", sans-serif;
+}
+/*/////////////////////////*/
+header .primary a{
+    font-weight: bold;
+}
+@media (max-width: 1024px) {
+    header .primary a{
+       font-weight: bold;
+    }
+}
+/*/////////////////////////*/
+.heading,
+#benefits{
+    text-align: center;
+}
+footer .heading{
+    text-align: left;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #testimonials .heading{
+        text-align: left;
+    }
+}
+/*/////////////////////////*/
+body{
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 440px) {
+    body {
+        font-size: 12px;
+    }
+}
+/*/////////////////////////*/
+.contact h3 a,
+footer h3 a,
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+p,
+dd,
+dt,
+.button{
+    font-size: 1rem;
+}
+cite,
+li,
+.button.md,
+small{
+    font-size: 0.8rem;
+}
+.button.sm{
+    font-size: 0.6rem;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+       font-size: 1.25rem;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    .contact h3 a,
+    footer h3 a,
+    h1{
+        font-size: 1.75rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* IMAGES */
+/*//////////////////////////////////////////////////*/
+.img{
+    width: 100%;
+}
+/*/////////////////////////*/
+.img{
+    padding-bottom: 60%;
+}
+#directions .img{
+    padding-bottom: 70%;
+}
+.contact .img,
+#address .img,
+footer .img,
+#testimonials cite .img{
+    padding-bottom: 0!important;
+}
+/*/////////////////////////*/
+#address .img{
+    width: 172px;
+    aspect-ratio: 2/2.6;
+}
+footer .img{
+    width: 148px;
+    height: 148px;
+}
+#testimonials cite .img{
+    width: 40px;
+    height: 40px;
+}
+/*/////////////////////////*/
+.message:before,
+.img{
+    background-size: 100% auto;
+}
+/*/////////////////////////*/
+.message:before,
+.img{
+    background-position: 50%;
+}
+/*/////////////////////////*/
+.message:before,
+.img{
+    background-repeat: no-repeat;
+}
+/*//////////////////////////////////////////////////*/
+.logo{
+    background-image: url(../img/log.svg);
+}
+/*/////////////////////////*/
+#hero .img{
+    background-image: url(../img/hero1.png);
+}
+/*/////////////////////////*/
+#services .col:nth-child(1) .img{
+    background-image: url(../img/partnership.png);
+}
+#services .col:nth-child(2) .img{
+    background-image: url(../img/tax.png);
+}
+#services .col:nth-child(3) .img{
+    background-image: url(../img/registration.png);
+}
+#services .col:nth-child(4) .img{
+    background-image: url(../img/consulting.png);
+}
+/*/////////////////////////*/
+#details .img{
+    background-image: url(../img/details1.png);
+}
+/*/////////////////////////*/
+#testimonials .col:nth-child(1) .img{
+    background-image: url(../img/testimonial1.png);
+}
+#testimonials .col:nth-child(2) .img{
+    background-image: url(../img/testimonial2.png);
+}
+#testimonials .col:nth-child(3) .img{
+    background-image: url(../img/testimonial3.png);
+}
+/*/////////////////////////*/
+footer .img{
+    background-image: url(../img/lineQR.png);
+}
+.line:before{
+    background-image: url(../img/line-logo.svg);
+}
+.wechat:before{
+    background-image: url(../img/wechat-logo.svg);
+}
+/*//////////////////////////////////////////////////*/
+#directions .col:nth-child(1) .img{
+    background-image: url(../img/direction1.png);
+}
+#directions .col:nth-child(2) .img{
+    background-image: url(../img/direction2.png);
+}
+#directions .col:nth-child(3) .img{
+    background-image: url(../img/direction3.png);
+}
+#directions .col:nth-child(4) .img{
+    background-image: url(../img/direction4.png);
+}
+#directions .col:nth-child(5) .img{
+    background-image: url(../img/direction5.png);
+}
+#directions .col:nth-child(6) .img{
+    background-image: url(../img/direction6.png);
+}
+#directions .col:nth-child(7) .img{
+    background-image: url(../img/direction7.png);
+}
+#address .img{
+    background-image: url(../img/building.png);
+}
+/*//////////////////////////////////////////////////*/

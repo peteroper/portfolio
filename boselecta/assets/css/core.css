@@ -1,0 +1,135 @@
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/* CORE */
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+ul{
+    list-style-position: inside;
+}
+html,
+body,
+header,
+footer,
+section{
+    width: 100%;
+}
+header{
+    width: 1360px;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -680px;
+}
+section,
+.heading,
+.container{
+    max-width: 896px;
+    margin: 0 auto;
+}
+.splash{
+    max-width: 100%;
+}
+.content{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+/*//////////////////////////////////////////////////*/
+/* FLEX */
+/*//////////////////////////////////////////////////*/
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex .col{
+    flex: 1;
+    box-sizing:border-box;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    .flex{
+        flex-direction: column;
+    }
+    .container.flex{
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* BUTTON */
+/*//////////////////////////////////////////////////*/
+.button{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.button:hover {
+    transform: translateY(-3px); /* Lift effect */
+}
+.button:active {
+    transform: translateY(0); /* Button returns to normal position */
+}
+.button:disabled {
+    background-color: #b0c4de; /* Light greyish blue */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+#lang.button:hover{
+    transform: none;
+}
+/*//////////////////////////////////////////////////*/
+/* IMAGE */
+/*//////////////////////////////////////////////////*/
+.img{
+    display: block;
+}
+/*//////////////////////////////////////////////////*/
+/* BRAND */
+/*//////////////////////////////////////////////////*/
+.brand{
+    width: 168px;
+    overflow: hidden;
+}
+.brand small{
+    display: block;
+}
+/*//////////////////////////////////////////////////*/
+/* TRANSITION */
+/*//////////////////////////////////////////////////*/
+body{
+    transition: background 0.8s ease;
+}
+#intro{
+    opacity: 0;
+    transition: opacity 0.8s ease-out,transform 0.8s ease-out;
+    transform: translateY(40px);
+}
+#intro.show{
+    opacity: 100%;
+    transform: translateY(0);
+}
+#intro h2,
+#intro .button,
+#intro p{
+    transition: opacity 0.8s ease-in-out,transform 0.8s ease-in-out;
+    transform: translateY(20px);
+}
+/*//////////////////////////////////////////////////*/
+/* CASESTUDY */
+/*//////////////////////////////////////////////////*/
+.content h4 a,
+.content h3 a{
+    display: block;
+    text-align: center;
+}

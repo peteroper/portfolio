@@ -1,0 +1,399 @@
+:root {
+    /* Colors */
+    --primary-color: #88A4AA;
+    --secondary-color: #E6E6EA;
+    --accent-color: #D23F3F;
+    --background-color: #F1F1F3;
+    --text-color: #2C2524;
+    --light-text-color: #666;
+    --invert-text-color: #FFF;
+    /* Dark Mode */
+    /*--primary-color: #88A4AA;
+    --secondary-color: #000;
+    --accent-color: #D23F3F;
+    --background-color: #2D2D2D;
+    --text-color: #E1E1E1;
+    --light-text-color: #666;
+    --invert-text-color: #000;*/
+}
+/*//////////////////////////////////////////////////*/
+/* COLOR */
+/*//////////////////////////////////////////////////*/
+.brand h1,
+.button{
+    color: var(--invert-text-color);
+}
+body,
+.content a{
+    color: var(--text-color);
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+
+}
+/*/////////////////////////*/
+#intro .button,
+#intro p{
+    opacity: 24%;
+}
+/*//////////////////////////////////////////////////*/
+header .language a:hover,
+.button:hover,
+a{
+    text-decoration: none;
+}
+/*a:hover{
+    text-decoration: underline;
+}*/
+/*//////////////////////////////////////////////////*/
+.button{
+    font-weight: bold;
+}
+/*//////////////////////////////////////////////////*/
+.brand{
+    text-align: center;
+}
+/*//////////////////////////////////////////////////*/
+/* BORDER COLOR */
+/*//////////////////////////////////////////////////*/
+.button.outline{
+    border-style: solid;
+}
+/*/////////////////////////*/
+.button.outline{
+    border-width: 1px;
+}
+header .language a{
+    border-width: 0 0 1px 0;
+}
+/*/////////////////////////*/
+.button.outline{
+    border-color: var(--text-color);
+}
+footer .button.outline{
+    border-color: var(--invert-color);
+}
+header .language a{
+    border-color: rgba(255, 255, 255, 0.25);
+}
+/*//////////////////////////////////////////////////*/
+/* BACKGROUND COLOR */
+/*//////////////////////////////////////////////////*/
+.menu-icon div{
+    background-color: var(--primary-color);
+}
+header .language a:hover,
+.img{
+    background-color: var(--secondary-color);
+}
+.brand h1,
+header .language.active a,
+.button{
+    background-color: var(--accent-color);
+}
+html,
+.bg-intro,
+header .language a{
+    background-color: var(--background-color);
+}
+footer,
+.brand small{
+    background-color: #FFF;
+}
+.splash{
+    background: linear-gradient(to right, #F1F1F3 0%, #E6E6EA 50%);
+}
+
+body{
+    position: relative;
+}
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Apply blur effect */
+    opacity: 0.4; /* Fade the background image */
+    z-index: -1; /* Keep it behind the content */
+}
+.bg-casestudy2{
+    /*background-color:#362F46;*/
+    /*background: linear-gradient(to right, #362F46, #703598, #69A5B3, #3F2070);*/
+    background: linear-gradient(to right, 
+    rgba(54, 47, 70, 1), 
+    rgba(112, 53, 152, 1), 
+    rgba(105, 165, 179, 1), 
+    rgba(63, 32, 112, 1)
+  );
+}
+.bg-casestudy3{
+    background-color: #FC0;
+}
+.bg-casestudy4{
+    /*background: linear-gradient(to right, #EB5505, #FF5D86, #FF7147, #9786FE);*/
+    /*background: linear-gradient(to right, 
+    rgba(235, 85, 5, 0.5), 
+    rgba(255, 93, 134, 0.5), 
+    rgba(255, 113, 71, 0.5), 
+    rgba(151, 134, 254, 0.5)
+  );*/
+  background-color: #D23F3F;
+}
+/*/////////////////////////*/
+.button.outline{
+    background-color: transparent!important;
+}
+/*//////////////////////////////////////////////////*/
+/* BORDER RADIUS */
+/*//////////////////////////////////////////////////*/
+.button{
+    border-radius: 1000px;
+}
+.language.button{
+    border-radius: 1.25rem;
+}
+.language.button.active{
+    border-radius: 0.75rem;
+}
+.img{
+    border-radius: 2rem;
+}
+.brand{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+/*//////////////////////////////////////////////////*/
+/* SPACING */
+/*//////////////////////////////////////////////////*/
+section{
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+footer{
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+}
+header,
+.heading,
+.container{
+    padding-left: 2rem; 
+    padding-right: 2rem;
+}
+#benefits .col{
+    padding: 1.5rem;
+}
+.brand h1{
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+.brand small{
+    padding: 0.75rem 1rem;
+}
+.button{
+    padding: 0.75rem 1.5rem;
+}
+header .language a,
+.button.md{
+    padding: 0.5rem 1rem;
+}
+.button.sm{
+    padding: 0.25rem 0.5rem; 
+}
+.language.button{
+    padding: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+        padding: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+
+}
+/*//////////////////////////////////////////////////*/
+#intro h2,
+#intro p,
+.heading{
+    margin-bottom: 2rem;
+}
+h1,
+h2,
+h3{
+    margin-bottom: 1.5rem;
+}
+.img,
+p{
+    margin-bottom: 1rem;
+}
+.heading h2,
+.heading h3{
+    margin-bottom: 0.25rem;
+}
+.brand h1,
+.brand p,
+.container > *:last-child,
+.heading > *:last-child{
+margin-bottom: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+footer .heading{
+    margin-left: 2rem; 
+    margin-right: 2rem;
+}
+}
+/*//////////////////////////////////////////////////*/
+.flex{
+    gap: 2rem;
+}
+header nav,
+header{
+    gap: 1rem;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+       gap: 1.5rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* FONT */
+/*//////////////////////////////////////////////////*/
+body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif, "Hiragino Kaku Gothic Pro", "Meiryo", "Microsoft YaHei", "SimSun", "Noto Sans", "Noto Sans CJK", sans-serif;
+}
+.japanese-text {
+    font-family: "Hiragino Kaku Gothic Pro", "Meiryo", "Yu Gothic", sans-serif;
+}
+.chinese-text {
+    font-family: "Microsoft YaHei", "SimSun", "PingFang SC", sans-serif;
+}
+/*/////////////////////////*/
+#intro p{
+    font-weight: bold;
+}
+/*/////////////////////////*/
+.heading,
+#benefits{
+    text-align: center;
+}
+footer .heading{
+    text-align: left;
+}
+/*/////////////////////////*/
+#intro p{
+    line-height: 150%;
+}
+h3,
+h4{
+    line-height: 130%;    
+}
+h2{
+    line-height: 115%;
+}
+h1{
+    line-height: 100%;
+}
+/*/////////////////////////*/
+h2{
+    letter-spacing: -1pt;
+}
+/*/////////////////////////*/
+body{
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media (max-width: 440px) {
+    body {
+        font-size: 12px;
+    }
+}
+/*/////////////////////////*/
+h1{
+    font-size: 1rem;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 1.75rem;
+}
+#intro p{
+    font-size: 1.5rem;
+}
+p,
+li,
+dd,
+dt,
+.button{
+    font-size: 1rem;
+}
+.button.md,
+small{
+    font-size: 0.8rem;
+}
+.button.sm{
+    font-size: 0.6rem;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    header .primary{
+       font-size: 1.25rem;
+    }
+}
+/*//////////////////////////////////////////////////*/
+/* IMAGES */
+/*//////////////////////////////////////////////////*/
+.img{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+#casestudy-block1 .img{
+    aspect-ratio: 1/1;
+}
+/*/////////////////////////*/
+.img{
+
+}
+.img{
+    padding-bottom: 0!important;
+}
+/*/////////////////////////*/
+.img{
+    background-size: 100% auto;
+}
+/*/////////////////////////*/
+.img{
+    background-position: 50%;
+}
+/*/////////////////////////*/
+.img{
+    background-repeat: no-repeat;
+}
+/*//////////////////////////////////////////////////*/
+.bg-casestudy1 body:before,
+#casestudy1 .img{
+    background-image: url(../img/showcase2.png);
+}
+.bg-casestudy2 body:before,
+#casestudy2 .img{
+    background-image: url(../img/showcase3.png);
+}
+#casestudy4 .img{
+    background-image: url(../img/showcase1.png);
+}
+/*//////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////////////*/

@@ -2,9 +2,10 @@
     /* Colors */
     --primary-color: #88A4AA;
     --secondary-color: #E6E6EA;
-    --accent-color: #D23F3F;
+    --accent-color: #D45D3C;
     --background-color: #F1F1F3;
-    --text-color: #2C2524;
+    --background-color: #315D68;
+    --text-color: #444;
     --light-text-color: #666;
     --invert-text-color: #FFF;
     /* Dark Mode */
@@ -24,8 +25,12 @@
     color: var(--invert-text-color);
 }
 body,
-.content a{
+a{
     color: var(--text-color);
+}
+.page-index,
+.page-index a{
+    color: var(--invert-text-color);
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
@@ -70,6 +75,7 @@ header .language a{
 .button.outline{
     border-color: var(--text-color);
 }
+.page-index .button.outline,
 footer .button.outline{
     border-color: var(--invert-color);
 }
@@ -86,16 +92,20 @@ header .language a:hover,
 .img{
     background-color: var(--secondary-color);
 }
+.page-index .img{
+    background-color: rgba(0, 0, 0, 0.24);
+}
 .brand h1,
 header .language.active a,
 .button{
     background-color: var(--accent-color);
 }
-html,
-.bg-intro,
+.page-index .bg-intro,
+.page-index .bg-intro a,
 header .language a{
     background-color: var(--background-color);
 }
+header h1 span,
 footer,
 .brand small{
     background-color: #FFF;
@@ -121,26 +131,40 @@ body:before {
     opacity: 0.4; /* Fade the background image */
     z-index: -1; /* Keep it behind the content */
 }
-.bg-casestudy2{
-    /*background-color:#362F46;*/
-    /*background: linear-gradient(to right, #362F46, #703598, #69A5B3, #3F2070);*/
-   /* background: linear-gradient(to right, 
+.page-index .bg-intro{
+    background-color: var(--background-color);
+    color: #FFF;
+}
+.bg-journal{
+    background-color: #191919;
+}
+.bg-showcase{
+    background-color: #2E2E2E;
+}
+body,
+.bg-intro,
+.bg-casestudy1,
+.bg-casestudy2,
+.bg-casestudy3{
+    background-color: #21282D;
+    color: #FFF;
+}
+/*.bg-casestudy-au{
+    background: radial-gradient(circle, rgba(235, 85, 5, 0.4) 20%, rgba(0, 58, 126, 0.2) 80%);
+    background: radial-gradient(circle, rgba(235, 85, 5, 0.7) 20%, rgba(0, 58, 126, 0.8) 80%);
+}*/
+.bg-casestudy-adventure{
+    background-color: #111;
+    color: #FFF;
+}
+.bg-casestudy-pulse{
+    background: linear-gradient(to right, 
     rgba(54, 47, 70, 1), 
     rgba(112, 53, 152, 1), 
     rgba(105, 165, 179, 1), 
     rgba(63, 32, 112, 1)
-  );*/
-}
-.bg-casestudy3{
-}
-.bg-casestudy4{
-    /*background: linear-gradient(to right, #EB5505, #FF5D86, #FF7147, #9786FE);*/
-    /*background: linear-gradient(to right, 
-    rgba(235, 85, 5, 0.5), 
-    rgba(255, 93, 134, 0.5), 
-    rgba(255, 113, 71, 0.5), 
-    rgba(151, 134, 254, 0.5)
-  );*/
+    );
+    color: #FFF;
 }
 /*/////////////////////////*/
 .button.outline{
@@ -149,6 +173,7 @@ body:before {
 /*//////////////////////////////////////////////////*/
 /* BORDER RADIUS */
 /*//////////////////////////////////////////////////*/
+header h1 span,
 .button{
     border-radius: 1000px;
 }
@@ -160,6 +185,9 @@ body:before {
 }
 .img{
     border-radius: 2rem;
+}
+.casestudy.flex .img{
+    border-radius: 1.25rem;
 }
 .brand{
     border-bottom-left-radius: 16px;
@@ -317,12 +345,14 @@ body{
 h1{
     font-size: 1rem;
 }
-h2,
+h2{
+    font-size: 3rem;    
+}
 h3{
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 h4{
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 #intro p{
     font-size: 1.5rem;
@@ -357,6 +387,9 @@ small{
     width: 100%;
     aspect-ratio: 16/9;
 }
+#journal .img{
+    aspect-ratio: 3/4;
+}
 #casestudy-block1 .img{
     aspect-ratio: 1/1;
 }
@@ -371,23 +404,30 @@ small{
 .img{
     background-size: 100% auto;
 }
+.casestudy .img{
+    background-size: auto 100%;
+}
 /*/////////////////////////*/
 .img{
     background-position: 50%;
+}
+.casestudy .img{
+    background-position: 0 50%;
 }
 /*/////////////////////////*/
 .img{
     background-repeat: no-repeat;
 }
 /*//////////////////////////////////////////////////*/
-#casestudy1 .img{
-    background-image: url(../img/showcase2.png);
+#casestudy-adventure .img{
+    background-image: url(../img/showcase-adventure.png);
 }
-#casestudy2 .img{
-    background-image: url(../img/showcase3.png);
+#casestudy-pulse .img{
+    background-image: url(../img/showcase-pulse.png);
 }
-#casestudy4 .img{
-    background-image: url(../img/showcase1.png);
+#initial-experience .img,
+.casestudy.system .img{
+    background-image: url(../img/showcase-system.png);
 }
 /*//////////////////////////////////////////////////*/
 

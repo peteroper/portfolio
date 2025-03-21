@@ -67,13 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to change body class
     function updateBodyClass(id) {
       // Remove any existing body classes starting with 'bg-'
-      document.documentElement.className = document.documentElement.className
+      document.body.className = document.body.className
         .split(' ')
         .filter(c => !c.startsWith('bg-'))
         .join(' ');
   
       // Add new class based on casestudy ID
-      document.documentElement.classList.add(`bg-${id}`);
+      document.body.classList.add(`bg-${id}`);
     }
   
     // Create an IntersectionObserver

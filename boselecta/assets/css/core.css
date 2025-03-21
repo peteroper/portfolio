@@ -29,6 +29,20 @@ header{
     left: 50%;
     margin-left: -680px;
 }
+header h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header h1 span{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 0 0.5rem 0;
+    font-size: 40px;
+    display: block;
+}
 section,
 .heading,
 .container{
@@ -75,6 +89,12 @@ section,
     .container.flex{
         width: 100%;
         flex-wrap: nowrap;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .dt-set{
+        display: none;
     }
 }
 /*//////////////////////////////////////////////////*/
@@ -146,4 +166,21 @@ body{
 .content h3 a{
     display: block;
     text-align: center;
+}
+
+#journal .flex{
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 20px; /* Space between the items (optional) */
+    padding: 10px; /* Optional, for padding around the scroll container */
+}
+      
+#journal .flex .col{
+        flex: auto;
+        flex-shrink: 0; /* Prevents the items from shrinking */
+        max-width: 32%; /* Each item has a width of 340px */
+      }
+
+#showcase .img{
+    aspect-ratio: 2/0.6;
 }

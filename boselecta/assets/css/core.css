@@ -42,6 +42,20 @@ section,
     padding-left: 2rem;
     padding-right: 2rem;
 }
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    .container{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    .container{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 /*//////////////////////////////////////////////////*/
 /* FLEX */
 /*//////////////////////////////////////////////////*/

@@ -321,9 +321,7 @@ body{
 h1{
     font-size: 1rem;
 }
-h2{
-    font-size: 3rem;
-}
+h2,
 h3{
     font-size: 3rem;
 }
@@ -349,9 +347,9 @@ small{
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
-    header .primary{
-       font-size: 1.25rem;
-    }
+    h2,h3{
+    font-size: 2.25rem;
+}
 }
 /*//////////////////////////////////////////////////*/
 /* IMAGES */

@@ -156,8 +156,10 @@ body{
 .heading h2:after{
     background-color: rgba(255, 255, 255, 0.24);
 }
-#journal .flex::-webkit-scrollbar-thumb,
 .page-index .img{
+    background-color: rgba(255, 255, 255, 0.12);
+}
+#journal .flex::-webkit-scrollbar-thumb{
     background-color: rgba(0, 0, 0, 0.24);
 }
 /*//////////////////////////////////////////////////*/
@@ -284,6 +286,9 @@ header .language a,
     .content{
         padding-left: 0;
         padding-right: 0;
+    }
+    #journal .flex{
+        padding-bottom: 0.5rem;
     }
     #journal .content,
     body{

@@ -173,6 +173,7 @@ header h1 span,
 .language.button.active{
     border-radius: 0.75rem;
 }
+.img-wrap,
 .img{
     border-radius: 2rem;
 }
@@ -188,11 +189,13 @@ header h1 span,
 }
 /*/////////////////////////*/
 @media (max-width: 768px) {
+    .img-wrap,
     .img{
         border-radius: 1.5rem;
     }
 }
 @media (max-width: 440px) {
+    .img-wrap,
     .img{
         border-radius: 1.25rem;
     }
@@ -295,6 +298,7 @@ h2,
 h3{
     margin-bottom: 1.5rem;
 }
+.img-wrap,
 .img,
 p{
     margin-bottom: 1rem;
@@ -446,21 +450,22 @@ small{
 #journal .img{
     aspect-ratio: 1/1;
 }
+.img-wrap {
+    aspect-ratio: 2.35/1;
+}
 @media (max-width: 768px) {
     .img{
         width: 100%;
         aspect-ratio: 4/3;
     }
+    .img-wrap {
+        aspect-ratio: 16/9;
 }
 /*/////////////////////////*/
-.img{
-
-}
 .img{
     padding-bottom: 0!important;
 }
 /*/////////////////////////*/
-#showcase .img,
 .img{
     background-size: 100% auto;
 }

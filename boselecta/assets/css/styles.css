@@ -466,12 +466,11 @@ small{
     aspect-ratio: 2.35/1;
 }
 @media (max-width: 768px) {
+    .img-wrap,
     .img{
         width: 100%;
         aspect-ratio: 4/3;
     }
-    .img-wrap {
-        aspect-ratio: 16/9;
 }
 /*/////////////////////////*/
 .img{

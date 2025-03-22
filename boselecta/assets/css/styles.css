@@ -46,6 +46,9 @@ h2,
 .heading p{
     opacity: 68%;  
 }
+#showcase .heading,
+#journal .heading,
+#casestudy .heading,
 #intro .button,
 #intro p{
     opacity: 24%;
@@ -64,6 +67,7 @@ a{
     font-weight: bold;
 }
 /*//////////////////////////////////////////////////*/
+.content h3 a,
 .brand{
     text-align: center;
 }
@@ -156,9 +160,10 @@ body{
 /*//////////////////////////////////////////////////*/
 .casestudy .content:after,
 .heading h2:before, 
-.heading h2:after {
+.heading h2:after{
     background-color: rgba(255, 255, 255, 0.24);
 }
+#journal .flex::-webkit-scrollbar-thumb,
 .page-index .img{
     background-color: rgba(0, 0, 0, 0.24);
 }
@@ -181,9 +186,23 @@ header h1 span,
 .casestudy.flex .img{
     border-radius: 1.25rem;
 }
+#journal .flex::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+}
 .brand{
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .img{
+        border-radius: 1.5rem;
+    }
+}
+@media (max-width: 440px) {
+    .img{
+        border-radius: 1.25rem;
+    }
 }
 /*//////////////////////////////////////////////////*/
 /* SPACING */
@@ -235,10 +254,28 @@ header .language a,
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
-
+    body{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 @media (max-width: 768px) {
-
+    header,
+    .heading,
+    .container,
+    body{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+@media (max-width: 440px) {
+    header,
+    .heading,
+    .container,
+    body{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
 }
 /*//////////////////////////////////////////////////*/
 #intro h2,
@@ -246,6 +283,7 @@ header .language a,
 .heading{
     margin-bottom: 2rem;
 }
+#journal .flex,
 h1,
 h2,
 h3{
@@ -281,9 +319,15 @@ header{
     gap: 1rem;
 }
 /*/////////////////////////*/
-@media (max-width: 1024px) {
-    header .primary{
-       gap: 1.5rem;
+@media (max-width: 768px) {
+    #journal .flex{
+        gap: 1.5rem;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 440px) {
+    #journal .flex{
+        gap: 1.25rem;
     }
 }
 /*//////////////////////////////////////////////////*/
@@ -308,6 +352,7 @@ body {
 #benefits{
     text-align: center;
 }
+#journal h4,
 footer .heading{
     text-align: left;
 }
@@ -374,9 +419,12 @@ small{
     font-size: 0.6rem;
 }
 /*/////////////////////////*/
-@media (max-width: 1024px) {
-    h2,h3{
-        font-size: 2.25rem;
+@media (max-width: 768px) {
+    h2{
+        font-size: 2rem;    
+    }
+    h3{
+        font-size: 1.5rem;
     }
     #intro p{
         font-size: 1.25rem;
@@ -392,6 +440,12 @@ small{
 #journal .img{
     aspect-ratio: 1/1;
 }
+@media (max-width: 768px) {
+    .img{
+        width: 100%;
+        aspect-ratio: 4/3;
+    }
+}
 /*/////////////////////////*/
 .img{
 
@@ -400,6 +454,7 @@ small{
     padding-bottom: 0!important;
 }
 /*/////////////////////////*/
+#showcase .img,
 .img{
     background-size: 100% auto;
 }

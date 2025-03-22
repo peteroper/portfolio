@@ -26,8 +26,7 @@ header{
     margin: 0 auto;
     position: fixed;
     top: 0;
-    left: 50%;
-    margin-left: -680px;
+    left: 0;
 }
 header h1{
     display: flex;
@@ -56,6 +55,22 @@ section,
     padding-left: 2rem;
     padding-right: 2rem;
 }
+#journal .content{
+    padding-right: 0;
+}
+/*/////////////////////////*/
+@media (min-width: 1440px) {
+    header{
+        left: 50%;
+        margin-left: -680px;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 1440px) {
+    header{
+        width: 100%;
+    }
+}
 /*/////////////////////////*/
 @media (max-width: 1024px) {
     .container{
@@ -65,6 +80,9 @@ section,
 }
 /*/////////////////////////*/
 @media (max-width: 440px) {
+    header{
+        display: none;
+    }
     .container{
         padding-left: 1rem;
         padding-right: 1rem;
@@ -168,6 +186,13 @@ body:before {
     opacity: 100%;
     transform: translateY(0);
 }
+
+.bg-showcase #showcase .heading,
+.bg-journal #journal .heading,
+.bg-casestudy #casestudy .heading{
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}
 #intro h2,
 #intro .button,
 #intro p{
@@ -180,7 +205,6 @@ body:before {
 .content h4 a,
 .content h3 a{
     display: block;
-    text-align: center;
 }
 .heading h2,
 .casestudy .content{
@@ -209,6 +233,13 @@ body:before {
 .heading h2::after {
     right: 0;
 }
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    .heading h2:before, 
+    .heading h2:after {
+        width: 22%;
+    }
+}
 /*//////////////////////////////////////////////////*/
 /* JOURNAL */
 /*//////////////////////////////////////////////////*/
@@ -219,15 +250,39 @@ width: 25%;
 #journal .flex{
     flex-wrap: nowrap;
     overflow-y: hidden;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    gap: 20px; /* Space between the items (optional) */
-    padding: 10px; /* Optional, for padding around the scroll container */
+    overflow-x: auto;
 }  
 #journal .flex .col{
-        flex: auto;
-        flex-shrink: 0; /* Prevents the items from shrinking */
-        max-width: 32%; /* Each item has a width of 340px */
-      }
+    max-width: 31%; 
+    flex: auto;
+    flex-shrink: 0; 
+}
+#journal .flex::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+#journal .content:after{
+    width: 2px;
+    height: auto;
+    left: 0;
+    margin-left: 0;
+    top: 0;
+    bottom: 0;
+}
+/*/////////////////////////*/
+@media (max-width: 1024px) {
+    #journal .flex{
+        flex-direction: row;
+    }
+}
+@media (max-width: 768px) {
+    #journal .heading h2:before, 
+    #journal .heading h2:after {
+        width: 17%;
+    }
+    #journal .flex .col{
+        max-width: 68%; 
+}
 /*//////////////////////////////////////////////////*/
 /* SHOWCASE */
 /*//////////////////////////////////////////////////*/
@@ -235,16 +290,3 @@ width: 25%;
     aspect-ratio: 2/0.6;
 }
 
-#journal .flex::-webkit-scrollbar {
-    width: 2px; /* Adjust the width of the scrollbar */
-    height: 2px; /* Adjust the height for horizontal scrollbar */
-  }
-  
-  #journal .flex::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.24); /* White color with 40% opacity */
-    border-radius: 2px; /* Optional: rounded corners */
-}
-  
-#journal .flex::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional: background color for the track */
-}

@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Page loaded');
   
     // Get all .casestudy sections
-    const caseStudies = document.querySelectorAll('.casestudy');
+    const caseStudies = document.querySelectorAll('.fade');
   
     // Function to change body class
     function updateBodyClass(id) {

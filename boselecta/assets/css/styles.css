@@ -1,10 +1,12 @@
 :root {
     /* Colors */
-    --primary-color: #88A4AA;
+    --primary-color: #315D68;
     --secondary-color: #E6E6EA;
-    --accent-color: #D45D3C;
+    --accent-color: #D45D3C; /*#88A4AA*/
     --background-color: #F1F1F3;
-    --background-color: #315D68;
+    --invert-color: #191919;
+    --invert-primary-color: #21282D;
+    --invert-secondary-color: #29444C;
     --text-color: #444;
     --light-text-color: #666;
     --invert-text-color: #E6E0D0;
@@ -20,19 +22,18 @@
 /*//////////////////////////////////////////////////*/
 /* COLOR */
 /*//////////////////////////////////////////////////*/
-.brand h1,
-.button{
-    color: var(--invert-text-color);
-}
 body,
 a{
     color: var(--text-color);
 }
+.brand h1,
+.page-index .button,
+.page-index .bg-intro,
 .page-index,
 .page-index a{
     color: var(--invert-text-color);
 }
-h2,
+.page-index h2,
 .casestudy,
 .casestudy a{
     color: #ECECE4;
@@ -88,12 +89,8 @@ header .language a{
 .button.outline{
     border-color: var(--text-color);
 }
-{
-    border-color: #89A6AE;
-}
-.page-index .button.outline,
-footer .button.outline{
-    border-color: var(--invert-color);
+.page-index .button.outline{
+    border-color: var(--invert-text-color);
 }
 header .language a{
     border-color: rgba(255, 255, 255, 0.25);
@@ -101,40 +98,36 @@ header .language a{
 /*//////////////////////////////////////////////////*/
 /* BACKGROUND COLOR */
 /*//////////////////////////////////////////////////*/
+header h1 span,
+footer,
+.brand small,
 .menu-icon div{
-    background-color: var(--primary-color);
+    background-color: #FFF;
 }
-header .language a:hover,
 .img{
     background-color: var(--secondary-color);
 }
 .brand h1,
-header .language.active a,
 .button{
     background-color: var(--accent-color);
 }
 .bg-intro,
 .bg-intro a,
-header .language a{
-    background-color: var(--background-color);
-}
-header h1 span,
-footer,
-.brand small{
-    background-color: #FFF;
-}
+header .language a,
 .page-index .bg-intro{
-    background-color: var(--background-color);
-    color: #E6E0D0;
-}
-.bg-journal{
-    background-color: #29444C;
+    background-color: var(--primary-color);
 }
 .bg-showcase{
-    background-color: #191919;
+    background-color: var(--invert-color);
 }
 body{
-    background-color: #21282D;
+    background-color: var(--background-color);
+}
+.page-index body{
+    background-color: var(--invert-primary-color);
+}
+.bg-journal{
+    background-color: var(--invert-secondary-color);
 }
 /*/////////////////////////*/
 .button.outline{

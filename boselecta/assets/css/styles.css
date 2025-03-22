@@ -267,6 +267,10 @@ header .language a,
     }
 }
 @media (max-width: 440px) {
+    section{
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
     header,
     .heading,
     .container,

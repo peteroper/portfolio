@@ -199,6 +199,10 @@ header h1 span,
     .img{
         border-radius: 1.25rem;
     }
+    .img-wrap{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 }
 /*//////////////////////////////////////////////////*/
 /* SPACING */
@@ -281,8 +285,16 @@ header .language a,
         padding-left: 0;
         padding-right: 0;
     }
+    #journal .content,
     body{
         padding-left: 1.25rem;
+        padding-right: 0;
+    }
+    #casestudy,
+    #journal .heading,
+    #showcase .content,
+    #showcase .heading,
+    #intro{
         padding-right: 1.25rem;
     }
 }
@@ -484,15 +496,26 @@ small{
     background-repeat: no-repeat;
 }
 /*//////////////////////////////////////////////////*/
-#casestudy-adventure .img{
-    background-image: url(../img/showcase-adventure.png);
+.content{
+    background-image: url(../img/casestudy-content.png);
 }
-#casestudy-pulse .img{
-    background-image: url(../img/showcase-pulse.png);
+.initial{
+    background-image: url(../img/casestudy-initial.png);
 }
-#initial-experience .img,
-.casestudy.system .img{
-    background-image: url(../img/showcase-system.png);
+.homeplus{
+    background-image: url(../img/casestudy-homeplus.png);
+}
+.flip{
+    background-image: url(../img/casestudy-flip.png);
+}
+.variables{
+    background-image: url(../img/journal-variables.png);
+}
+.inspection{
+    background-image: url(../img/journal-inspection.png);
+}
+.userflow{
+    background-image: url(../img/journal-userflow.png);
 }
 /*//////////////////////////////////////////////////*/
 

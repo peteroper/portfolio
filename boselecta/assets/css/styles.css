@@ -117,7 +117,7 @@ header .language a,
 .page-index .bg-intro{
     background-color: var(--primary-color);
 }
-.bg-showcase{
+.page-index body.bg-showcase{
     background-color: var(--invert-color);
 }
 body{
@@ -126,7 +126,7 @@ body{
 .page-index body{
     background-color: var(--invert-primary-color);
 }
-.bg-journal{
+.page-index body.bg-journal{
     background-color: var(--invert-secondary-color);
 }
 /*/////////////////////////*/
@@ -382,6 +382,11 @@ body {
 #journal h4,
 footer .heading{
     text-align: left;
+}
+@media (max-width: 440px) {
+    #showcase .content p {
+        text-align: left;
+    }
 }
 /*/////////////////////////*/
 #intro p{

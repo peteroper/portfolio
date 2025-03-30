@@ -141,9 +141,9 @@ footer,
 #hero{
     background-color: var(--primary-color);
 }
+/*.img,*/
 #contact-info .col,
 header .language a:hover,
-.img,
 #benefits{
     background-color: var(--secondary-color);
 }

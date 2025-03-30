@@ -431,16 +431,23 @@ footer .img{
     height: 40px;
 }
 /*/////////////////////////*/
+.logo{
+    background-size: auto 100%;    
+}
 .message:before,
 .img{
     background-size: 100% auto;
 }
 /*/////////////////////////*/
+.log{
+    background-position: 0 0;
+}
 .message:before,
 .img{
     background-position: 50%;
 }
 /*/////////////////////////*/
+.logo,
 .message:before,
 .img{
     background-repeat: no-repeat;

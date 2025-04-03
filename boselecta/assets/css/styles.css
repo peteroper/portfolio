@@ -27,9 +27,9 @@ body,
 a{
     color: var(--text-color);
 }
-blockquote {
-    color: var(--light-text-color);
-}
+.page-journal footer a,
+.page-journal blockquote p,
+.page-journal,
 header .close,
 .page-index .button,
 .page-index .bg-intro,
@@ -46,10 +46,8 @@ header .close,
     color: #FFF;
 }
 /*/////////////////////////*/
-@media (max-width: 1024px) {
-
-}
-/*/////////////////////////*/
+blockquote p,
+#splash .img,
 .casestudy .content p,
 .heading p{
     opacity: 68%;  
@@ -118,8 +116,8 @@ header .language a{
 /*//////////////////////////////////////////////////*/
 /* BACKGROUND COLOR */
 /*//////////////////////////////////////////////////*/
+.page-about footer,
 header h1 span,
-footer,
 .brand small,
 .menu-icon div{
     background-color: #FFF;
@@ -143,10 +141,12 @@ header .language a,
 body{
     background-color: var(--background-color);
 }
+.page-journal,
 header .close,
 .page-index body{
     background-color: var(--invert-primary-color);
 }
+.page-journal footer,
 .page-index body.bg-journal{
     background-color: var(--invert-secondary-color);
 }
@@ -158,8 +158,11 @@ header .close,
 /*//////////////////////////////////////////////////*/
 /* GRADIENTS */
 /*//////////////////////////////////////////////////*/
-.splash{
-    background: linear-gradient(to right, #F1F1F3 0%, #E6E6EA 50%);
+#splash{
+    background: linear-gradient(to right, var(--invert-primary-color) 0%,var(--invert-color) 50%);
+}
+.page-journal{
+    background: linear-gradient(to bottom right, var(--invert-secondary-color), var(--invert-color));
 }
 .bg-casestudy-pulse{
     background: linear-gradient(to right, 
@@ -178,6 +181,7 @@ header .close,
 .heading h2:after{
     background-color: rgba(255, 255, 255, 0.24);
 }
+.page-journal .img,
 .page-index .img{
     background-color: rgba(255, 255, 255, 0.12);
 }
@@ -211,6 +215,9 @@ header h1 span,
 .brand{
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+}
+#splash .img{
+    border-radius: 0;
 }
 /*/////////////////////////*/
 @media (max-width: 768px) {
@@ -281,12 +288,17 @@ header .language a,
 .button.sm{
     padding: 0.25rem 0.5rem; 
 }
+#entry,
+#splash,
 .language.button{
     padding: 0;
 }
 .page-journal #intro,
 #about{
     padding-top: 1rem;
+}
+#entry .container{
+    padding-bottom: 0;
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
@@ -521,6 +533,9 @@ small{
 #about .img{
     aspect-ratio: 16/13;
 }
+#splash .img{
+    aspect-ratio: 2/0.75;    
+}
 .heading.narrow .img,
 .img-wrap {
     aspect-ratio: 2.35/1;
@@ -540,6 +555,7 @@ small{
 .img{
     background-size: 100% auto;
 }
+#splash .img,
 .casestudy .img{
     background-size: auto 100%;
 }

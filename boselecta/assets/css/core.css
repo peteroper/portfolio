@@ -27,7 +27,7 @@ section,
     max-width: 896px;
     margin: 0 auto;
 }
-.splash{
+#splash{
     max-width: 100%;
 }
 /*/////////////////////////*/
@@ -47,14 +47,6 @@ section,
 /*//////////////////////////////////////////////////*/
 /* QUOTE */
 /*//////////////////////////////////////////////////*/
-blockquote {
-    font-style: italic;
-    font-size: 1.2em;
-    color: #555;
-    padding: 10px 20px;
-    border-left: 4px solid #ccc;
-    margin: 20px 0;
-}
 blockquote p{
     margin: 0!important;
 }
@@ -344,6 +336,7 @@ width: 25%;
 #about{
     width: 1180px;
 }
+#entry p,
 #about p{
     line-height: 160%;
 }
@@ -356,4 +349,7 @@ width: 25%;
 #about ul li{
     list-style-type: none;
     margin-bottom: 0.5rem;
+}
+#entry .flex{
+    gap: 6rem;
 }

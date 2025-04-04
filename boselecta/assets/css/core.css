@@ -101,7 +101,10 @@ header .close{
 }
 /*/////////////////////////*/
 @media (max-width: 440px) {
-    header{
+    .page-journal header{
+        height: 80px;
+    }
+    header .brand{
         display: none;
     }
 }

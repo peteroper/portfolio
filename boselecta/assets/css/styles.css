@@ -302,12 +302,22 @@ header .language a,
 }
 /*/////////////////////////*/
 @media (max-width: 1024px) {
+    .page-journal footer,
+    .page-journal #entry,
+    .page-journal section,
     body{
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    .page-journal{
+        padding-left: 0!important;
+        padding-right: 0!important;
+    } 
 }
 @media (max-width: 768px) {
+    .page-journal footer,
+    .page-journal #entry,
+    .page-journal section,
     .content
     header,
     .heading,
@@ -333,7 +343,7 @@ header .language a,
         padding-bottom: 0.5rem;
     }
     #journal .content,
-    body{
+    body.page-index{
         padding-left: 1.25rem;
         padding-right: 0;
     }
@@ -545,6 +555,12 @@ small{
     .img{
         width: 100%;
         aspect-ratio: 4/3;
+    }
+}
+/*/////////////////////////*/
+@media (max-width: 768px) {
+    #splash .img{
+        aspect-ratio: 2/1;    
     }
 }
 /*/////////////////////////*/

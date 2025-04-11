@@ -183,6 +183,19 @@ header .close{
 /*//////////////////////////////////////////////////*/
 .img{
     display: block;
+    transition: transform 0.5s ease-in-out;
+    background-position: 50%;
+    cursor: pointer;
+}
+.img-wrap .img:hover {
+    transform: scale(1.1);
+}
+a.img-wrap{
+    display: block;
+    overflow: hidden;
+}
+#journal .img-wrap{
+    aspect-ratio: 1/1;
 }
 /*//////////////////////////////////////////////////*/
 /* BRAND */

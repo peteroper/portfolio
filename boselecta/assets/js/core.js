@@ -36,19 +36,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if elements exist before applying logic
     if (heading && description && button) {
       // Set initial opacity for description and button
-      description.style.opacity = '40%';
-      button.style.opacity = '40%';
+      description.style.opacity = '60%';
+      button.style.opacity = '60%';
 
       // Add scroll event listener
       window.addEventListener('scroll', function () {
         if (window.scrollY > scrollTrigger) {
-          heading.style.opacity = '40%'; // H1 to 24%
+          heading.style.opacity = '60%'; // H1 to 24%
           description.style.opacity = '100%'; // Paragraph to 100%
           button.style.opacity = '100%'; // Button to 100%
         } else {
           heading.style.opacity = '100%'; // Reset to full opacity
-          description.style.opacity = '40%'; // Hide when not scrolled enough
-          button.style.opacity = '40%'; // Hide button initially
+          description.style.opacity = '60%'; // Hide when not scrolled enough
+          button.style.opacity = '60%'; // Hide button initially
         }
       });
     }

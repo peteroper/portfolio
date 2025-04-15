@@ -50,12 +50,10 @@ header .close,
 blockquote p,
 #splash .img,
 .casestudy .content p,
-.heading p{
-    opacity: 68%;  
-}
+.heading p,
 #intro .button,
 #intro p{
-    opacity: 40%;
+    opacity: 60%;
 }
 #showcase .heading,
 #journal .heading,

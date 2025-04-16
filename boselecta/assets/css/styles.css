@@ -297,15 +297,22 @@ header .language a,
 .language.button{
     padding: 0;
 }
-.page-about #intro,
-.page-journal #intro,
-#about{
+#about,
+.page-journal #intro{
     padding-top: 1rem;
 }
 #entry .container{
     padding-bottom: 0;
 }
+.note{
+    padding: 2rem;
+}
 /*/////////////////////////*/
+@media (min-width: 768px) {
+    .page-about #intro{
+        padding-top: 1rem;
+    }
+}
 @media (max-width: 1024px) {
     .page-about section,
     .page-about footer,
@@ -323,6 +330,9 @@ header .language a,
     } 
 }
 @media (max-width: 768px) {
+    .page-about #intro{
+        padding-bottom: 2rem;
+    }
     .page-journal footer,
     .page-journal #entry,
     .page-journal section,
@@ -340,6 +350,7 @@ header .language a,
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+    .note,
     header,
     .heading,
     .container,

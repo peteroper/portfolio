@@ -118,8 +118,11 @@ header .close{
     .page-journal header{
         height: 80px;
     }
-    header .brand{
-        display: none;
+    header .close{
+        height: 38px;
+        width: 38px;
+        top: 1rem;
+        right: 1.25rem;
     }
 }
 /*//////////////////////////////////////////////////*/

@@ -351,13 +351,19 @@ header .language a,
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+    #intro{
+        padding-top: 6rem;
+    }
     .note,
-    header,
     .heading,
     .container,
     .content{
         padding-left: 0;
         padding-right: 0;
+    }
+    header{
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
     #journal .flex{
         padding-bottom: 0.5rem;
@@ -559,6 +565,11 @@ small{
     }
     #intro p{
         font-size: 1.25rem;
+    }
+}
+@media (max-width: 440px) {
+    header h1{
+        font-size: 0.9rem;
     }
 }
 /*//////////////////////////////////////////////////*/

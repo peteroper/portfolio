@@ -15,7 +15,7 @@ html,
 body{
     overflow-x: hidden;
 }
-ul{
+ol, ul{
     list-style-position: inside;
 }
 html,

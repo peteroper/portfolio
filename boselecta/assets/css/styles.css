@@ -27,10 +27,14 @@ body,
 a{
     color: var(--text-color);
 }
+.page-casestudy footer a,
+.page-casestudy blockquote p,
+.page-casestudy,
 .page-journal footer a,
 .page-journal blockquote p,
 .page-journal,
 header .close,
+.page-casestudy .button,
 .page-journal .button,
 .page-index .button,
 .page-index .bg-intro,
@@ -150,6 +154,7 @@ header .language a,
 body{
     background-color: var(--background-color);
 }
+.page-casestudy,
 .page-journal,
 header .close,
 .page-index body{
@@ -171,6 +176,7 @@ header .close,
 #splash{
     background: linear-gradient(to right, var(--invert-primary-color) 0%,var(--invert-color) 50%);
 }
+.page-casestudy,
 .page-journal{
     background: linear-gradient(to bottom right, var(--invert-secondary-color), var(--invert-color));
 }
@@ -191,6 +197,7 @@ header .close,
 .heading h2:after{
     background-color: rgba(255, 255, 255, 0.24);
 }
+.page-casestudy .img,
 .page-journal .img,
 .page-index .img{
     background-color: rgba(255, 255, 255, 0.12);
@@ -295,6 +302,7 @@ header .language a,
 .language.button{
     padding: 0;
 }
+.page-casestudy #intro,
 .page-journal #intro{
     padding-top: 6rem;    
 }
@@ -318,6 +326,9 @@ header .language a,
 @media (max-width: 1024px) {
     .page-about section,
     .page-about footer,
+    .page-casestudy footer,
+    .page-casestudy #entry,
+    .page-casestudy section,
     .page-journal footer,
     .page-journal #entry,
     .page-journal section,
@@ -326,6 +337,7 @@ header .language a,
         padding-right: 2rem;
     }
     .page-about,
+    .page-casestudy,
     .page-journal{
         padding-left: 0!important;
         padding-right: 0!important;
@@ -335,6 +347,9 @@ header .language a,
     .page-about #intro{
         padding-bottom: 2rem;
     }
+    .page-casestudy footer,
+    .page-casestudy #entry,
+    .page-casestudy section,
     .page-journal footer,
     .page-journal #entry,
     .page-journal section,
